@@ -22,6 +22,7 @@ maxbch = 1 # 4000 # (D=10) number of batches
        z0 =     0.00        # minimum position of z-axis [cm]
        z1 =     0.00        # maximum position of z-axis [cm]
       dir =   all           # z-direction of beam [isotropic]
+      trcl = 2003
 
 [ Cell ]
 C 1.0 HEAD AND NECK
@@ -632,34 +633,6 @@ C          VOL=20800-2800=18000
 C                               
 C     8.0  GENDER SPECIFIC DESCRIPTIONS
 C           
-C     8.1    MALE
-C     8.1.1 PROSTATE
-C           
-156     12 -1.03                -339
-           VOL=15.3
-C           
-C     8.1.2  TESTES
-C           
-C     LEFT TESTES
-C           
-178     22 -1.04       -350
-          VOL = 18.8
-C           
-C     RIGHT TESTE
-179     22 -1.04      -351
-          VOL = 18.8
-C           
-C      BOTH 
-C 180   1 -1.04       -350:-351
-C         VOL=37.6
-C           
-C    8.1.3  MALE GENITALIA 
-C           
-182   12 -1.03       -2 -3 352 -353 354 -355 390 392
-C      REMOVE       TESTES (LEFT / RIGHT) 
-                        (350 351)
-C                   VOL=196-37.6
-                    VOL=158.4
 C     8.2    FEMALE
 C           
 C     8.2.1  OVARIES
@@ -769,12 +742,6 @@ C   10.0 SKIN
 C           
 C   10.2 SKIN OF TRUNK REGION
 C           
-C   10.2.1  SKIN OF MALE TRUNK
-C     %210   1 -1.04       -384 -394 3 (10:73:-3)
-C     REMOVE        MATERIAL UNDER NECK
-C                   (382:-73:394)
-C                    VOL = 1410
-C           
 C   10.2.2 SKIN OF FEMALE TRUNK   
 C           
 222   11  -1.09      ((-384 -394 3 (10:73:-3)):
@@ -796,17 +763,10 @@ C       REMOVE       LEFT LEG
 C       REMOVE       RIGHT LEG
                         (3:-32:30)
                      VOL = 1190
-C           
-C    10.5 SKIN OF MALE GENITALIA 
-C           
-227   11 -1.09  -2 -3 412 -413 414 -415 390 392 
-C      REMOVE       GENITALIA & TESTES (LEFT / RIGHT) 
-                   (2:3:-352:353:-354:355:-390:-392)(350 351)
-                     VOL = 23.4
-C           
+C                     
 C     AIR CYLINDER SURROUNDING THE PHANTOM(10CM EXTENDED)
 C           
-230      4 -0.001205   -400 #20001 #20002 #20003 #20004 #20005 #20006 #20007 #20008 #20009 #20011 #20012 #20013 #20014 #20018 #20023 #20024
+230      4 -0.001205   -400
 C       REMOVE        HEAD AND NECK     
 C             (501:505:-506:508)(509:-508)(511:-513:506)(515:-506:508:-505:501)
               ((501:-513:(509 508)):(501:-513:(-506 511 513))
@@ -821,6 +781,8 @@ C       REMOVE       LEG REGION
                      (3:-398:(390 392))
 C       REMOVE       GENITALIA
                      (2:3:-412:413:-414:415:-390:-392)
+
+        #20001 #20002 #20003 #20004 #20005 #20006 #20007 #20008 #20009 #20011 #20012 #20013 #20014 #20018 #20023 #20024
 C           
 231        0         400
 C           
@@ -1556,6 +1518,7 @@ C
 
 TR2001 0 0 138.3 0 0 -1 0 1 0 1 0 0 1
 *TR2002 40 -10 52 0 270 90 0 0 0 0 0 0 2
+*TR2003 0 0 52 0 90 0 0 0 0 0 0 0 2
 
 [ Material ]
 M1       6000  -0.000124
@@ -1906,14 +1869,11 @@ e-type = 1
 ne = 1
 0.0 30.0
 axis = xy
-output = 2
 epsout = 1
 unit    =   1
 part    =   all proton neutron photon electron
 gshow   =   3
-epsout  =   1
 file    =   track_xz_BSAORNL.out
-
 
 [ T - gshow ]
 mesh = xyz
@@ -1932,6 +1892,7 @@ axis = xy
 output = 2
 file = 2d_xy_BSAORNL.dat
 epsout = 1
+ginfo = 1
 
 [ T - gshow ]
 mesh = xyz
@@ -1950,3 +1911,4 @@ axis = xz
 output = 2
 file = 2d_xz_BSAORNL.dat
 epsout = 1
+ginfo = 1

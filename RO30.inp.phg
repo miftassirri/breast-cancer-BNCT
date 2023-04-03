@@ -1,0 +1,597 @@
+{
+  "TAB_0": {
+    "buttonBar": {
+      "arrowEnabled": false,
+      "cameraInfo": {
+        "focalPoint": [
+          0.25,
+          0,
+          29.399999999999999
+        ],
+        "position": [
+          -139.17221264509607,
+          -230.51277204136278,
+          -397.81255917715373
+        ],
+        "viewUp": [
+          0.55557067389647274,
+          -0.79391489081387334,
+          0.247063498822094
+        ]
+      },
+      "cellPickerEnabled": true,
+      "gridEnabled": true,
+      "legendEnabled": false,
+      "markers": []
+    },
+    "cellPane": {
+      "displayedCells": [
+        "1",
+        "100",
+        "10001",
+        "1001",
+        "1002",
+        "1003",
+        "102",
+        "103",
+        "106",
+        "108",
+        "109",
+        "110",
+        "111",
+        "113",
+        "114",
+        "115",
+        "116",
+        "119",
+        "12",
+        "120",
+        "121",
+        "122",
+        "124",
+        "125",
+        "126",
+        "128",
+        "129",
+        "13",
+        "130",
+        "132",
+        "133",
+        "134",
+        "136",
+        "137",
+        "138",
+        "14",
+        "140",
+        "141",
+        "142",
+        "15",
+        "157",
+        "158",
+        "159",
+        "16",
+        "17",
+        "172",
+        "18",
+        "184",
+        "185",
+        "188",
+        "19",
+        "190",
+        "191",
+        "2",
+        "20",
+        "200",
+        "20001",
+        "20002",
+        "20003",
+        "20004",
+        "20005",
+        "20006",
+        "20007",
+        "20008",
+        "20009",
+        "20011",
+        "20012",
+        "20013",
+        "20014",
+        "20018",
+        "20023",
+        "20024",
+        "21",
+        "22",
+        "222",
+        "226",
+        "230",
+        "231",
+        "24",
+        "25",
+        "27",
+        "3",
+        "4",
+        "5",
+        "50",
+        "56",
+        "60",
+        "61",
+        "62",
+        "64",
+        "65",
+        "67",
+        "69",
+        "7",
+        "71",
+        "72",
+        "73",
+        "75",
+        "76",
+        "77",
+        "78",
+        "79",
+        "8",
+        "80",
+        "81",
+        "82",
+        "83",
+        "84",
+        "85",
+        "89",
+        "9",
+        "90",
+        "98",
+        "99"
+      ]
+    },
+    "geomviewerSettings": {
+      "memSafetyFactor": 90,
+      "numPoints": 10000,
+      "region": [
+        -50,
+        50,
+        -50,
+        50,
+        -80.200000000000003,
+        139
+      ],
+      "smoothingFactor": 0.40000000000000002,
+      "xyzPlane": [
+        {
+          "cutting": 0,
+          "normal": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "pos": 0,
+          "visible": false
+        },
+        {
+          "cutting": 0,
+          "normal": {
+            "0": 0,
+            "1": 1,
+            "2": 0
+          },
+          "pos": 0,
+          "visible": false
+        },
+        {
+          "cutting": 0,
+          "normal": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "pos": 0,
+          "visible": false
+        }
+      ]
+    }
+  },
+  "cwd": "C:\/Users\/assirri\/Desktop\/analisis-dosis-radiasi",
+  "guiConfig": {
+    "bgColor3D": {
+      "a": 255,
+      "b": 102,
+      "g": 77,
+      "r": 51
+    },
+    "clearStateFile": false,
+    "cssName": "",
+    "cuiconfig": {
+      "colorRatio": -999,
+      "colormap": {
+        "1": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 143,
+            "g": 31,
+            "r": 209
+          },
+          "materialName": "1",
+          "printSize": 1
+        },
+        "10": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 143,
+            "g": 128,
+            "r": 112
+          },
+          "materialName": "10",
+          "printSize": 1
+        },
+        "11": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 255,
+            "g": 255,
+            "r": 240
+          },
+          "materialName": "11",
+          "printSize": 1
+        },
+        "12": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 135,
+            "g": 184,
+            "r": 222
+          },
+          "materialName": "12",
+          "printSize": 1
+        },
+        "13": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 0,
+            "g": 255,
+            "r": 128
+          },
+          "materialName": "13",
+          "printSize": 1
+        },
+        "14": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 255,
+            "g": 0,
+            "r": 255
+          },
+          "materialName": "14",
+          "printSize": 1
+        },
+        "15": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 79,
+            "g": 128,
+            "r": 255
+          },
+          "materialName": "15",
+          "printSize": 1
+        },
+        "16": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 219,
+            "g": 248,
+            "r": 255
+          },
+          "materialName": "16",
+          "printSize": 1
+        },
+        "17": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 33,
+            "g": 33,
+            "r": 178
+          },
+          "materialName": "17",
+          "printSize": 1
+        },
+        "18": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 0,
+            "g": 214,
+            "r": 255
+          },
+          "materialName": "18",
+          "printSize": 1
+        },
+        "19": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 240,
+            "g": 255,
+            "r": 240
+          },
+          "materialName": "19",
+          "printSize": 1
+        },
+        "2": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 255,
+            "g": 0,
+            "r": 0
+          },
+          "materialName": "2",
+          "printSize": 1
+        },
+        "20": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 140,
+            "g": 230,
+            "r": 240
+          },
+          "materialName": "20",
+          "printSize": 1
+        },
+        "2001": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 46,
+            "g": 82,
+            "r": 161
+          },
+          "materialName": "2001",
+          "printSize": 1
+        },
+        "2002": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 217,
+            "g": 191,
+            "r": 217
+          },
+          "materialName": "2002",
+          "printSize": 1
+        },
+        "2003": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 71,
+            "g": 99,
+            "r": 255
+          },
+          "materialName": "2003",
+          "printSize": 1
+        },
+        "2004": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 209,
+            "g": 225,
+            "r": 64
+          },
+          "materialName": "2004",
+          "printSize": 1
+        },
+        "2005": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 178,
+            "g": 222,
+            "r": 245
+          },
+          "materialName": "2005",
+          "printSize": 1
+        },
+        "2006": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 115,
+            "g": 128,
+            "r": 250
+          },
+          "materialName": "2006",
+          "printSize": 1
+        },
+        "2007": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 161,
+            "g": 150,
+            "r": 94
+          },
+          "materialName": "2007",
+          "printSize": 1
+        },
+        "2008": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 10,
+            "g": 135,
+            "r": 184
+          },
+          "materialName": "2008",
+          "printSize": 1
+        },
+        "2009": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 46,
+            "g": 107,
+            "r": 84
+          },
+          "materialName": "2009",
+          "printSize": 1
+        },
+        "2010": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 204,
+            "g": 89,
+            "r": 107
+          },
+          "materialName": "2010",
+          "printSize": 1
+        },
+        "21": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 97,
+            "g": 48,
+            "r": 176
+          },
+          "materialName": "21",
+          "printSize": 1
+        },
+        "22": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 214,
+            "g": 112,
+            "r": 217
+          },
+          "materialName": "22",
+          "printSize": 1
+        },
+        "23": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 31,
+            "g": 166,
+            "r": 217
+          },
+          "materialName": "23",
+          "printSize": 1
+        },
+        "24": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 222,
+            "g": 161,
+            "r": 222
+          },
+          "materialName": "24",
+          "printSize": 1
+        },
+        "25": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 237,
+            "g": 245,
+            "r": 255
+          },
+          "materialName": "25",
+          "printSize": 1
+        },
+        "4": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 0,
+            "g": 255,
+            "r": 255
+          },
+          "materialName": "4",
+          "printSize": 1
+        },
+        "5": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 0,
+            "g": 255,
+            "r": 0
+          },
+          "materialName": "5",
+          "printSize": 1
+        },
+        "6": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 255,
+            "g": 255,
+            "r": 0
+          },
+          "materialName": "6",
+          "printSize": 1
+        },
+        "7": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 0,
+            "g": 166,
+            "r": 255
+          },
+          "materialName": "7",
+          "printSize": 1
+        },
+        "8": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 204,
+            "g": 191,
+            "r": 255
+          },
+          "materialName": "8",
+          "printSize": 1
+        },
+        "9": {
+          "aliasName": "",
+          "color": {
+            "a": 255,
+            "b": 43,
+            "g": 43,
+            "r": 166
+          },
+          "materialName": "9",
+          "printSize": 1
+        }
+      },
+      "mode": "auto",
+      "noXs": true,
+      "numThreads": 8,
+      "timeoutBB": 5000,
+      "verbose": false,
+      "warnPhitsCompat": false,
+      "xsdir": ""
+    },
+    "gridColor3D": {
+      "a": 255,
+      "b": 255,
+      "g": 255,
+      "r": 255
+    },
+    "langName": "",
+    "restoreState": true
+  },
+  "version": "2022.11.25"
+}
