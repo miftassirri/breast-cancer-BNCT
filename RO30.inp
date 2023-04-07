@@ -7,9 +7,10 @@ C DISTRIBUTION OR MODIFICATION WITHOUT PERMISSION IS PROHIBITED.
 C --------------------------------------------------------------
 
 [ Parameters ]
-icntl = 7 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
-maxcas = 10000 # (D=10) number of particles per one batch
+icntl = 0 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
+maxcas = 500000 # (D=10) number of particles per one batch
 maxbch = 1000 # (D=10) number of batches
+e-mode = 2
 
 [ Source ]
   totfact =     6.241e15        # (D=1.0) global factor
@@ -33,7 +34,7 @@ C
             (506:(-511 512):-513)(-506:508:-505:(-515 70 516):
             (502 -501 -516))#8 #9 #2      
              VOL=280.1          
-C           
+C
 C 1.2 THE CRANIUM
 C           
 2 2 -1.4 (522 -526 508):(523 -527 524 528 -508):(-527 -524 528 -508)
@@ -248,10 +249,25 @@ C     2.0  SKELETON REGION
 C           
 C     2.1  SPINE
 C           
+C     2.1.1  CERVICAL VERTERBRA - CV(UPPER)
+C           
+60    2 -1.4        -70 -74 73
+                 VOL=165.562
+C           
+C     2.1.2  THORACIC VERTERBRA - TV (MIDDLE)
+C           
+C 61     2 -1.4        -70 -73 72 
+C                 VOL=548.208 
+C           
+C     2.1.3  LUMBER VERTERBRA - LV (LOWER)
+C           
+C 62     2 -1.4        -70 -72 71
+C                 VOL=205.774
+C           
 C        2.1.4  ENTIRE SPINE (CRISTY & EKERMAN)
 C           
-63    3 -1.400003        -70 -73 71  
-                      VOL=920
+63    2 -1.4        -70 -73 71  
+C                      VOL=920
 C     2.2  RIBS
 C           
 C     ALL RIBS
@@ -329,10 +345,10 @@ C
 C           
 C     3.2  LUNGS
 C      LEFT 
-80    14 -0.3520015      -180 182 (189:188:187)
+80    14 -0.352      -180 182 (189:188:187)
                    VOL=1560
 C      RIGHT
-81    14 -0.3520015      -181 182 (-185:186:184:-183)
+81    14 -0.352      -181 182 (-185:186:184:-183)
                    VOL=1810
 C      BOTH 
 C 82      3 -0.296      182 ((-181(-185:186:184:-183)):
@@ -348,12 +364,12 @@ C     3.4  HEART
 C           
 C           
 C      WALL OF HEART                               
-84    15 -1.0500015     (200 ((-201 203 -202):(205 -204))):
+84    15 -1.05     (200 ((-201 203 -202):(205 -204))):
                       (-200 ((-201 211 -210):(201 207 -206):(-201 -208 209)))
                   VOL=303
 C           
 C      CONTENTS OF HEART 
-85    15 -1.0500015        (200 ((-201 -203 204):(-205))):
+85    15 -1.05        (200 ((-201 -203 204):(-205))):
                       (-200 ((-201 -211 208):(201 -207):(-201 -209)))    
                    VOL=437   
 C           
@@ -618,6 +634,34 @@ C          VOL=20800-2800=18000
 C                               
 C     8.0  GENDER SPECIFIC DESCRIPTIONS
 C           
+C     8.1    MALE
+C     8.1.1 PROSTATE
+C           
+156     12 -1.03                -339
+           VOL=15.3
+C           
+C     8.1.2  TESTES
+C           
+C     LEFT TESTES
+C           
+178     22 -1.04       -350
+          VOL = 18.8
+C           
+C     RIGHT TESTE
+179     22 -1.04      -351
+          VOL = 18.8
+C           
+C      BOTH 
+C 180   1 -1.04       -350:-351
+C         VOL=37.6
+C           
+C    8.1.3  MALE GENITALIA 
+C           
+182   12 -1.03       -2 -3 352 -353 354 -355 390 392
+C      REMOVE       TESTES (LEFT / RIGHT) 
+                        (350 351)
+C                   VOL=196-37.6
+                    VOL=158.4
 C     8.2    FEMALE
 C           
 C     8.2.1  OVARIES
@@ -641,11 +685,11 @@ C
 C           
 C     8.2.3  BREASTS
 C      LEFT GLAND
-190   25 -0.940003       -371 10 #1001 #1002 #1003
+190   25 -0.94       -371 10 #1001 #1002 #1003
 C                   VOL=168.5
                     VOL=236.543
 C      RIGHT GLAND
-191   25 -0.940003       -373 10
+191   25 -0.94       -373 10
 C                   VOL=168.5
                     VOL=236.543
 C      BOTH GLANDS
@@ -727,6 +771,12 @@ C   10.0 SKIN
 C           
 C   10.2 SKIN OF TRUNK REGION
 C           
+C   10.2.1  SKIN OF MALE TRUNK
+C     %210   1 -1.04       -384 -394 3 (10:73:-3)
+C     REMOVE        MATERIAL UNDER NECK
+C                   (382:-73:394)
+C                    VOL = 1410
+C           
 C   10.2.2 SKIN OF FEMALE TRUNK   
 C           
 222   11  -1.09      ((-384 -394 3 (10:73:-3)):
@@ -748,7 +798,14 @@ C       REMOVE       LEFT LEG
 C       REMOVE       RIGHT LEG
                         (3:-32:30)
                      VOL = 1190
-C                     
+C           
+C    10.5 SKIN OF MALE GENITALIA 
+C           
+227   11 -1.09  -2 -3 412 -413 414 -415 390 392 
+C      REMOVE       GENITALIA & TESTES (LEFT / RIGHT) 
+                   (2:3:-352:353:-354:355:-390:-392)(350 351)
+                     VOL = 23.4
+C           
 C     AIR CYLINDER SURROUNDING THE PHANTOM(10CM EXTENDED)
 C           
 230      4 -0.001205   -400
@@ -764,9 +821,11 @@ C       REMOVE       BREAST REGION
                      (-384:(370 372))
 C       REMOVE       LEG REGION
                      (3:-398:(390 392))
-                     
-        #20001 #20002 #20003 #20004 #20005 #20006 #20007 #20008 #20009 #20011 #20012 #20013 #20014 #20018 #20023 #20024
-C           
+C       REMOVE       GENITALIA
+                     (2:3:-412:413:-414:415:-390:-392)
+
+                     #20001 #20002 #20003 #20004 #20005 #20006 #20007 #20008 #20009 #20011 #20012 #20013 #20014 #20018 #20023 #20024
+C 
 231        -1         400
 C           
 C       CANCER
@@ -817,8 +876,6 @@ C       GAMMA SHIELD
 
 [ Surface ]
 
-C    SURFACE DESCRIPTIONS
-C           
 C     0.  BASIC PLANES*
 C           
 1     PX 0  
@@ -1415,7 +1472,7 @@ C      PLANE BELOW LEGS (FEET)
 398     PZ -80.2
 C    
 C     10.5 MALE GENITALIA *
-C       
+C
 412      PZ -5.0  
 C          FRONT / RIGHT / LEFT PLANES
 413      P 0 -10 -1 102
@@ -1751,6 +1808,17 @@ M21       1000       -0.105
           17000      -0.003
           19000      -0.003
 
+$ TESTES (RHO=1.04)
+M22       1000       -0.106         
+          6000       -0.099
+          7000       -0.02 
+          8000       -0.766
+          11000      -0.002
+          15000      -0.001
+          16000      -0.002
+          17000      -0.002
+          19000      -0.002  
+
 $ OVARY(RHO=1.05)
 M23       1000       -0.105          
           6000       -0.093
@@ -1760,7 +1828,7 @@ M23       1000       -0.105
           15000      -0.002
           16000      -0.002
           17000      -0.002
-          19000      -0.002     
+          19000      -0.002   
 
 $ UTERUS (RHO=1.02)
 M24       1000      -0.106          
