@@ -648,7 +648,7 @@ C
 178     22 -1.04       -350
           VOL = 18.8
 C           
-C     RIGHT TESTE
+C     RIGHT TESTES
 179     22 -1.04      -351
           VOL = 18.8
 C           
@@ -830,9 +830,9 @@ C
 231        -1         400
 C           
 C       CANCER
-1001    1001       -0.940027       -1001           VOL=8.181       $GTV
-1002    1002       -0.940015       1001 -1002      VOL=5.956       $CTV
-1003    1002       -0.940015       1002 -1003      VOL=8.313       $PTV
+1001    1001       -0.94       -1001           VOL=8.181       $GTV
+1002    1002       -0.94       1001 -1002      VOL=5.956       $CTV
+1003    1002       -0.94       1002 -1003      VOL=8.313       $PTV
 C       
 C       BSA
 C       DELIMITER      
@@ -1896,7 +1896,7 @@ M2010   1001 -0.081
 
 [t-track]
    mesh = reg
-reg = 63 64 80 81 86 190 191 1001 1002 1003 
+reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
 axis =   reg             # axis of output
      file = photon.out       # file name of output for the above axis
      part = photon
@@ -1921,7 +1921,7 @@ anatally end
 
 [t-track]
    mesh = reg
-reg = 63 64 80 81 86 190 191 1001 1002 1003 
+reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
 axis =   reg             # axis of output
      file = neutron.out       # file name of output for the above axis
      part = neutron
@@ -1944,7 +1944,7 @@ multiplier = all $ The following is subsection of multiplier.
 
 [t-track]
    mesh = reg
-reg = 63 64 80 81 86 190 191 1001 1002 1003 
+reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
 axis =   reg             # axis of output
      file = hydro.out       # file name of output for the above axis
      part = neutron
@@ -1967,7 +1967,7 @@ multiplier = all $ The following is subsection of multiplier.
 
 [t-track]
    mesh = reg
-reg = 63 64 80 81 86 190 191 1001 1002 1003 
+reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
 axis =   reg             # axis of output
      file = nitro.out       # file name of output for the above axis
      part = neutron
@@ -1987,7 +1987,7 @@ multiplier = all $ The following is subsection of multiplier.
 
 [t-track]
    mesh = reg
-reg = 63 64 80 81 86 190 191 1001 1002 1003 
+reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
 axis =   reg             # axis of output
      file = boron.out       # file name of output for the above axis
      part = neutron
@@ -2011,7 +2011,7 @@ multiplier = all $ The following is subsection of multiplier.
 
 [t-deposit]
    mesh = reg
-reg = 63 64 80 81 86 190 191 1001 1002 1003 
+reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
 axis =   reg             # axis of output
      file = dose.out       # file name of output for the above axis
      part = all (neutron photon) neutron photon proton (alpha 7Li)
