@@ -11,7 +11,7 @@ C --------------------------------------------------------------
 icntl = 0 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
 maxcas = 10000000 # (D=10) number of particles per one batch
 maxbch = 100 # (D=10) number of batches
-e-mode = 2
+e-mode = 0
 
 [ Source ]
   totfact =     6.241e15        # (D=1.0) global factor
@@ -252,8 +252,8 @@ C     2.1  SPINE
 C           
 C     2.1.1  CERVICAL VERTERBRA - CV(UPPER)
 C           
-60    2 -1.4        -70 -74 73
-                 VOL=165.562
+C 60    2 -1.4        -70 -74 73
+C                 VOL=165.562
 C           
 C     2.1.2  THORACIC VERTERBRA - TV (MIDDLE)
 C           
@@ -365,19 +365,19 @@ C     3.4  HEART
 C           
 C           
 C      WALL OF HEART                               
-84    15 -1.05     (200 ((-201 203 -202):(205 -204))):
-                      (-200 ((-201 211 -210):(201 207 -206):(-201 -208 209)))
-                  VOL=303
+C 84    15 -1.05     (200 ((-201 203 -202):(205 -204))):
+C                      (-200 ((-201 211 -210):(201 207 -206):(-201 -208 209)))
+C                  VOL=303
 C           
 C      CONTENTS OF HEART 
-85    15 -1.05        (200 ((-201 -203 204):(-205))):
-                      (-200 ((-201 -211 208):(201 -207):(-201 -209)))    
-                   VOL=437   
+C 85    15 -1.05        (200 ((-201 -203 204):(-205))):
+C                      (-200 ((-201 -211 208):(201 -207):(-201 -209)))    
+C                   VOL=437   
 C           
 C      OUTLINE OF HEART
-C 86   1 -1.04        (200 ((-201  -202):(-204))):
-C                     (-200 ((-201 -210):(201 -206):(-201 -208)))                                       
-C                  VOL=740
+86   15 -1.04        (200 ((-201  -202):(-204))):
+                     (-200 ((-201 -210):(201 -206):(-201 -208)))                                       
+                  VOL=740
 C           
 C     4.0  MIDDLE CHEST ORGANS
 C                                                 
@@ -729,7 +729,7 @@ C      REMOVE       LUNGS (LEFT / RIGHT)  /* VOL=2200 */
 C      REMOVE        THYMUS  /* VOL=27.3 */
                         195      
 C      REMOVE        HEART  /* VOL=565 */ 
-                        #84 #85  
+                        #86  
 C      REMOVE        ADRENALS (LEFT / RIGHT)  /* VOL=10.1 */
                         (212:-214) (213:-214)    
 C      REMOVE        KIDNEYS (LEFT / RIGHT)  /*VOL=238.4 */
@@ -1581,29 +1581,9 @@ M2       1000  -0.07337
         30000  -0.00005                   
         37000  -0.00002                   
         38000  -0.00003                   
-        82000  -0.00001    
-
-$       SPINAL CORD (RHO = 1.4 G/ML)
-M3       1000  -0.07337                   
-         6000  -0.25475                   
-         7000  -0.03057                   
-         8000  -0.47893                   
-         9000  -0.00025                   
-        11000  -0.00326                   
-        12000  -0.00112                   
-        14000  -0.00002                   
-        15000  -0.05095                   
-        16000  -0.00173                   
-        17000  -0.00143                   
-        19000  -0.00153                   
-        20000  -0.10190                   
-        26000  -0.00008                   
-        30000  -0.00005                   
-        37000  -0.00002                   
-        38000  -0.00003                   
-        82000  -0.00001   
+        82000  -0.00001      
         5000    -1.2e-5
-MT3 lwtr.20t
+MT2 lwtr.20t
 
 $      AIR (RHO = 0.001205)               
 M4       6000  -0.000124                  
@@ -1695,7 +1675,8 @@ M11     1000    -0.1
         15000   -0.001
         16000   -0.002
         17000   -0.003
-        19000   -0.001  
+        19000   -0.001
+        5000    -1.2e-5 
 
 $ SOFT TISSUE  (RHO=1.03)
 M12     1000    -0.105        
@@ -1913,13 +1894,128 @@ M2010   1001 -0.081
         6012 -0.469
         5010 -0.450
 
+[t-track]
+   mesh = reg
+reg = 63 64 80 81 86 190 191 1001 1002 1003 
+axis =   reg             # axis of output
+     file = photon.out       # file name of output for the above axis
+     part = photon
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+             0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+multiplier = all $ The following is subsection of multiplier.
+      mat        mset1
+      2         (3.47572E-11    2 -5 -6)
+      11        (4.25142E-11   11 -5 -6)
+      14        (4.26573E-11   14 -5 -6)
+      15        (4.31003E-11   15 -5 -6)
+      25        (4.81833E-11   25 -5 -6)
+      1001      (4.14440E-11 1001 -5 -6)
+      1002      (4.81833E-11 1002 -5 -6)
+    y-txt = Dose [Gy/source]
+   epsout = 1
+   # angel = ymin(1.0e-17) ymax(1.0e-14)
+anatally start
+anatally end
+
+[t-track]
+   mesh = reg
+reg = 63 64 80 81 86 190 191 1001 1002 1003 
+axis =   reg             # axis of output
+     file = neutron.out       # file name of output for the above axis
+     part = neutron
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+             0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+multiplier = all $ The following is subsection of multiplier.
+      mat        mset1
+      2         (3.47572E-11    2 1 -4)
+      11        (4.25142E-11   11 1 -4)
+      14        (4.26573E-11   14 1 -4)
+      15        (4.31003E-11   15 1 -4)
+      25        (4.81833E-11   25 1 -4)
+      1001      (4.14440E-11 1001 1 -4)
+      1002      (4.81833E-11 1002 1 -4)
+    y-txt = Dose [Gy/source]
+   epsout = 1
+   # angel = ymin(1.0e-17) ymax(1.0e-14)
+
+[t-track]
+   mesh = reg
+reg = 63 64 80 81 86 190 191 1001 1002 1003 
+axis =   reg             # axis of output
+     file = hydro.out       # file name of output for the above axis
+     part = neutron
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+             0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+multiplier = all $ The following is subsection of multiplier.
+      mat        mset1
+      2         (1.93656E-11    2 1 -4)
+      11        (2.63944E-11   11 1 -4)
+      14        (2.71862E-11   14 1 -4)
+      15        (2.74502E-11   15 1 -4)
+      25        (3.06175E-11   25 1 -4)
+      1001      (2.61833E-11 1001 1 -4)
+      1002      (3.06175E-11 1002 1 -4)
+    y-txt = Dose [Gy/source]
+   epsout = 1
+   # angel = ymin(1.0e-17) ymax(1.0e-14)
+
+[t-track]
+   mesh = reg
+reg = 63 64 80 81 86 190 191 1001 1002 1003 
+axis =   reg             # axis of output
+     file = nitro.out       # file name of output for the above axis
+     part = neutron
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+             0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+multiplier = all $ The following is subsection of multiplier.
+      mat        mset1
+      2         (5.80656E-13    2 1 -4)
+      11        (7.97761E-13   11 1 -4)
+      14        (5.88824E-13   14 1 -4)
+      15        (5.50835E-13   15 1 -4)
+    y-txt = Dose [Gy/source]
+   epsout = 1
+   # angel = ymin(1.0e-17) ymax(1.0e-14)
+
+[t-track]
+   mesh = reg
+reg = 63 64 80 81 86 190 191 1001 1002 1003 
+axis =   reg             # axis of output
+     file = boron.out       # file name of output for the above axis
+     part = neutron
+   e-type =    1            # e-mesh is given by the below data
+       ne =    1            # number of e-mesh points
+             0.0  1000.0
+     unit =    1            # unit is [1/cm^2/source]
+multiplier = all $ The following is subsection of multiplier.
+     part  = neutron
+      mat        mset1
+      2         (2.95E-16    2 1 -4)
+      11        (2.95E-16   11 1 -4)
+      14        (2.95E-16   14 1 -4)
+      15        (2.95E-16   15 1 -4)
+      25        (2.95E-16   25 1 -4)
+      1001      (8.86E-16 1001 1 -4)
+      1002      (2.95E-16 1002 1 -4)
+    y-txt = Dose [Gy/source]
+   # angel = ymin(1.0e-17) ymax(1.0e-14)
+   epsout = 1
+
 [t-deposit]
-title = Dosis pada tiap organ
-mesh = reg
-reg = 63 80 81 84 85 190 191 1001 1002 1003 
-axis =   reg            # axis of output
-file = dose.out       # file name of output for the above axis
-part = all neutron photon proton (alpha 7Li)
-unit =    0            # unit is [Gy/source]
-output = dose
-epsout = 1
+   mesh = reg
+reg = 63 64 80 81 86 190 191 1001 1002 1003 
+axis =   reg             # axis of output
+     file = dose.out       # file name of output for the above axis
+     part = all (neutron photon) neutron photon proton (alpha 7Li)
+     unit =    0            # unit is [Gy/source]
+   output = dose
+   epsout = 1
+   # angel = ymin(1.0e-17) ymax(1.0e-14)
