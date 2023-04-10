@@ -267,7 +267,7 @@ C                 VOL=205.774
 C           
 C        2.1.4  ENTIRE SPINE (CRISTY & EKERMAN)
 C           
-63    2 -1.4        -70 -73 71  
+63    2 -1.4        -70 -74 71  
                       VOL=920
 C     2.2  RIBS
 C           
@@ -1904,7 +1904,7 @@ axis =   reg             # axis of output
        ne =    1            # number of e-mesh points
              0.0  1000.0
      unit =    1            # unit is [1/cm^2/source]
-multiplier = all $ The following is subsection of multiplier.
+multiplier = 7 $ The following is subsection of multiplier.
       mat        mset1
       2         (3.47572E-11    2 -5 -6)
       11        (4.25142E-11   11 -5 -6)
@@ -1929,7 +1929,7 @@ axis =   reg             # axis of output
        ne =    1            # number of e-mesh points
              0.0  1000.0
      unit =    1            # unit is [1/cm^2/source]
-multiplier = all $ The following is subsection of multiplier.
+multiplier = 7 $ The following is subsection of multiplier.
       mat        mset1
       2         (3.47572E-11    2 1 -4)
       11        (4.25142E-11   11 1 -4)
@@ -1952,7 +1952,7 @@ axis =   reg             # axis of output
        ne =    1            # number of e-mesh points
              0.0  1000.0
      unit =    1            # unit is [1/cm^2/source]
-multiplier = all $ The following is subsection of multiplier.
+multiplier = 7 $ The following is subsection of multiplier.
       mat        mset1
       2         (1.93656E-11    2 1 -4)
       11        (2.63944E-11   11 1 -4)
@@ -1975,7 +1975,7 @@ axis =   reg             # axis of output
        ne =    1            # number of e-mesh points
              0.0  1000.0
      unit =    1            # unit is [1/cm^2/source]
-multiplier = all $ The following is subsection of multiplier.
+multiplier = 7 $ The following is subsection of multiplier.
       mat        mset1
       2         (5.80656E-13    2 1 -4)
       11        (7.97761E-13   11 1 -4)
