@@ -9,7 +9,7 @@ C --------------------------------------------------------------
 
 [ Parameters ]
 icntl = 0 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
-maxcas = 10000000 # (D=10) number of particles per one batch
+maxcas = 1000000 # (D=10) number of particles per one batch
 maxbch = 100 # (D=10) number of batches
 e-mode = 0
 
@@ -1975,7 +1975,7 @@ axis =   reg             # axis of output
        ne =    1            # number of e-mesh points
              0.0  1000.0
      unit =    1            # unit is [1/cm^2/source]
-multiplier = 7 $ The following is subsection of multiplier.
+multiplier = 4 $ The following is subsection of multiplier.
       mat        mset1
       2         (5.80656E-13    2 1 -4)
       11        (7.97761E-13   11 1 -4)
@@ -1995,7 +1995,7 @@ axis =   reg             # axis of output
        ne =    1            # number of e-mesh points
              0.0  1000.0
      unit =    1            # unit is [1/cm^2/source]
-multiplier = all $ The following is subsection of multiplier.
+multiplier = 7 $ The following is subsection of multiplier.
      part  = neutron
       mat        mset1
       2         (2.95E-16    2 1 -4)

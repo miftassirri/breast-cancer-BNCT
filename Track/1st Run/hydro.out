@@ -1,0 +1,88 @@
+[ T-Track ]
+    title = [t-track] in region mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 63 64 80 81 86 190 191 222 { 1001 - 1003 }
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    1       63   9.2000E+02 # 63
+    2       64   6.9400E+02 # 64
+    3       80   1.5600E+03 # 80
+    4       81   1.8100E+03 # 81
+    5       86   7.4000E+02 # 86
+    6      190   2.3654E+02 # 190
+    7      191   2.3654E+02 # 191
+    8      222   1.4100E+03 # 222
+    9     1001   8.1810E+00 # 1001
+   10     1002   5.9560E+00 # 1002
+   11     1003   8.3130E+00 # 1003
+   e-type =    1            # e-mesh is given by the below data
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+            0.00000E+00  1.00000E+03
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =     reg            # axis of output
+     file = hydro.out       # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+  multiplier =   7          # number of material group
+     part =  all      
+# kf/name :  0        
+     emax =   1.00000E+10
+      mat                   mset1  
+        2    ( 1.93656E-11 2 1 -4 )
+       11   ( 2.63944E-11 11 1 -4 )
+       14   ( 2.71862E-11 14 1 -4 )
+       15   ( 2.74502E-11 15 1 -4 )
+       25   ( 3.06175E-11 25 1 -4 )
+     1001 ( 2.61833E-11 1001 1 -4 )
+     1002 ( 3.06175E-11 1002 1 -4 )
+    y-txt = Dose [Gy/source]
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :         148 (  0)           0 (  0)         148 (  0)
+
+#------------------------------------------------------------------------------
+#newpage:
+#   no. =  1
+#  ie =  1
+#   e = (   0.0000E+00  -   1.0000E+03  )
+#   mset =  1
+
+x: Serial Num. of Region
+y: Dose [Gy/source]
+p: xlin ylog afac(0.8) form(0.9)
+h:   x      n     n          y(neutron ),l3   n   
+#  num    reg     volume     neutron     r.err 
+    1      63   9.2000E+02   7.0122E-05  0.5072
+    2      64   6.9400E+02   1.8703E-04  0.2070
+    3      80   1.5600E+03   4.8882E-04  0.2110
+    4      81   1.8100E+03   1.9148E-04  0.4220
+    5      86   7.4000E+02   4.6078E-04  0.4340
+    6     190   2.3654E+02   2.1780E-03  0.2522
+    7     191   2.3654E+02   2.3212E-04  0.9036
+    8     222   1.4100E+03   2.5161E-04  0.2864
+    9    1001   8.1810E+00   9.6409E-04  0.7063
+   10    1002   5.9560E+00   7.2467E-04  0.7026
+   11    1003   8.3130E+00   5.5897E-04  0.5968
+
+#   sum over    7.6295E+03   3.3896E-04
+
+'no. =  1,  ie =  1,  mset =  1'
+msuc: {\huge [t-track] in region mesh}
+msdr: {\it plotted by \ANGEL \version}
+msdl: {\it calculated by \PHITS  3.30}
+wt: s(0.7)
+\vspace{-3}
+  emin  &=&   0.0000E+00 [MeV]
+  emax  &=&   1.0000E+03 [MeV]
+  mset  &=&   1
+e:
+ 
+# Information for Restart Calculation
+# This calculation was newly started
+# istdev =  2 # 1:Batch variance, 2:History variance
+# resc2  = 1.60230732271511456E-08 # Total source weight or Total source weight / maxcas
+# resc3  = 1.00000000000000000E+08 # Total history number or Total batch number
+# maxcas =     1000000 # History / Batch, only used for istdev=1
+# bitrseed = 1101111110010001010110101011011001110100110101001100011110000101 # bit data of rseed
