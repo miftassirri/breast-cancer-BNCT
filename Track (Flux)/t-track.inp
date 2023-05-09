@@ -9,12 +9,12 @@ C --------------------------------------------------------------
 
 [ Parameters ]
 icntl = 0 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
-maxcas = 1000000 # (D=10) number of particles per one batch
+maxcas = 1000 # (D=10) number of particles per one batch
 maxbch = 100 # (D=10) number of batches
 e-mode = 2
 
 [ Source ]
-  totfact =     6.241e15        # (D=1.0) global factor
+  totfact =     6.241e15        # proton flux in 1 mA / second
    s-type =     1           # cylindrical source
      proj =   proton        # kind of incident particle         
        e0 =    30.00        # energy of beam [MeV/u]
@@ -22,7 +22,7 @@ e-mode = 2
        x0 =   0.00        # (D=0.0) center position of x-axis [cm]
        y0 =   0.00        # (D=0.0) center position of y-axis [cm]
        z0 =   0.00        # minimum position of z-axis [cm]
-       z1 =   50.00        # maximum position of z-axis [cm]
+       z1 =   0.00        # maximum position of z-axis [cm]
       dir =   1.0           # z-direction of beam [isotropic]
       trcl = 2003
 
@@ -1555,7 +1555,7 @@ C
 
 TR2001 0 0 138.3 0 0 -1 0 1 0 1 0 0 1
 *TR2002 40 -10 52 0 270 90 0 0 0 0 0 0 2
-*TR2003 165 -10 52 0 270 0 0 0 0 0 0 0 2
+*TR2003 160 -10 52 0 270 0 0 0 0 0 0 0 2
 
 [ Material ]
 M1       6000  -0.000124

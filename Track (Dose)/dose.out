@@ -1,0 +1,64 @@
+[ T-Deposit ]
+    title = [t-deposit] in region mesh
+     mesh =  reg            # mesh type is region-wise
+      reg = 63 64 80 81 86 190 191 222 { 1001 - 1003 }
+   volume                   # combined, lattice or level structure 
+   non     reg      vol     # reg definition
+    1       63   9.2000E+02 # 63
+    2       64   6.9400E+02 # 64
+    3       80   1.5600E+03 # 80
+    4       81   1.8100E+03 # 81
+    5       86   7.4000E+02 # 86
+    6      190   2.3654E+02 # 190
+    7      191   2.3654E+02 # 191
+    8      222   1.4100E+03 # 222
+    9     1001   8.1810E+00 # 1001
+   10     1002   5.9560E+00 # 1002
+   11     1003   8.3130E+00 # 1003
+     unit =    0            # unit is [Gy/source]
+   letmat =    0            # (D=0) mat ID for LET, 0:real mat, <0: electron for H2O
+  dedxfnc =    0            # (D=0) user defined multiplier, 0(no), 1, 2
+ material =  all            # (D=all) number of specific material
+   output =  dose           # total deposit energy
+  deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
+     axis =   reg           # axis of output
+     file = dose.out        # file name of output for the above axis
+     part =  all       ( neutron    photon   )   neutron    photon     proton    ( alpha      7Li      ) 
+# kf/name :  0         ( 2112       22       )   2112       22         2212      ( 2000004    3000007  ) 
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          15 (  0)           0 (  0)          15 (  0)
+
+#------------------------------------------------------------------------------
+#newpage:
+#   no. =  1
+
+x: Serial Num. of Region
+y: Dose [Gy/source]      
+p: xlin ylog afac(0.8) form(0.9)
+h:   x      n     n          y(all     ),l3   n   y(p2-group),d4r  n   y(neutron ),u5b  n   y(photon  ),m6g  n   y(proton  ),q7rr n   y(p6-group),v8bb n   
+#  num    reg     volume     all         r.err    p2-group    r.err    neutron     r.err    photon      r.err    proton      r.err    p6-group    r.err 
+    1      63   9.2000E+02   6.3604E-05  0.1513   4.2484E-05  0.0735   0.0000E+00  0.0000   4.2484E-05  0.0735   1.4459E-05  0.5092   3.9549E-06  1.0000
+    2      64   6.9400E+02   2.5463E-04  0.1023   1.4045E-04  0.0364   0.0000E+00  0.0000   1.4045E-04  0.0364   6.2104E-05  0.2668   3.0608E-05  0.4715
+    3      80   1.5600E+03   4.0125E-04  0.0874   2.5441E-04  0.0343   0.0000E+00  0.0000   2.5441E-04  0.0343   1.1193E-04  0.2545   1.6076E-05  0.7533
+    4      81   1.8100E+03   1.5784E-04  0.1531   9.7259E-05  0.0566   0.0000E+00  0.0000   9.7259E-05  0.0566   4.5099E-05  0.4665   4.4614E-06  1.0000
+    5      86   7.4000E+02   5.1404E-04  0.1049   2.7503E-04  0.0551   0.0000E+00  0.0000   2.7503E-04  0.0551   2.0835E-04  0.2335   9.6242E-06  0.5898
+    6     190   2.3654E+02   1.7858E-03  0.0991   8.0055E-04  0.0445   0.0000E+00  0.0000   8.0055E-04  0.0445   8.4218E-04  0.1948   4.6741E-05  0.8082
+    7     191   2.3654E+02   3.2645E-04  0.2546   1.7014E-04  0.1114   0.0000E+00  0.0000   1.7014E-04  0.1114   5.6832E-05  0.5493   6.9320E-05  1.0000
+    8     222   1.4100E+03   1.8037E-04  0.1070   8.8120E-05  0.0307   0.0000E+00  0.0000   8.8120E-05  0.0307   8.2159E-05  0.2280   1.5083E-06  1.0000
+    9    1001   8.1810E+00   1.6039E-03  0.2989   8.7801E-04  0.1286   0.0000E+00  0.0000   8.7801E-04  0.1286   9.2825E-05  0.4867   3.0048E-04  1.0000
+   10    1002   5.9560E+00   2.4544E-03  0.4234   9.0605E-04  0.1152   0.0000E+00  0.0000   9.0605E-04  0.1152   1.5292E-03  0.6759   0.0000E+00  0.0000
+   11    1003   8.3130E+00   3.7199E-03  0.6812   8.7575E-04  0.0967   0.0000E+00  0.0000   8.7575E-04  0.0967   2.8426E-03  0.8909   0.0000E+00  0.0000
+
+'no. =  1'
+msuc: {\huge [t-deposit] in region mesh}
+msdr: {\it plotted by \ANGEL \version}
+msdl: {\it calculated by \PHITS  3.30}
+ 
+# Information for Restart Calculation
+# This calculation was newly started
+# istdev =  2 # 1:Batch variance, 2:History variance
+# resc2  = 1.60230732467008367E-07 # Total source weight or Total source weight / maxcas
+# resc3  = 1.00000000000000000E+09 # Total history number or Total batch number
+# maxcas =    10000000 # History / Batch, only used for istdev=1
+# bitrseed = 0001001110011001001001110000100100110111001111011100001000101100 # bit data of rseed
