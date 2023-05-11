@@ -4,10 +4,21 @@ Verifikasi BSA
 
 [Parameters]
 icntl = 0
-maxcas = 10000
+maxcas = 1000000
 maxbch = 100
 ipnint = 1 # 1: consider photo-nuclear reactions
-negs = -1 # transport only photons based on the PHITS original algorithm
+
+# Transport electrons, positrons, and photons based on the EGS5 algorithm
+negs = 2 # EGS photon and electron
+emin(12) = 0.1
+emin(13) = 0.1
+emin(14) = 0.001
+dmax(12) = 1e7
+dmax(13) = 1e7
+dmax(14) = 1e7
+# Sources
+# PHITS Manual halaman 45
+
 e-mode = 0 # non event generator mode
 
 [Source]
@@ -233,11 +244,74 @@ file = 2d_xz_BSAORNL.out
 epsout = 1
 ginfo = 1
 
-[t-deposit]
+[ T - track ]
 mesh = reg
 reg = 100001
-axis =   reg            # axis of output
-file = total_gamma_dose.out       # file name of output for the above axis
-part = photon
-unit =    0            # unit is [Gy/source]
-output = dose
+axis = reg
+file = thermal_neutron_flux.out
+part = neutron
+e-type = 2
+ne = 1
+emin = 0
+emax = 5e-7
+unit = 1
+
+[ T - track ]
+mesh = reg
+reg = 100001
+axis = reg
+file = epithermal_neutron_flux.out
+part = neutron
+e-type = 2
+ne = 1
+emin = 5e-7
+emax = 0.01
+unit = 1
+
+[ T - track ]
+mesh = reg
+reg = 100001
+axis = reg
+file = fast_neutron_flux.out
+part = neutron
+e-type = 2
+ne = 1
+emin = 0.01
+emax = 200
+unit = 1
+
+[ T - track ]
+mesh = reg
+reg = 100001
+axis = reg
+file = total_neutron_flux.out
+part = neutron
+e-type = 2
+ne = 1
+emin = 0
+emax = 200
+unit = 1
+
+[ T - cross ]
+mesh = xyz
+x-type = 2
+nx = 1
+xmin = -30
+xmax = 20
+y-type = 2
+ny = 1
+ymin = -35
+ymax =  15
+z-type = 2
+nz = 1
+zmin = 27
+zmax = 77
+axis = eng
+file = total_neutron_current.out
+part = neutron
+e-type = 2
+ne = 1
+emin = 0
+emax = 200
+output = current
+unit = 1
