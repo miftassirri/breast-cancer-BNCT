@@ -4,7 +4,7 @@
       reg = 100001
    volume                   # combined, lattice or level structure 
    non     reg      vol     # reg definition
-    1   100001   1.2500E+02 # 100001
+    1   100001   1.0000E+03 # 100001
      unit =    0            # unit is [Gy/source]
    letmat =    0            # (D=0) mat ID for LET, 0:real mat, <0: electron for H2O
   dedxfnc =    0            # (D=0) user defined multiplier, 0(no), 1, 2
@@ -27,9 +27,9 @@ y: Dose [Gy/source]
 p: xlin ylog afac(0.8) form(0.9)
 h:   x      n     n          y(photon  ),l3 n   
 #  num    reg     volume       photon    r.err 
-    1  100001   1.2500E+02   1.3059E-01  0.0512
+    1  100001   1.0000E+03   3.7412E-02  0.0477
 
-#   sum over                 1.6323E+01
+#   sum over                 3.7412E+01
 
 'no. =  1'
 msuc: {\huge [t-deposit] in region mesh}
@@ -39,7 +39,7 @@ msdl: {\it calculated by \PHITS  3.31}
 # Information for Restart Calculation
 # This calculation was newly started
 # istdev =  2 # 1:Batch variance, 2:History variance
-# resc2  = 8.01088334434022488E-09 # Total source weight or Total source weight / maxcas
+# resc2  = 8.01088326423139237E-09 # Total source weight or Total source weight / maxcas
 # resc3  = 1.00000000000000000E+08 # Total history number or Total batch number
 # maxcas =     1000000 # History / Batch, only used for istdev=1
 # bitrseed = 1101111110010001010110101011011001110100110101001100011110000101 # bit data of rseed

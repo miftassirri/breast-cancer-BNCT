@@ -94,7 +94,7 @@ C       GAMMA SHIELD
 20024   2002    -11.34  2038 -2009 -2042 2043                                                   trcl=2002
 
 C       Phantom udara (10001 = double defined, -10001 = not double defined)
-100001  1       -0.001205       -10001  VOL = 125
+100001  1       -0.001205       -10001  VOL = 1000
 [ Surface ]
 C      AIR CYLINDER SURROUNDING THE PHANTOM (SHOULD BE CHECK)* 
 400      SO 500
@@ -145,7 +145,7 @@ C       BSA
 2043 2001 px 119.3
 
 $ Simple phantom
-10001 RPP -30 20 -35 15 27 77
+10001 RPP -80 20 -60 40 2 102
 
 [ Transform ]
 TR2001 0 0 138.3 0 0 -1 0 1 0 1 0 0 1

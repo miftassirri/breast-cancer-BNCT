@@ -51,9 +51,9 @@ y: Current [1/cm^2/source]
 p: xlin ylog afac(0.8) form(0.9)
 h: n            x            y(neutron ),hh0l n 
 #  e-lower      e-upper        neutron   r.err 
-   0.0000E+00   2.0000E+02   9.0545E+06  0.0683
+   0.0000E+00   2.0000E+02   9.0390E+06  0.0679
 
-#   sum over                 9.0545E+06
+#   sum over                 9.0390E+06
 
 'no. =  1,  iz surf =  1,  ix =  1,  iy =  1'
 msuc: {\huge [t-cross] in xyz mesh}
@@ -82,9 +82,9 @@ y: Current [1/cm^2/source]
 p: xlin ylog afac(0.8) form(0.9)
 h: n            x            y(neutron ),hh0l n 
 #  e-lower      e-upper        neutron   r.err 
-   0.0000E+00   2.0000E+02   7.8136E+06  0.0709
+   0.0000E+00   2.0000E+02   7.7470E+06  0.0712
 
-#   sum over                 7.8136E+06
+#   sum over                 7.7470E+06
 
 'no. =  2,  iz surf =  2,  ix =  1,  iy =  1'
 msuc: {\huge [t-cross] in xyz mesh}
@@ -104,7 +104,7 @@ e:
 # Information for Restart Calculation
 # This calculation was newly started
 # istdev =  2 # 1:Batch variance, 2:History variance
-# resc2  = 8.01088494651687838E-09 # Total source weight or Total source weight / maxcas
+# resc2  = 8.01088326423139237E-09 # Total source weight or Total source weight / maxcas
 # resc3  = 1.00000000000000000E+08 # Total history number or Total batch number
 # maxcas =     1000000 # History / Batch, only used for istdev=1
 # bitrseed = 1101111110010001010110101011011001110100110101001100011110000101 # bit data of rseed

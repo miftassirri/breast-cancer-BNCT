@@ -83,7 +83,7 @@ C       GAMMA SHIELD
 20024   2002    -11.34  2038 -2009 -2042 2043                                                   trcl=2002
 
 C       Phantom udara (10001 = double defined, -10001 = not double defined)
-100001  1       -0.001205       -10001  VOL = 125
+100001  1       -0.001205       -10001  VOL = 1000
 [ Surface ]
 C      AIR CYLINDER SURROUNDING THE PHANTOM (SHOULD BE CHECK)* 
 400      SO 500
@@ -134,7 +134,7 @@ C       BSA
 2043 2001 px 119.3
 
 $ Simple phantom
-10001 RPP -30 20 -35 15 27 77
+10001 RPP -80 20 -60 40 2 102
 
 [ Transform ]
 TR2001 0 0 138.3 0 0 -1 0 1 0 1 0 0 1
@@ -243,14 +243,23 @@ unit =    0            # unit is [Gy/source]
 output = dose
 
 [t-deposit]
-mesh = reg
-reg = 100001
-axis =   reg            # axis of output
-file = fast_neutron_dose.out       # file name of output for the above axis
-part = neutron
-e-type = 2
-ne = 1
+mesh = r-z # mesh type is xyz scoring mesh
+r-type = 2 # y-mesh is linear given by ymin, ymax and ny
+rmin = -15.000000 # minimum value of y-mesh points
+rmax = 10.000000 # maximum value of y-mesh points
+nr = 1 # number of y-mesh points
+z-type = 2 # z-mesh is linear given by zmin, zmax and nz
+zmin = -100.00000 # minimum value of z-mesh points
+zmax = 150.00000 # maximum value of z-mesh points
+nz = 320 # number of z-mesh points
+e-type = 3
+ne = 100
 emin = 0.01
-emax = 200
-unit =    0            # unit is [Gy/source]
-output = dose
+emax = 200.0
+axis = z # axis of output
+file = fast_neutron_dose.out # file name of output for the above axis
+part = neutron
+unit = 3 # unit is [Gy/source]
+output = deposit
+y-txt = Dose (Gy/source)
+epsout = 1
