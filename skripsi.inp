@@ -1,0 +1,885 @@
+$OMP = 8
+
+[ Parameters ]
+        icntl = 0 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
+        maxcas = 100000 # (D=10) number of particles per one batch
+        maxbch = 10000 # (D=10) number of batches
+        e-mode = 0
+
+[ Source ]
+  totfact = 9.3622636e+15        # (D=1.0) global factor
+   s-type =     1           # cylindrical source
+     proj =   proton        # kind of incident particle         
+       e0 =    30.00        # energy of beam [MeV/u]
+       r0 =    1.5        # radius [cm]
+       x0 =   0.00        # (D=0.0) center position of x-axis [cm]
+       y0 =   0.00        # (D=0.0) center position of y-axis [cm]
+       z0 =   0.00        # minimum position of z-axis [cm]
+       z1 =   0.00        # maximum position of z-axis [cm]
+      dir =   1.0           # z-direction of beam [isotropic]
+      trcl = 2003
+
+[ Cell ]
+ $ FANTOM
+
+ $ CANCER
+ 1001    1001       -0.94       -1001           VOL=8.181        $GTV
+ 1002    1002       -0.94       1001 -1002      VOL=5.956        $CTV
+ 1003    1002       -0.94       1002 -1003      VOL=8.313        $PTV
+ $       
+ $ BSA
+ $       DELIMITER      
+ 20001   2004    -0.9843 (2011 -2002 2003 -2006):(-2009 -2001 2006 2014):(-2009 -2014 2016 2024) trcl=2002
+ 20002   2006    -8.45   (-2024 2022 -2014 2019 2038):(2019 -2035 2038 -2024)                    trcl=2002
+ $       REFLEKTOR 
+ 20003   2006    -8.45   -2006 2007 -2003 2014                                                   trcl=2002
+ 20004   2006    -8.45   (-2014 2035 2027 -2022 2038):(2038 -2022 2035 -2018)                    trcl=2002
+ $       2ND MODERATOR
+ 20005   2006    -8.45   (2011 -2003 2004 -2007):(-2003 2010 -2007 2013):(2027 -2007 2014 -2013) trcl=2002
+ 20006   2007    -2.7    -2013 2031 -2027                                                        trcl=2002
+ $       1ST MODERATOR
+ 20007   2007    -2.7    (2013 -2010 -2004 2025):(2013 -2010 -2005)                              trcl=2002
+ $       TN FILTER
+ 20008   2009    -2.520  -2027 -2034 2018                                                        trcl=2002
+ $       FN FILTER
+ 20009   2008    -2.653  -2032 -2027 2017                                                        trcl=2002
+ $       VOID PROTON BEAM
+ 20011   0               2004 -2012 -2026                                                        trcl=2002
+ $       BERYLLIUM TARGET
+ 20012   2001   -1.850  2005 -2004 -2025                                                        trcl=2002
+ $       GAMMA SHIELD
+ 20013   2003    -9.8    -2026 2004 2012 -2011                                                   trcl=2002
+ 20014   2003    -9.8    2030 -2018 -2038                                                        trcl=2002
+ $       APERTURE                                                 
+ 20018   2005    -8.86   2036 -2028 2037 -2038                                                   trcl=2002
+ $       PARAFFIN SHIELD
+ 20023   2010    -0.930  2038 -2009 -2019 2042                                                   trcl=2002
+ $       GAMMA SHIELD
+ 20024   2002    -11.34  2038 -2009 -2042 2043                                                   trcl=2002
+
+[ Surface ]
+ $ FANTOM
+
+ $ CANCER
+ 1001    S 10 -10.660254 52 1.25       $GTV
+ 1002    S 10 -10.660254 52 1.5        $CTV  
+ 1003    S 10 -10.660254 52 1.75       $PTV
+ $       
+ $ BSA
+ 2001 2001 px 252.1
+ 2002 2001 px 252
+ 2003 2001 px 242
+ 2004 2001 px 205
+ 2005 2001 px 204.5
+ 2006 2001 cx 57
+ 2007 2001 cx 28
+ 2008 2001 cx 67.01
+ 2009 2001 cx 87
+ 2010 2001 cx 25
+ 2011 2001 cx 15
+ 2012 2001 cx 5
+ 2013 2001 px 166
+ 2014 2001 px 153
+ 2015 2001 px 143
+ 2016 2001 px 129.3
+ 2017 2001 px 146
+ 2018 2001 px 145.791
+ 2019 2001 px 129.3
+ 2020 2001 px 138.4
+ 2021 2001 kx 133 2
+ 2022 2001 kx 125 0.6
+ 2023 2001 kx 105.9 0.9
+ 2024 2001 kx 106 0.9
+ 2025 2001 cx 9.5
+ 2026 2001 px 260
+ 2027 2001 kx 135 0.65
+ 2028 2001 px 145.29
+ 2029 2001 px 145.79
+ 2030 2001 px 145.291
+ 2031 2001 px 154
+ 2032 2001 px 153.995
+ 2033 2001 px 152
+ 2034 2001 px 145.999
+ 2035 2001 px 144
+ 2036 2001 px 138.301
+ 2037 2001 cx 5
+ 2038 2001 cx 5.5
+ 2039 2001 py 4.2
+ 2040 2001 py -4.2
+ 2041 2001 px 98.3
+ 2042 2001 px 127.3
+ 2043 2001 px 124.3
+
+[ Transform ]
+ $  $   AXIS TRANSFORMATION SECTION *
+ $      ADRENALS (LEFT / RIGHT)
+ TR1    3.5 5 38 0.6157 0.788 0 -0.788 0.6157 0 0 0 1
+ TR2    -3.5 5 38 0.6157 -0.788 0 0.788 0.6157 0 0 0 1
+ $      GALL BLADDER
+ TR3    -4.5 -3.2 30
+         0.9615 0 -0.2748 -0.0574 0.9779 -0.2008 0.2687 0.2090 0.9403
+ $      HEART
+ TR4    1 -1.8 50
+        0.6751 -0.4727 -0.5664 -0.4640 0.3249 -0.8241 0.5736 0.8191 0     
+ $      ESOPHAGUS
+ TR6   0 2.575 42.30
+       0.736084 -0.604969 -0.303634 0.634945 0.772557 0 0.234575 
+       -0.192791 0.952789
+ $ MAIN BRONCHI        
+ $           
+ *TR7  1.967 -1.09 59.77 33 90 57 90 0 90 123 90 33
+ *TR8 -1.967 -1.09 59.77 33 90 123 90 0 90 57 90 33
+
+ $ Transformasi teknik iradiasi depan
+ $ TR2001 0 0 143.3 0 0 -1 0 1 0 1 0 0 1
+ $ *TR2002 10 -33 52 0 180 90 0 0 0 0 0 0 2
+ $ *TR2003 10 -153 52 0 180 90 0 0 0 0 0 0 2
+ $ *TR2004 10 0 52 0 180 90 0 0 0 0 0 0 2
+
+ $ Transformasi teknik iradiasi samping
+ $ TR2001 0 0 143.3 0 0 -1 0 1 0 1 0 0 1
+ $ *TR2002 40 -10 52 0 270 0 0 0 0 0 0 0 2
+ $ *TR2003 153 -10 52 0 270 0 0 0 0 0 0 0 2
+ $ *TR2004 0 -10 52 0 270 0 0 0 0 0 0 0 2
+
+
+[ Material ]
+        M1       6000  -0.000124
+                7000  -0.755268
+                8000  -0.231781
+                18000  -0.012827
+        $  ADULT TISSUES; TABLE A-1, P42 OF VO                                     
+        $       SKELETON (RHO = 1.4 G/ML)    
+        M2       1000  -0.07337                   
+                6000  -0.25475                   
+                7000  -0.03057                   
+                8000  -0.47893                   
+                9000  -0.00025                   
+                11000  -0.00326                   
+                12000  -0.00112                   
+                14000  -0.00002                   
+                15000  -0.05095                   
+                16000  -0.00173                   
+                17000  -0.00143                   
+                19000  -0.00153                   
+                20000  -0.10190                   
+                26000  -0.00008                   
+                30000  -0.00005                   
+                37000  -0.00002                   
+                38000  -0.00003                   
+                82000  -0.00001      
+        
+        $       All Ribs (RHO = 1.4 G/ML)    
+        M3       1000  -0.07337                   
+                6000  -0.25475                   
+                7000  -0.03057                   
+                8000  -0.47893                   
+                9000  -0.00025                   
+                11000  -0.00326                   
+                12000  -0.00112                   
+                14000  -0.00002                   
+                15000  -0.05095                   
+                16000  -0.00173                   
+                17000  -0.00143                   
+                19000  -0.00153                   
+                20000  -0.10190                   
+                26000  -0.00008                   
+                30000  -0.00005                   
+                37000  -0.00002                   
+                38000  -0.00003                   
+                82000  -0.00001      
+                5010    -1.5e-6 $3.0e-6 4.5e-6 6e-6 7.5e-6
+        MT3 lwtr.20t
+
+        $      AIR (RHO = 0.001205)               
+        M4       6000  -0.000124                  
+                7000  -0.755267                  
+                8000  -0.231781                  
+                18000  -0.012827                  
+                                                
+        $     UPPER FACE REGION(RHO=1.22)         
+        M5       1000  -0.088955                  
+                6000  -0.240690                  
+                7000  -0.027735                  
+                8000  -0.557090                  
+                9000  -0.000125                  
+                11000  -0.002190                  
+                12000  -0.000625                  
+                14000  -0.000160                  
+                15000  -0.026145                  
+                16000  -0.001885                  
+                17000  -0.001380                  
+                19000  -0.001805                  
+                20000  -0.051070                  
+                26000  -0.000065                  
+                30000  -0.000040                  
+                37000  -0.000015                  
+                38000  -0.000015                  
+                40000  -0.000010                  
+                82000  -0.000005                  
+
+        $ BRAIN (RHO=1.04)
+        M6      1000    -0.107                           
+                6000    -0.145
+                7000    -0.022
+                8000    -0.712
+                11000   -0.002
+                15000   -0.004
+                16000   -0.002
+                17000   -0.003
+                19000   -0.003
+
+        $ EYES (RHO=1.07)
+        M7      1000    -0.096
+                6000    -0.195
+                7000    -0.057
+                8000    -0.646
+                11000   -0.001
+                15000   -0.001
+                16000   -0.003
+                17000   -0.001
+
+        $ LARNYX (RHO=1.10)
+        M8      1000    -0.096        
+                6000    -0.099
+                7000    -0.022
+                8000    -0.744
+                11000   -0.005
+                15000   -0.022
+                16000   -0.009
+                17000   -0.003
+
+        $ TRACHEA(RHO=1.03) 
+        M9      1000    -0.105        
+                6000    -0.256
+                7000    -0.027
+                8000    -0.602
+                11000   -0.001
+                15000   -0.002
+                16000   -0.003
+                17000   -0.002
+                19000   -0.002
+
+        $ THYROID(RHO=1.05)
+        M10      1000     -0.104        
+                6000     -0.119
+                7000     -0.024
+                8000     -0.745
+                11000     -0.002
+                15000     -0.001
+                16000     -0.001
+                17000     -0.002
+                19000     -0.001
+                53000     -0.001
+
+        $ SKIN (RHO=1.09)
+        M11     1000    -0.1          
+                6000    -0.204
+                7000    -0.042
+                8000    -0.645
+                11000   -0.002
+                15000   -0.001
+                16000   -0.002
+                17000   -0.003
+                19000   -0.001
+         
+                $Breast Skin
+        M111     1000    -0.1          
+                6000    -0.204
+                7000    -0.042
+                8000    -0.645
+                11000   -0.002
+                15000   -0.001
+                16000   -0.002
+                17000   -0.003
+                19000   -0.001
+                5010    -1.5e-6 $3.0e-6 4.5e-6 6e-6 7.5e-6
+        MT111 lwtr.20t
+                
+        $ SOFT TISSUE  (RHO=1.03)
+        M12     1000    -0.105        
+                6000    -0.256    
+                7000    -0.027    
+                8000    -0.602    
+                11000   -0.001    
+                15000   -0.002    
+                16000   -0.003    
+                17000   -0.002    
+                19000   -0.002    
+
+        $ SKELETAL MUSCLE   (RHO=1.05)
+        M13     1000    -0.102        
+                6000    -0.143
+                7000    -0.034
+                8000    -0.71 
+                11000   -0.001
+                15000   -0.002
+                16000   -0.003
+                17000   -0.001
+                19000   -0.004
+
+        $ LUNG (RHO=0.3520015)
+        M14     1000    -0.103
+                6000    -0.105
+                7000    -0.031
+                8000    -0.749
+                11000   -0.002
+                15000   -0.002
+                16000   -0.003
+                17000   -0.003
+                19000   -0.002
+                5010    -1.5e-6 $3.0e-6 4.5e-6 6e-6 7.5e-6
+        MT14 lwtr.20t
+
+        $ HEART (RHO=1.05)
+        M15     1000    -0.104        
+                6000    -0.139
+                7000    -0.029
+                8000    -0.718
+                11000   -0.001
+                15000   -0.002
+                16000   -0.002
+                17000   -0.002
+                19000   -0.003
+                5010    -1.5e-6 $3.0e-6 4.5e-6 6e-6 7.5e-6
+        MT15 lwtr.20t
+
+        $ KIDNEY (RHO=1.05)
+        M16     1000         -0.103        
+                6000         -0.132
+                7000         -0.03 
+                8000         -0.724
+                11000        -0.002
+                15000        -0.002
+                16000        -0.002
+                17000        -0.002
+                19000        -0.002 
+                20000        -0.001
+
+        $ LIVER (RHO=1.05)
+        M17      1000        -0.103        
+                6000        -0.186
+                7000        -0.028
+                8000        -0.671
+                11000       -0.002
+                15000       -0.002
+                16000       -0.003
+                17000       -0.002
+                19000       -0.003 
+
+        $ PANCREAS (RHO=1.04)
+        M18      1000       -0.106         
+                6000       -0.169
+                7000       -0.022
+                8000       -0.694
+                11000      -0.002
+                15000      -0.002
+                16000      -0.001
+                17000      -0.002
+                19000      -0.002
+
+        $ SPLEEN (RHO=1.06)
+        M19      1000       -0.103         
+                6000       -0.113
+                7000       -0.032
+                8000       -0.741
+                11000      -0.001
+                15000      -0.003
+                16000      -0.002
+                17000      -0.002
+                19000      -0.003
+
+        $ GI TRACK (RHO=1.03)
+        M20      1000       -0.106
+                6000       -0.115
+                7000       -0.022
+                8000       -0.751
+                11000      -0.001
+                15000      -0.001
+                16000      -0.001
+                17000      -0.002
+                19000      -0.001
+
+        $ UB (RHO=1.04)
+        M21       1000       -0.105         
+                6000       -0.096
+                7000       -0.026
+                8000       -0.761
+                11000      -0.002
+                15000      -0.002
+                16000      -0.002
+                17000      -0.003
+                19000      -0.003
+
+        $ TESTES (RHO=1.04)
+        M22       1000       -0.106         
+                6000       -0.099
+                7000       -0.02 
+                8000       -0.766
+                11000      -0.002
+                15000      -0.001
+                16000      -0.002
+                17000      -0.002
+                19000      -0.002  
+
+        $ OVARY(RHO=1.05)
+        M23       1000       -0.105          
+                6000       -0.093
+                7000       -0.024
+                8000       -0.768
+                11000      -0.002
+                15000      -0.002
+                16000      -0.002
+                17000      -0.002
+                19000      -0.002   
+
+        $ UTERUS (RHO=1.02)
+        M24       1000      -0.106          
+                6000      -0.315
+                7000      -0.024
+                8000      -0.547
+                11000     -0.001
+                15000     -0.002
+                16000     -0.002
+                17000     -0.001
+                19000     -0.002
+
+        $ LEFT BREAST (RHO=0.94)
+        M25       1000      -0.116
+                6000      -0.519  
+                8000      -0.365 
+
+        $ BREAST (RHO=0.94)
+        M26       1000      -0.116
+                6000      -0.519  
+                8000      -0.365 
+        
+        $ GTV
+        M1001     1000      -0.116
+                6000      -0.519
+                8000      -0.365
+                5010      -15e-6 $30e-6 45e-6 60e-6 75e-6
+        MT1001 lwtr.20t
+
+        $ CTV/PTV
+        M1002     1000      -0.116
+                6000      -0.519
+                8000      -0.365
+                5010      -1.5e-6 $3.0e-6 4.5e-6 6e-6 7.5e-6
+        MT1002 lwtr.20t           
+
+        M1111 1000 1.0
+        M2222 7000 1.0
+        M3333 5010 1.0
+
+        $ Be     24
+        M2001   04009 -1
+
+        $ Pb -11.34     25
+        M2002   82206 -0.244
+                82207 -0.224
+                82208 -0.532
+
+        $ Bi -9.78      26
+        M2003   83209 -1
+
+        $ Lithiated Polyethilene        27
+        M2004   1001 -0.5262
+                6000 -0.2969
+                8016 -0.1007
+                3006 -0.0724
+                3007 -0.0038
+
+        $ Nikel 95% -8.86       28
+        M2005   28000 -0.95
+                25055 -0.015
+                26000 -0.01
+                14000 -0.005
+                29000 -0.01
+                6012 -0.005
+                22000 -0.005
+
+        $ PbF2          29
+        M2006   82000 -0.333
+                9019 -0.667
+
+        $ Al            30
+        M2007   13027 -1
+
+        $ LiF 2.653     31
+        M2008   3007 -0.26785
+                9019 -0.732415
+
+        $ Boron Carbide 2.520   32
+        M2009   5010 -0.782610
+                6012 -0.217390
+
+        $ Boroted Paraffin Wax  35
+        M2010   1001 -0.081
+                6012 -0.469
+                5010 -0.450
+
+ $ Visualisasi geometri
+[ T - Gshow ] $ Menampilkan geometri BSA tanpa fantom (teknik iradiasi depan)
+        mesh = xyz
+        x-type = 2
+        nx = 200
+        xmin = -90.
+        xmax = 110.
+        z-type = 2
+        nz = 10
+        zmin = 45
+        zmax = 55
+        y-type = 2
+        ny = 190
+        ymin = -170.
+        ymax = 20.
+        axis = xy
+        output = 2
+        file = XY.out
+        epsout = 1
+
+[ T - Gshow ] $ Menampilkan geometri teknik iradiasi depan
+        mesh = xyz
+        x-type = 2
+        nx = 200
+        xmin = 0.
+        xmax = 20.
+        z-type = 2
+        nz = 10
+        zmin = 45
+        zmax = 55
+        y-type = 2
+        ny = 100
+        ymin = -41.
+        ymax = -5.
+        axis = xy
+        output = 2
+        file = XY.out
+        epsout = 1
+
+[ T - Gshow ] $ Menampilkan geometri teknik iradiasi samping
+        mesh = xyz
+        x-type = 2
+        nx = 200
+        xmin = -16.
+        xmax = 16.
+        z-type = 2
+        nz = 10
+        zmin = 45
+        zmax = 55
+        y-type = 2
+        ny = 260
+        ymin = -14.
+        ymax = -8.
+        axis = xy
+        output = 2
+        file = XY.out
+        epsout = 1
+
+ $ Pengukuran fluks dan kualitas neutron keluaran BSA (teknik iradiasi depan)
+[ T-Track ]
+        trcl = 2004
+        file = thermal_neutron_flux.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41      # minimum value of z-mesh points
+        zmax = 15      # maximum value of z-mesh points
+        nz = 56            # number of z-mesh points
+        axis = z            # axis of output
+        e-type = 2
+        ne = 1
+        emin = 0
+        emax = 25E-09
+        unit = 1
+        part = neutron
+
+[ T-Track ]
+        trcl = 2004
+        file = epithermal_neutron_flux.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41      # minimum value of z-mesh points
+        zmax = 15      # maximum value of z-mesh points
+        nz = 56            # number of z-mesh points
+        axis = z            # axis of output
+        e-type = 2
+        ne = 1
+        emin = 1E-6
+        emax = 4E-2
+        unit = 1
+        part = neutron
+
+[ T-Track ]
+        trcl = 2004
+        file = fast_neutron_flux.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41      # minimum value of z-mesh points
+        zmax = 15     # maximum value of z-mesh points
+        nz = 56            # number of z-mesh points
+        axis = z            # axis of output
+        e-type = 2
+        ne = 1
+        emin = 1E-2
+        emax = 1000
+        unit = 1
+        part = neutron
+
+[ T-Track ]
+        trcl = 2004
+        file = total_neutron_flux.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41      # minimum value of z-mesh points
+        zmax = 15     # maximum value of z-mesh points
+        nz = 56            # number of z-mesh points
+        axis = z            # axis of output
+        e-type = 2
+        ne = 1
+        emin = 0
+        emax = 1000
+        unit = 1
+        part = neutron
+
+[ T-Deposit ]
+        trcl = 2004
+        file = gamma_dose.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41      # minimum value of z-mesh points
+        zmax = 15     # maximum value of z-mesh points
+        nz = 56         # number of z-mesh points
+        axis = z            # axis of output
+        output = dose
+        unit = 0
+        part = photon
+
+[ T-Track ]
+        trcl = 2004
+        file = fast_neutron_dose.out
+        mesh = r-z
+        r-type = 2              # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0                # minimum value of r-mesh points
+        rmax = 5.5              # maximum value of r-mesh points
+        nr = 1                  # number of r-mesh points
+        z-type = 2              # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41              # minimum value of z-mesh points
+        zmax = 15               # maximum value of z-mesh points
+        nz = 56                # number of z-mesh points
+        axis = z                # axis of output
+        e-type = 2
+        ne = 1
+        emin = 1E-2
+        emax = 1000
+        unit =    1             # unit is [1/cm^2/source]
+        multiplier = 1          # The following is subsection of multiplier.
+        mat     mset1
+        1       (1.82881E-11 1 1 -4)
+        y-txt = Dose [Gy/source]
+        part = neutron
+
+[ T-Cross ]
+        trcl = 2004
+        file = total_neutron_current.out
+        mesh = r-z
+        r-type = 2              # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0                # minimum value of r-mesh points
+        rmax = 5.5              # maximum value of r-mesh points
+        nr = 1                  # number of r-mesh points
+        z-type = 2              # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41              # minimum value of z-mesh points
+        zmax = 15               # maximum value of z-mesh points
+        nz = 56                # number of z-mesh points
+        axis = z                # axis of output
+        e-type = 2
+        ne = 1
+        emin = 0
+        emax = 1000
+        output = current
+        unit =    1             # unit is [1/cm^2/source]
+
+ $ Pengukuran distribusi fluks neutron pada fantom (teknik iradiasi depan / $samping)
+[ T-Track ]
+        trcl = 2004
+        file = thermal_neutron_flux.out
+        mesh = r-z
+        r-type = 2              # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0                # minimum value of r-mesh points
+        rmax = 5.5 $3           # maximum value of r-mesh points
+        nr = 1                  # number of r-mesh points
+        z-type = 2              # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41 $-21         # minimum value of z-mesh points
+        zmax = 15  $21          # maximum value of z-mesh points
+        nz = 56    $42          # number of z-mesh points
+        axis = z                # axis of output
+        e-type = 2
+        ne = 1
+        emin = 0
+        emax = 5e-7
+        unit = 1
+        part = neutron
+        gshow	= 1
+        epsout	= 1
+        ginfo   = 1
+
+[ T-Track ]
+        trcl = 2004
+        file = epithermal_neutron_flux.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41 $-21         # minimum value of z-mesh points
+        zmax = 15  $21          # maximum value of z-mesh points
+        nz = 56    $42          # number of z-mesh points
+        axis = z                # axis of output
+        e-type = 2
+        ne = 1
+        emin = 5e-7
+        emax = 0.01
+        unit = 1
+        part = neutron
+        gshow	= 1
+        epsout	= 1
+        ginfo   = 1
+
+[ T-Track ]
+        trcl = 2004
+        file = fast_neutron_flux.out
+        mesh = r-z
+        r-type = 2            # r-mesh is linear given by rmin, rmax and nr
+        rmin = 0     # minimum value of r-mesh points
+        rmax = 5.5      # maximum value of r-mesh points
+        nr = 1            # number of r-mesh points
+        z-type = 2            # z-mesh is linear given by zmin, zmax and nz
+        zmin = -41 $-21         # minimum value of z-mesh points
+        zmax = 15  $21          # maximum value of z-mesh points
+        nz = 56    $42          # number of z-mesh points
+        axis = z                # axis of output
+        e-type = 2
+        ne = 1
+        emin = 0.01
+        emax = 1000
+        unit = 1
+        part = neutron
+        gshow	= 1
+        epsout	= 1
+        ginfo   = 1
+
+ $ Perhitungan dosis foton, hidrogen, nitrogen, dan boron-10
+ $ Material:
+ $ 3 = tulang rusuk
+ $ 111 = kulit payudara
+ $ 14 = paru-paru
+ $ 15 = jantung
+ $ 1001 = GTV
+ $ 1002 = CTV/GTV
+
+ $ mset1
+ $ (faktor_konversi_dosis nomor_material (kerma_partikel))
+ $ (-5 -6) adalah kerma foton
+ # (1 -4) adalah kerma neutron
+[ T-Track ]
+        mesh = reg
+        reg = 64 80 81 86 222 1001 1002 1003 
+        axis =   reg             # axis of output
+        file = photon.out       # file name of output for the above axis
+        part = photon
+        e-type =    1            # e-mesh is given by the below data
+        ne =    1            # number of e-mesh points
+                0.0  1000.0
+        unit =    1            # unit is [1/cm^2/source]
+        multiplier = 6 $ The following is subsection of multiplier.
+        part  = photon
+        emax  = 1000     
+        mat        mset1
+        3         (X    2 -5 -6)
+        111       (X  111 -5 -6)
+        14        (X   14 -5 -6)
+        15        (X   15 -5 -6)
+        1001      (X 1001 -5 -6)
+        1002      (X 1002 -5 -6)
+
+[ T-Track ]
+        mesh = reg
+        reg = 64 80 81 86 222 1001 1002 1003 
+        axis =   reg             # axis of output
+        file = hydro.out       # file name of output for the above axis
+        part = neutron
+        e-type =    1            # e-mesh is given by the below data
+        ne =    1            # number of e-mesh points
+                0.0  1000.0
+        unit =    1            # unit is [1/cm^2/source]
+        multiplier = 6 $ The following is subsection of multiplier.
+        part  = neutron
+        emax  = 1000     
+        mat        mset1
+        3         (X 1111 1 -4)
+        111       (X 1111 1 -4)
+        14        (X 1111 1 -4)
+        15        (X 1111 1 -4)
+        1001      (X 1111 1 -4)
+        1002      (X 1111 1 -4)
+
+[ T-Track ]
+        mesh = reg
+        reg = 64 80 81 86 222 1001 1002 1003 
+        axis =   reg             # axis of output
+        file = nitro.out       # file name of output for the above axis
+        part = neutron
+        e-type =    1            # e-mesh is given by the below data
+        ne =    1            # number of e-mesh points
+                0.0  1000.0
+        unit =    1            # unit is [1/cm^2/source]
+        multiplier = 4 $ The following is subsection of multiplier.
+        part  = neutron
+        emax  = 1000     
+        mat        mset1
+        3         (X 2222 1 -4)
+        111       (X 2222 1 -4)
+        14        (X 2222 1 -4)
+        15        (X 2222 1 -4)
+
+[ T-Track ]
+        mesh = reg
+        reg = 64 80 81 86 222 1001 1002 1003 
+        axis =   reg             # axis of output
+        file = boron.out       # file name of output for the above axis
+        part = neutron
+        e-type =    1            # e-mesh is given by the below data
+        ne =    1            # number of e-mesh points
+                0.0  1000.0
+        unit =    1            # unit is [1/cm^2/source]
+        multiplier = 6 $ The following is subsection of multiplier.
+        part  = neutron
+        emax  = 1000     
+        mat        mset1
+        3         (X 3333 1 -4)
+        111       (X 3333 1 -4)
+        14        (X 3333 1 -4)
+        15        (X 3333 1 -4)
+        1001      (X 3333 1 -4)
+        1002      (X 3333 1 -4)
