@@ -1526,8 +1526,8 @@ C --------------------------------------------------------------
  2039 2001 py 4.2
  2040 2001 py -4.2
  2041 2001 px 98.3
- 2042 2001 px 124.3
- 2043 2001 px 119.3
+ 2042 2001 px 127.3
+ 2043 2001 px 124.3
 
 [ Transform ]
  $  $   AXIS TRANSFORMATION SECTION *
@@ -1549,7 +1549,7 @@ C --------------------------------------------------------------
  *TR7  1.967 -1.09 59.77 33 90 57 90 0 90 123 90 33
  *TR8 -1.967 -1.09 59.77 33 90 123 90 0 90 57 90 33
 
- TR2001 0 0 138.3 0 0 -1 0 1 0 1 0 0 1
+ TR2001 0 0 143.3 0 0 -1 0 1 0 1 0 0 1
  *TR2002 40 -10 52 0 270 90 0 0 0 0 0 0 2
  *TR2003 160 -10 52 0 270 0 0 0 0 0 0 0 2
 
@@ -1578,9 +1578,6 @@ C --------------------------------------------------------------
                 37000  -0.00002                   
                 38000  -0.00003                   
                 82000  -0.00001      
-                5010    -10e-6
-        MT2 lwtr.20t
-
 
         $      AIR (RHO = 0.001205)               
         M4       6000  -0.000124                  
@@ -1708,8 +1705,6 @@ C --------------------------------------------------------------
                 17000   -0.003
                 19000   -0.002
                 5010    -10e-6
-        MT14 lwtr.20t
-
 
         $ HEART (RHO=1.05)
         M15     1000    -0.104        
@@ -1722,7 +1717,6 @@ C --------------------------------------------------------------
                 17000   -0.002
                 19000   -0.003
                 5010    -10e-6
-        MT15 lwtr.20t
 
         $ KIDNEY (RHO=1.05)
         M16     1000         -0.103        
@@ -1828,22 +1822,16 @@ C --------------------------------------------------------------
         M25       1000      -0.116
                 6000      -0.519  
                 8000      -0.365 
-                5010      -10e-6
-        MT25 lwtr.20t
 
         $ GTV
         M1001     1000      -0.0992
                 6000      -0.1936 
                 8000      -0.6598
-                5010      -100e-6
-        MT1001 lwtr.20t
 
         $ CTV/PTV
         M1002     1000      -0.116
                 6000      -0.519  
                 8000      -0.365 
-                5010      -10e-6
-        MT1002 lwtr.20t
 
         M1111 1000 1.0
         M2222 7000 1.0
@@ -1896,7 +1884,29 @@ C --------------------------------------------------------------
                 6012 -0.469
                 5010 -0.450
 
-[ T - Gshow ]
+[Mat Name Color]
+mat     name                    color                    
+4       Udara                   gray
+2001    Beryllium               red
+2002    Timbal                  orange
+2003    Bismuth                 yellow
+2004    PolietilenLithium       green
+2005    Nikel95                 cyan
+2006    PbF2                    blue
+2007    Alumunium               violet
+2008    LiF                     magenta
+2009    BoronKarbida            darkred
+2010    BorotedParaffinWax      pink
+2       Tulang                  darkgray
+11      Kulit                   orangeyellow
+12      JaringanLunak           darkgreen
+14      Paru-Paru               pastelblue
+15      Jantung                 pastelpink
+25      Payudara                brown
+1001    GTV                     pastelpurple
+1002    CTV/GTV                 pastelviolet
+
+[ T - Gshow ] off
         mesh = xyz
         x-type = 2
         nx = 210
@@ -1915,8 +1925,32 @@ C --------------------------------------------------------------
         file = 2d_xy_BSAORNL.out
         epsout = 1
         ginfo = 1
+        x-txt = Panjang (cm)
+        y-txt = Tinggi (cm)
 
 [ T - Gshow ]
+        mesh = xyz
+        x-type = 2
+        nx = 210
+        xmin = 4.
+        xmax = 20.9
+        z-type = 2
+        nz = 10
+        zmin = 45
+        zmax = 55
+        y-type = 2
+        ny = 200
+        ymin = -14.
+        ymax = -6.5
+        axis = xy
+        output = 2
+        file = 2_2d_xy_BSAORNL.out
+        epsout = 1
+        ginfo = 1
+        x-txt = Panjang (cm)
+        y-txt = Tinggi (cm)
+
+[ T - Gshow ] off
         mesh = xyz
         x-type = 2
         nx = 210

@@ -1,0 +1,1273 @@
+           _________________________________________________________
+          |                                                         |
+          |       _/_/_/_/                                          |
+          |      _/      _/                  _/_/_/_/_/_/           |
+          |     _/      _/  _/      _/   _/      _/      _/_/_/_/_/ |
+          |    _/_/_/_/    _/      _/   _/      _/      _/          |
+          |   _/          _/_/_/_/_/   _/      _/       _/_/_/_/    |
+          |  _/          _/      _/   _/      _/              _/    |
+          | _/          _/      _/   _/      _/      _/_/_/_/_/     |
+          |                                                         |
+          |                                                         |
+          |       Particle and Heavy Ion Transport code System      |
+          |                      Version =  3.310                   |
+          |                       developed by                      |
+          |                                                         |
+          |  Tatsuhiko SATO, Yosuke IWAMOTO, Shintaro HASHIMOTO,    |
+          |    Tatsuhiko OGAWA, Takuya FURUTA, Shinichiro ABE,      |
+          |    Takeshi KAI, Norihiro MATSUDA, Yusuke MATSUYA,       |
+          | Yuho HIRATA, Lan YAO, Pi-En TSAI, Hunter RATLIFF (JAEA),|
+          |                                                         |
+          |            Hiroshi IWASE, Yasuhito SAKAKI (KEK),        |
+          |                                                         |
+          |           Nobuhiro SHIGYO (Kyushu University),          |
+          |                                                         |
+          |      Lembit SIHVER (Technische Universitat Wien), and   |
+          |                                                         |
+          |                     Koji NIITA (RIST)                   |
+          |                                                         |
+          |                 Last Revised  2023-04-11                |
+          |_________________________________________________________|
+
+                        Starting Date = 2023-06-14
+                        Starting Time = 21h 00m 00
+
+>>> Input Echo >>>=============================================================
+
+[ Parameters ]
+ icntl    =           0     # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
+ maxcas   =    10000000     # (D=10) number of particles per one batch
+ maxbch   =         100     # (D=10) number of batches
+ e-mode   =           0     # (D=0) 0: Normal, 1: Event generator mode Ver.1, 2: Ver.2
+ ipnint   =           1     # (D=0) 0: no, 1: consider photo-nuclear reaction
+
+[ Source ]
+  totfact =  9.36226E+15    # (D=1.0) global factor
+   s-type =   1             # cylindrical source
+     proj =  proton         # kind of incident particle         
+       e0 =   30.000        # energy of beam [MeV/n]
+       r0 =   2.0000        # radius [cm]
+       r1 =   0.0000        # minimum radius [cm]
+       x0 =   0.0000        # (D=0.0) center position of x-axis [cm]
+       y0 =   0.0000        # (D=0.0) center position of y-axis [cm]
+       z0 =   0.0000        # minimum position of z-axis [cm]
+       z1 =   0.0000        # maximum position of z-axis [cm]
+      dir =   1.0000        # z-direction of beam [cosine]
+     trcl =   2003          # transform ID
+
+[ Material ]
+MAT[ 1 ] 
+            C        -1.2400000E-04
+            N        -7.5526800E-01
+            O        -2.3178100E-01
+           Ar        -1.2827000E-02
+MAT[ 2 ] 
+            H        -7.3370000E-02
+            C        -2.5475000E-01
+            N        -3.0570000E-02
+            O        -4.7893000E-01
+            F        -2.5000000E-04
+           Na        -3.2600000E-03
+           Mg        -1.1200000E-03
+           Si        -2.0000000E-05
+            P        -5.0950000E-02
+            S        -1.7300000E-03
+           Cl        -1.4300000E-03
+            K        -1.5300000E-03
+           Ca        -1.0190000E-01
+           Fe        -8.0000000E-05
+           Zn        -5.0000000E-05
+           Rb        -2.0000000E-05
+           Sr        -3.0000000E-05
+           Pb        -1.0000000E-05
+mt2      lwtr.20t  
+MAT[ 4 ] 
+            C        -1.2400000E-04
+            N        -7.5526700E-01
+            O        -2.3178100E-01
+           Ar        -1.2827000E-02
+MAT[ 5 ] 
+            H        -8.8955000E-02
+            C        -2.4069000E-01
+            N        -2.7735000E-02
+            O        -5.5709000E-01
+            F        -1.2500000E-04
+           Na        -2.1900000E-03
+           Mg        -6.2500000E-04
+           Si        -1.6000000E-04
+            P        -2.6145000E-02
+            S        -1.8850000E-03
+           Cl        -1.3800000E-03
+            K        -1.8050000E-03
+           Ca        -5.1070000E-02
+           Fe        -6.5000000E-05
+           Zn        -4.0000000E-05
+           Rb        -1.5000000E-05
+           Sr        -1.5000000E-05
+           Zr        -1.0000000E-05
+           Pb        -5.0000000E-06
+MAT[ 6 ] 
+            H        -1.0700000E-01
+            C        -1.4500000E-01
+            N        -2.2000000E-02
+            O        -7.1200000E-01
+           Na        -2.0000000E-03
+            P        -4.0000000E-03
+            S        -2.0000000E-03
+           Cl        -3.0000000E-03
+            K        -3.0000000E-03
+MAT[ 7 ] 
+            H        -9.6000000E-02
+            C        -1.9500000E-01
+            N        -5.7000000E-02
+            O        -6.4600000E-01
+           Na        -1.0000000E-03
+            P        -1.0000000E-03
+            S        -3.0000000E-03
+           Cl        -1.0000000E-03
+MAT[ 8 ] 
+            H        -9.6000000E-02
+            C        -9.9000000E-02
+            N        -2.2000000E-02
+            O        -7.4400000E-01
+           Na        -5.0000000E-03
+            P        -2.2000000E-02
+            S        -9.0000000E-03
+           Cl        -3.0000000E-03
+MAT[ 9 ] 
+            H        -1.0500000E-01
+            C        -2.5600000E-01
+            N        -2.7000000E-02
+            O        -6.0200000E-01
+           Na        -1.0000000E-03
+            P        -2.0000000E-03
+            S        -3.0000000E-03
+           Cl        -2.0000000E-03
+            K        -2.0000000E-03
+MAT[ 10 ] 
+            H        -1.0400000E-01
+            C        -1.1900000E-01
+            N        -2.4000000E-02
+            O        -7.4500000E-01
+           Na        -2.0000000E-03
+            P        -1.0000000E-03
+            S        -1.0000000E-03
+           Cl        -2.0000000E-03
+            K        -1.0000000E-03
+            I        -1.0000000E-03
+MAT[ 11 ] 
+            H        -1.0000000E-01
+            C        -2.0400000E-01
+            N        -4.2000000E-02
+            O        -6.4500000E-01
+           Na        -2.0000000E-03
+            P        -1.0000000E-03
+            S        -2.0000000E-03
+           Cl        -3.0000000E-03
+            K        -1.0000000E-03
+MAT[ 12 ] 
+            H        -1.0500000E-01
+            C        -2.5600000E-01
+            N        -2.7000000E-02
+            O        -6.0200000E-01
+           Na        -1.0000000E-03
+            P        -2.0000000E-03
+            S        -3.0000000E-03
+           Cl        -2.0000000E-03
+            K        -2.0000000E-03
+MAT[ 13 ] 
+            H        -1.0200000E-01
+            C        -1.4300000E-01
+            N        -3.4000000E-02
+            O        -7.1000000E-01
+           Na        -1.0000000E-03
+            P        -2.0000000E-03
+            S        -3.0000000E-03
+           Cl        -1.0000000E-03
+            K        -4.0000000E-03
+MAT[ 14 ] 
+            H        -1.0300000E-01
+            C        -1.0500000E-01
+            N        -3.1000000E-02
+            O        -7.4900000E-01
+           Na        -2.0000000E-03
+            P        -2.0000000E-03
+            S        -3.0000000E-03
+           Cl        -3.0000000E-03
+            K        -2.0000000E-03
+mt14     lwtr.20t  
+MAT[ 15 ] 
+            H        -1.0400000E-01
+            C        -1.3900000E-01
+            N        -2.9000000E-02
+            O        -7.1800000E-01
+           Na        -1.0000000E-03
+            P        -2.0000000E-03
+            S        -2.0000000E-03
+           Cl        -2.0000000E-03
+            K        -3.0000000E-03
+mt15     lwtr.20t  
+MAT[ 16 ] 
+            H        -1.0300000E-01
+            C        -1.3200000E-01
+            N        -3.0000000E-02
+            O        -7.2400000E-01
+           Na        -2.0000000E-03
+            P        -2.0000000E-03
+            S        -2.0000000E-03
+           Cl        -2.0000000E-03
+            K        -2.0000000E-03
+           Ca        -1.0000000E-03
+MAT[ 17 ] 
+            H        -1.0300000E-01
+            C        -1.8600000E-01
+            N        -2.8000000E-02
+            O        -6.7100000E-01
+           Na        -2.0000000E-03
+            P        -2.0000000E-03
+            S        -3.0000000E-03
+           Cl        -2.0000000E-03
+            K        -3.0000000E-03
+MAT[ 18 ] 
+            H        -1.0600000E-01
+            C        -1.6900000E-01
+            N        -2.2000000E-02
+            O        -6.9400000E-01
+           Na        -2.0000000E-03
+            P        -2.0000000E-03
+            S        -1.0000000E-03
+           Cl        -2.0000000E-03
+            K        -2.0000000E-03
+MAT[ 19 ] 
+            H        -1.0300000E-01
+            C        -1.1300000E-01
+            N        -3.2000000E-02
+            O        -7.4100000E-01
+           Na        -1.0000000E-03
+            P        -3.0000000E-03
+            S        -2.0000000E-03
+           Cl        -2.0000000E-03
+            K        -3.0000000E-03
+MAT[ 20 ] 
+            H        -1.0600000E-01
+            C        -1.1500000E-01
+            N        -2.2000000E-02
+            O        -7.5100000E-01
+           Na        -1.0000000E-03
+            P        -1.0000000E-03
+            S        -1.0000000E-03
+           Cl        -2.0000000E-03
+            K        -1.0000000E-03
+MAT[ 21 ] 
+            H        -1.0500000E-01
+            C        -9.6000000E-02
+            N        -2.6000000E-02
+            O        -7.6100000E-01
+           Na        -2.0000000E-03
+            P        -2.0000000E-03
+            S        -2.0000000E-03
+           Cl        -3.0000000E-03
+            K        -3.0000000E-03
+MAT[ 22 ] 
+            H        -1.0600000E-01
+            C        -9.9000000E-02
+            N        -2.0000000E-02
+            O        -7.6600000E-01
+           Na        -2.0000000E-03
+            P        -1.0000000E-03
+            S        -2.0000000E-03
+           Cl        -2.0000000E-03
+            K        -2.0000000E-03
+MAT[ 23 ] 
+            H        -1.0500000E-01
+            C        -9.3000000E-02
+            N        -2.4000000E-02
+            O        -7.6800000E-01
+           Na        -2.0000000E-03
+            P        -2.0000000E-03
+            S        -2.0000000E-03
+           Cl        -2.0000000E-03
+            K        -2.0000000E-03
+MAT[ 24 ] 
+            H        -1.0600000E-01
+            C        -3.1500000E-01
+            N        -2.4000000E-02
+            O        -5.4700000E-01
+           Na        -1.0000000E-03
+            P        -2.0000000E-03
+            S        -2.0000000E-03
+           Cl        -1.0000000E-03
+            K        -2.0000000E-03
+MAT[ 25 ] 
+            H        -1.1600000E-01
+            C        -5.1900000E-01
+            O        -3.6500000E-01
+mt25     lwtr.20t  
+MAT[ 1001 ] 
+            H        -9.9200000E-02
+            C        -1.9360000E-01
+            O        -6.5980000E-01
+mt1001   lwtr.20t  
+MAT[ 1002 ] 
+            H        -1.1600000E-01
+            C        -5.1900000E-01
+            O        -3.6500000E-01
+mt1002   lwtr.20t  
+MAT[ 1111 ] 
+            H         1.0000000E+00
+MAT[ 2222 ] 
+            N         1.0000000E+00
+MAT[ 3333 ] 
+          10B         1.0000000E+00
+MAT[ 2001 ] 
+          9Be        -1.0000000E+00
+MAT[ 2002 ] 
+        206Pb        -2.4400000E-01
+        207Pb        -2.2400000E-01
+        208Pb        -5.3200000E-01
+MAT[ 2003 ] 
+        209Bi        -1.0000000E+00
+MAT[ 2004 ] 
+           1H        -5.2620000E-01
+            C        -2.9690000E-01
+          16O        -1.0070000E-01
+          6Li        -7.2400000E-02
+          7Li        -3.8000000E-03
+MAT[ 2005 ] 
+           Ni        -9.5000000E-01
+         55Mn        -1.5000000E-02
+           Fe        -1.0000000E-02
+           Si        -5.0000000E-03
+           Cu        -1.0000000E-02
+          12C        -5.0000000E-03
+           Ti        -5.0000000E-03
+MAT[ 2006 ] 
+           Pb        -3.3300000E-01
+          19F        -6.6700000E-01
+MAT[ 2007 ] 
+         27Al        -1.0000000E+00
+MAT[ 2008 ] 
+          7Li        -2.6785000E-01
+          19F        -7.3241500E-01
+MAT[ 2009 ] 
+          10B        -7.8261000E-01
+          12C        -2.1739000E-01
+MAT[ 2010 ] 
+           1H        -8.1000000E-02
+          12C        -4.6900000E-01
+          10B        -4.5000000E-01
+
+[ Cell ]
+ 230         4 -1.2050000E-03  -400 #20001 #20002 #20003 #20004 #20005
+                              #20006 #20007 #20008 #20009 #20011 #20012
+                              #20013 #20014 #20018 #20023 #20024 
+ 231        -1                 400 
+ 20001    2004 -9.8430000E-01  ( 2011 -2002 2003 -2006 )
+                              : ( -2009 -2001 2006 2014 )
+                              : ( -2009 -2014 2016 2024 )  trcl=2002 
+ 20002    2006 -8.4500000E+00  ( -2024 2022 -2014 2019 2038 )
+                              : ( 2019 -2035 2038 -2024 )  trcl=2002 
+ 20003    2006 -8.4500000E+00  -2006 2007 -2003 2014  trcl=2002 
+ 20004    2006 -8.4500000E+00  ( -2014 2035 2027 -2022 2038 )
+                              : ( 2038 -2022 2035 -2018 )  trcl=2002 
+ 20005    2006 -8.4500000E+00  ( 2011 -2003 2004 -2007 )
+                              : ( -2003 2010 -2007 2013 )
+                              : ( 2027 -2007 2014 -2013 )  trcl=2002 
+ 20006    2007 -2.7000000E+00  -2013 2031 -2027  trcl=2002 
+ 20007    2007 -2.7000000E+00  ( 2013 -2010 -2004 2025 )
+                              : ( 2013 -2010 -2005 )  trcl=2002 
+ 20008    2009 -2.5200000E+00  -2027 -2034 2018  trcl=2002 
+ 20009    2008 -2.6530000E+00  -2032 -2027 2017  trcl=2002 
+ 20011       0                 2004 -2012 -2026  trcl=2002 
+ 20012    2001 -1.8500000E+00  2005 -2004 -2025  trcl=2002 
+ 20013    2003 -9.8000000E+00  -2026 2004 2012 -2011  trcl=2002 
+ 20014    2003 -9.8000000E+00  2030 -2018 -2038  trcl=2002 
+ 20018    2005 -8.8600000E+00  2036 -2028 2037 -2038  trcl=2002 
+ 20023    2010 -9.3000000E-01  2038 -2009 -2019 2042  trcl=2002 
+ 20024    2002 -1.1340000E+01  2038 -2009 -2042 2043  trcl=2002 
+
+[ Surface ]
+ 400           so    5.0000000E+02
+ 2001     2001 px    2.5210000E+02
+ 2002     2001 px    2.5200000E+02
+ 2003     2001 px    2.4200000E+02
+ 2004     2001 px    2.0500000E+02
+ 2005     2001 px    2.0450000E+02
+ 2006     2001 cx    5.7000000E+01
+ 2007     2001 cx    2.8000000E+01
+ 2008     2001 cx    6.7010000E+01
+ 2009     2001 cx    8.7000000E+01
+ 2010     2001 cx    2.5000000E+01
+ 2011     2001 cx    1.5000000E+01
+ 2012     2001 cx    5.0000000E+00
+ 2013     2001 px    1.6600000E+02
+ 2014     2001 px    1.5300000E+02
+ 2015     2001 px    1.4300000E+02
+ 2016     2001 px    1.2930000E+02
+ 2017     2001 px    1.4600000E+02
+ 2018     2001 px    1.4579100E+02
+ 2019     2001 px    1.2930000E+02
+ 2020     2001 px    1.3840000E+02
+ 2021     2001 kx    1.3300000E+02  2.0000000E+00
+ 2022     2001 kx    1.2500000E+02  6.0000000E-01
+ 2023     2001 kx    1.0590000E+02  9.0000000E-01
+ 2024     2001 kx    1.0600000E+02  9.0000000E-01
+ 2025     2001 cx    9.5000000E+00
+ 2026     2001 px    2.6000000E+02
+ 2027     2001 kx    1.3500000E+02  6.5000000E-01
+ 2028     2001 px    1.4529000E+02
+ 2029     2001 px    1.4579000E+02
+ 2030     2001 px    1.4529100E+02
+ 2031     2001 px    1.5400000E+02
+ 2032     2001 px    1.5399500E+02
+ 2033     2001 px    1.5200000E+02
+ 2034     2001 px    1.4599900E+02
+ 2035     2001 px    1.4400000E+02
+ 2036     2001 px    1.3830100E+02
+ 2037     2001 cx    5.0000000E+00
+ 2038     2001 cx    5.5000000E+00
+ 2039     2001 py    4.2000000E+00
+ 2040     2001 py   -4.2000000E+00
+ 2041     2001 px    9.8300000E+01
+ 2042     2001 px    1.2730000E+02
+ 2043     2001 px    1.2430000E+02
+
+[ Transform ]
+tr2001         0.0000000E+00  0.0000000E+00  1.3830000E+02
+               0.0000000E+00  0.0000000E+00 -1.0000000E+00
+               0.0000000E+00  1.0000000E+00  0.0000000E+00
+               1.0000000E+00  0.0000000E+00  0.0000000E+00    1
+*tr2002        1.0000000E+01 -3.3000000E+01  5.2000000E+01
+               0.0000000E+00  1.8000000E+02  9.0000000E+01
+               0.0000000E+00  0.0000000E+00  0.0000000E+00
+               0.0000000E+00  0.0000000E+00  0.0000000E+00    2
+*tr2003        1.0000000E+01 -1.5300000E+02  5.2000000E+01
+               0.0000000E+00  1.8000000E+02  9.0000000E+01
+               0.0000000E+00  0.0000000E+00  0.0000000E+00
+               0.0000000E+00  0.0000000E+00  0.0000000E+00    2
+*tr2004        1.0000000E+01  0.0000000E+00  5.2000000E+01
+               0.0000000E+00  1.8000000E+02  9.0000000E+01
+               0.0000000E+00  0.0000000E+00  0.0000000E+00
+               0.0000000E+00  0.0000000E+00  0.0000000E+00    2
+
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =   0.000000      # minimum value of e-mesh points
+     emax =  2.5000000E-08  # maximum value of e-mesh points
+#    edel =  2.5000000E-08  # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           0.00000E+00  2.50000E-08
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = thermal_neutron_flux.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          65 (  0)           0 (  0)          65 (  0)
+
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =  1.0000000E-06  # minimum value of e-mesh points
+     emax =  4.0000000E-02  # maximum value of e-mesh points
+#    edel =  3.9999000E-02  # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           1.00000E-06  4.00000E-02
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = epithermal_neutron_flux.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          65 (  0)           0 (  0)          65 (  0)
+
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =  1.0000000E-02  # minimum value of e-mesh points
+     emax =   1000.000      # maximum value of e-mesh points
+#    edel =   999.9900      # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           1.00000E-02  1.00000E+03
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = fast_neutron_flux.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          65 (  0)           0 (  0)          65 (  0)
+
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =   0.000000      # minimum value of e-mesh points
+     emax =   1000.000      # maximum value of e-mesh points
+#    edel =   1000.000      # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           0.00000E+00  1.00000E+03
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = total_neutron_flux.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          65 (  0)           0 (  0)          65 (  0)
+
+[ T-Deposit ]
+    title = [t-deposit] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+     unit =    0            # unit is [Gy/source]
+   letmat =    0            # (D=0) mat ID for LET, 0:real mat, <0: electron for H2O
+  dedxfnc =    0            # (D=0) user defined multiplier, 0(no), 1, 2
+ material =  all            # (D=all) number of specific material
+   output =  dose           # total deposit energy
+  deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
+     axis =     z           # axis of output
+     file = gamma_dose.out  # file name of output for the above axis
+     part =  photon   
+# kf/name :  22       
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          62 (  0)           0 (  0)          62 (  0)
+
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =  1.0000000E-02  # minimum value of e-mesh points
+     emax =   1000.000      # maximum value of e-mesh points
+#    edel =   999.9900      # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           1.00000E-02  1.00000E+03
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = fast_neutron_dose.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+  multiplier =   1          # number of material group
+     part =  all      
+# kf/name :  0        
+     emax =   1.00000E+10
+      mat                mset1  
+        4 ( 1.82881E-11 4 1 -4 )
+    y-txt = Dose [Gy/source]
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          84 (  0)           0 (  0)          84 (  0)
+
+[ T-Cross ]
+    title = [t-cross] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =   0.000000      # minimum value of e-mesh points
+     emax =   1000.000      # maximum value of e-mesh points
+#    edel =   1000.000      # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           0.00000E+00  1.00000E+03
+  eng2let =    0            # (D=0) Flag to convert energy to LET, 0: not convert, 1: convert
+     unit =    1            # unit is [1/cm^2/source]
+     axis =    z            # axis of output
+     file = total_neutron_current.out  # file name of output for the above axis
+   output = current         # surface crossing current spectrum
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          65 (  0)           0 (  0)          65 (  0)
+
+[END] of Input Echo <<<========================================================
+
+<<< Report of real Geometry memory >>>
+*           GG/CG memory =        2
+*     total memory: mdas = 80000000
+*                percent =     0.00 %
+
+<<< Report of material memory for high energy>>>
+*   high energy material =        1
+*     total memory: mdas = 80000000
+*                percent =     0.00 %
+
+<<< Report of material memory for low energy>>>
+*    low energy material =    29308
+*     total memory: mdas = 80000000
+*                percent =     0.04 %
+
+<<< Report of real tally memory >>>
+*      real tally memory =      471
+*     total memory: mdas = 80000000
+*                percent =     0.00 %
+
+<<< Report of temporary tally memory >>>
+* temporary tally memory =    24313
+*     total memory: mdas = 80000000
+*                percent =     0.03 %
+
+<<< Report of total memory >>>
+*      used total memory =    29314
+*     total memory: mdas = 80000000
+*                percent =     0.04 %
+*                ---------------------
+
+-------------------------------------------------------------------------------
+bat[       1] ncas =       10000000.
+ bitrseed = 0100001010011000001011101100011110011000110110100110010000000000
+          cpu time =   5 m. 17.87 s.
+
+-------------------------------------------------------------------------------
+bat[       2] ncas =       20000000.
+ bitrseed = 1000110000001000111111101100101001110101110010000011011101101000
+          cpu time =   5 m. 28.79 s.
+
+-------------------------------------------------------------------------------
+bat[       3] ncas =       30000000.
+ bitrseed = 1100101110101011010100101011000101100001110011100000110110110010
+          cpu time =   6 m. 15.99 s.
+
+-------------------------------------------------------------------------------
+bat[       4] ncas =       40000000.
+ bitrseed = 0011100111001000100101100110110010101011101011100101001110011110
+          cpu time =   5 m. 29.48 s.
+
+-------------------------------------------------------------------------------
+bat[       5] ncas =       50000000.
+ bitrseed = 0101001101111000100111010100100100100000111001011001010000100001
+          cpu time =   5 m. 13.65 s.
+
+-------------------------------------------------------------------------------
+bat[       6] ncas =       60000000.
+ bitrseed = 1011011100110000010011010001101010111111010111000100110010000110
+          cpu time =   5 m.  8.41 s.
+
+-------------------------------------------------------------------------------
+bat[       7] ncas =       70000000.
+ bitrseed = 1111010001100110101111001000100001001100100111000111011111011001
+          cpu time =   6 m. 11.11 s.
+
+-------------------------------------------------------------------------------
+bat[       8] ncas =       80000000.
+ bitrseed = 1000000100110011110101011000010011000011101101111011000010000100
+          cpu time =   5 m. 57.03 s.
+
+-------------------------------------------------------------------------------
+bat[       9] ncas =       90000000.
+ bitrseed = 1100101101011011011011110000110001100101101111010011110111001000
+          cpu time =   5 m. 25.52 s.
+
+-------------------------------------------------------------------------------
+bat[      10] ncas =      100000000.
+ bitrseed = 1101001110101001111101010000010011000001100110111011011001110011
+          cpu time =   5 m. 17.16 s.
+
+-------------------------------------------------------------------------------
+bat[      11] ncas =      110000000.
+ bitrseed = 1101111110010001010110101011011001110100110101001100011110000101
+          cpu time =   6 m. 38.77 s.
+
+-------------------------------------------------------------------------------
+bat[      12] ncas =      120000000.
+ bitrseed = 0010111011011111100110010111010111100011011000101000110100100001
+          cpu time =   6 m.  2.15 s.
+
+-------------------------------------------------------------------------------
+bat[      13] ncas =      130000000.
+ bitrseed = 0101100101111000001001011001100111001001000001011010110111010110
+          cpu time =   5 m. 51.97 s.
+
+-------------------------------------------------------------------------------
+bat[      14] ncas =      140000000.
+ bitrseed = 1110100000110000001000101100100100110010111001100001001010001111
+          cpu time =   5 m. 48.60 s.
+
+-------------------------------------------------------------------------------
+bat[      15] ncas =      150000000.
+ bitrseed = 0011001010001010111010010101011101011011010001111010111000011101
+          cpu time =   5 m. 52.62 s.
+
+-------------------------------------------------------------------------------
+bat[      16] ncas =      160000000.
+ bitrseed = 0000000010101100111111000000110011111010101000110000100110111001
+          cpu time =   5 m. 51.41 s.
+
+-------------------------------------------------------------------------------
+bat[      17] ncas =      170000000.
+ bitrseed = 1011001111111001110110011011011100000001101001001000011011000001
+          cpu time =   5 m. 56.58 s.
+
+-------------------------------------------------------------------------------
+bat[      18] ncas =      180000000.
+ bitrseed = 1000000100101100000111100010001111101110011110001101000100000010
+          cpu time =   4 m. 59.34 s.
+
+-------------------------------------------------------------------------------
+bat[      19] ncas =      190000000.
+ bitrseed = 0001000110110110011010000100001011110100111010011001110100001000
+          cpu time =   6 m. 20.43 s.
+
+-------------------------------------------------------------------------------
+bat[      20] ncas =      200000000.
+ bitrseed = 0101000001000001011010101101101000110010101110111000011100101101
+          cpu time =   6 m. 12.42 s.
+
+-------------------------------------------------------------------------------
+bat[      21] ncas =      210000000.
+ bitrseed = 0010001011100111100100010010010011010010001011000110110101110101
+          cpu time =   5 m. 41.09 s.
+
+-------------------------------------------------------------------------------
+bat[      22] ncas =      220000000.
+ bitrseed = 1111111101110101100111110110000010110111010111101111010111010011
+          cpu time =  23 m. 59.36 s.
+
+-------------------------------------------------------------------------------
+bat[      23] ncas =      230000000.
+ bitrseed = 0001100101101111110000000011111111000101010011101101010111011011
+          cpu time =   7 m. 49.92 s.
+
+-------------------------------------------------------------------------------
+bat[      24] ncas =      240000000.
+ bitrseed = 1110000001101101000010001101010010010100010110011101000001100111
+          cpu time =   5 m. 50.10 s.
+
+-------------------------------------------------------------------------------
+bat[      25] ncas =      250000000.
+ bitrseed = 0100100100101101110110000001011010000101111001010101100110001010
+          cpu time =   5 m. 30.94 s.
+
+-------------------------------------------------------------------------------
+bat[      26] ncas =      260000000.
+ bitrseed = 1000100010001110110000010010110010100000000011111100001001111011
+          cpu time =   5 m. 35.44 s.
+
+-------------------------------------------------------------------------------
+bat[      27] ncas =      270000000.
+ bitrseed = 1010001000001101110101111111111011000111001000000101111001111101
+          cpu time =   6 m. 16.48 s.
+
+-------------------------------------------------------------------------------
+bat[      28] ncas =      280000000.
+ bitrseed = 1100010000110001001111010011011100010110101111100111001111111100
+          cpu time =   5 m. 15.21 s.
+
+-------------------------------------------------------------------------------
+bat[      29] ncas =      290000000.
+ bitrseed = 1010000001111000001000101110001110010100100111110010100010001100
+          cpu time =   6 m.  4.24 s.
+
+-------------------------------------------------------------------------------
+bat[      30] ncas =      300000000.
+ bitrseed = 1010111100100000010010010001101111011010010001000011000011110011
+          cpu time =   6 m. 27.43 s.
+
+-------------------------------------------------------------------------------
+bat[      31] ncas =      310000000.
+ bitrseed = 0000000100111110011111010001101111100010000110011110100111001100
+          cpu time =   6 m. 20.09 s.
+
+-------------------------------------------------------------------------------
+bat[      32] ncas =      320000000.
+ bitrseed = 1100011110110000110100000100001000000111101001001111101111011001
+          cpu time =   5 m. 31.23 s.
+
+-------------------------------------------------------------------------------
+bat[      33] ncas =      330000000.
+ bitrseed = 1110110000001100111100101001110101110110000100010010001000101001
+          cpu time =   6 m. 40.48 s.
+
+-------------------------------------------------------------------------------
+bat[      34] ncas =      340000000.
+ bitrseed = 0001101100101001111001011111101011010001100110110111001100000111
+          cpu time =   6 m. 10.69 s.
+
+-------------------------------------------------------------------------------
+bat[      35] ncas =      350000000.
+ bitrseed = 0100100011001010111001110100011000000110001101010011101100011111
+          cpu time =   5 m. 41.98 s.
+
+-------------------------------------------------------------------------------
+bat[      36] ncas =      360000000.
+ bitrseed = 0011101111011010011111010101010110111001101001001101001111011101
+          cpu time =   5 m. 32.42 s.
+
+-------------------------------------------------------------------------------
+bat[      37] ncas =      370000000.
+ bitrseed = 0100001111000110110111101110010111110111000000111001010110001010
+          cpu time =   5 m. 56.46 s.
+
+-------------------------------------------------------------------------------
+bat[      38] ncas =      380000000.
+ bitrseed = 1001010100010011001110111101110010101001101001000101100010111100
+          cpu time =   5 m. 58.50 s.
+
+-------------------------------------------------------------------------------
+bat[      39] ncas =      390000000.
+ bitrseed = 1000110111101001100001110010110010011111011000101101100111101010
+          cpu time =   5 m. 14.09 s.
+
+-------------------------------------------------------------------------------
+bat[      40] ncas =      400000000.
+ bitrseed = 1000001111111100111001101010010110001101111001011000100011000110
+          cpu time =   4 m. 57.43 s.
+
+-------------------------------------------------------------------------------
+bat[      41] ncas =      410000000.
+ bitrseed = 0100011101001100100011011110101100000000010011010111110110001100
+          cpu time =   4 m. 35.29 s.
+
+-------------------------------------------------------------------------------
+bat[      42] ncas =      420000000.
+ bitrseed = 0011001011011100110011100101000010010110010110010010001001001010
+          cpu time =   4 m. 36.33 s.
+
+-------------------------------------------------------------------------------
+bat[      43] ncas =      430000000.
+ bitrseed = 1100101001011110001000010110000011011101110101010001111011111001
+          cpu time =   4 m. 41.97 s.
+
+-------------------------------------------------------------------------------
+bat[      44] ncas =      440000000.
+ bitrseed = 0000110011101000111000100110011101101110010110000010101010100100
+          cpu time =   4 m. 40.31 s.
+
+-------------------------------------------------------------------------------
+bat[      45] ncas =      450000000.
+ bitrseed = 1001010100000100001111101001111101001110101000100010111110100001
+          cpu time =   4 m. 34.85 s.
+
+-------------------------------------------------------------------------------
+bat[      46] ncas =      460000000.
+ bitrseed = 1001100000000110010110010010011110110100001110010111001100110110
+          cpu time =   4 m. 33.22 s.
+
+-------------------------------------------------------------------------------
+bat[      47] ncas =      470000000.
+ bitrseed = 1101000110010010110100010110111110000111000000111001100010110000
+          cpu time =   4 m. 33.69 s.
+
+-------------------------------------------------------------------------------
+bat[      48] ncas =      480000000.
+ bitrseed = 0000100001101101011001110101010101000001011101010111101110001010
+          cpu time =   4 m. 33.79 s.
+
+-------------------------------------------------------------------------------
+bat[      49] ncas =      490000000.
+ bitrseed = 1011111011101101011001000100010111011011111110010111000111111110
+          cpu time =   4 m. 32.66 s.
+
+-------------------------------------------------------------------------------
+bat[      50] ncas =      500000000.
+ bitrseed = 1010001001011111010101100011100000001011001101010000001011110110
+          cpu time =   4 m. 34.84 s.
+
+-------------------------------------------------------------------------------
+bat[      51] ncas =      510000000.
+ bitrseed = 1101101111010011011000101101110001100110110010110001010100010001
+          cpu time =   4 m. 40.86 s.
+
+-------------------------------------------------------------------------------
+bat[      52] ncas =      520000000.
+ bitrseed = 1010001010100101001110011001100000101011101101011110111110011110
+          cpu time =   4 m. 34.49 s.
+
+-------------------------------------------------------------------------------
+bat[      53] ncas =      530000000.
+ bitrseed = 1001100000100001010000001110101100000110111100100100010110110111
+          cpu time =   4 m. 33.55 s.
+
+-------------------------------------------------------------------------------
+bat[      54] ncas =      540000000.
+ bitrseed = 1111000010001100011000110000001011111011011111000111011000000000
+          cpu time =   4 m. 33.48 s.
+
+-------------------------------------------------------------------------------
+bat[      55] ncas =      550000000.
+ bitrseed = 0111100000001100000101101101011011111000110010000111011010000001
+          cpu time =   4 m. 34.75 s.
+
+-------------------------------------------------------------------------------
+bat[      56] ncas =      560000000.
+ bitrseed = 0010010110101011010001001010111101010001000111001010101110010101
+          cpu time =   4 m. 35.98 s.
+
+-------------------------------------------------------------------------------
+bat[      57] ncas =      570000000.
+ bitrseed = 0011001100110100000011101101111010111010111101000101100101001110
+          cpu time =   4 m. 36.56 s.
+
+-------------------------------------------------------------------------------
+bat[      58] ncas =      580000000.
+ bitrseed = 0001000010100000111101110010010000110000101000110110010000000010
+          cpu time =   4 m. 34.15 s.
+
+-------------------------------------------------------------------------------
+bat[      59] ncas =      590000000.
+ bitrseed = 0001101110100001000010110100111111101111111011011011001001101101
+          cpu time =   4 m. 34.60 s.
+
+-------------------------------------------------------------------------------
+bat[      60] ncas =      600000000.
+ bitrseed = 1110000110000011110011101111001101110001110010011000101101001101
+          cpu time =   4 m. 33.72 s.
+
+-------------------------------------------------------------------------------
+bat[      61] ncas =      610000000.
+ bitrseed = 0110000111011010110101010111000111000010001011110111101110101011
+          cpu time =   4 m. 34.75 s.
+
+-------------------------------------------------------------------------------
+bat[      62] ncas =      620000000.
+ bitrseed = 0101001111010000100101000011001011010010001000100010101110011110
+          cpu time =   4 m. 35.75 s.
+
+-------------------------------------------------------------------------------
+bat[      63] ncas =      630000000.
+ bitrseed = 1110100011101011110000101101001100101000001000110110000100001011
+          cpu time =   4 m. 37.31 s.
+
+-------------------------------------------------------------------------------
+bat[      64] ncas =      640000000.
+ bitrseed = 0001101100000111111010101001101000010011111110011111001101110000
+          cpu time =   4 m. 46.03 s.
+
+-------------------------------------------------------------------------------
+bat[      65] ncas =      650000000.
+ bitrseed = 0011111111011110111100010001010001100101100000001100100011111110
+          cpu time =   4 m. 37.48 s.
+
+-------------------------------------------------------------------------------
+bat[      66] ncas =      660000000.
+ bitrseed = 1001110000011101110110101010111001100010110111011100011010101111
+          cpu time =   4 m. 35.02 s.
+
+-------------------------------------------------------------------------------
+bat[      67] ncas =      670000000.
+ bitrseed = 0011111011111010010101101001010011011100111100000100111001000101
+          cpu time =   4 m. 32.95 s.
+
+-------------------------------------------------------------------------------
+bat[      68] ncas =      680000000.
+ bitrseed = 0001010001100110100000101100101010011100010100100100000110011110
+          cpu time =   4 m. 32.34 s.
+
+-------------------------------------------------------------------------------
+bat[      69] ncas =      690000000.
+ bitrseed = 1101111110011100100110110111100011100001111101011101100011101010
+          cpu time =   4 m. 38.98 s.
+
+-------------------------------------------------------------------------------
+bat[      70] ncas =      700000000.
+ bitrseed = 0010000000111101000110000001000010110010100000110000100100111000
+          cpu time =   4 m. 39.64 s.
+
+-------------------------------------------------------------------------------
+bat[      71] ncas =      710000000.
+ bitrseed = 0001110000011001000000011001000100101001110010111011000100011101
+          cpu time =   4 m. 41.54 s.
+
+-------------------------------------------------------------------------------
+bat[      72] ncas =      720000000.
+ bitrseed = 1110111000011101111011100010001001010010011111110111010110101000
+          cpu time =   4 m. 35.66 s.
+
+-------------------------------------------------------------------------------
+bat[      73] ncas =      730000000.
+ bitrseed = 1110000111010010100010100101000101100010111100110001110110011111
+          cpu time =   4 m. 34.49 s.
+
+-------------------------------------------------------------------------------
+bat[      74] ncas =      740000000.
+ bitrseed = 1111110110010000000111100001001110101000001000111011100010001010
+          cpu time =   4 m. 34.06 s.
+
+-------------------------------------------------------------------------------
+bat[      75] ncas =      750000000.
+ bitrseed = 0011100000001110010011110011111111010011000111000110110100000010
+          cpu time =   4 m. 31.83 s.
+
+-------------------------------------------------------------------------------
+bat[      76] ncas =      760000000.
+ bitrseed = 1101011101001010111101100010100101001011111111111011011101001000
+          cpu time =   4 m. 35.20 s.
+
+-------------------------------------------------------------------------------
+bat[      77] ncas =      770000000.
+ bitrseed = 0100001100000110100001001111000010011000010110010000000001111001
+          cpu time =   4 m. 41.72 s.
+
+-------------------------------------------------------------------------------
+bat[      78] ncas =      780000000.
+ bitrseed = 1110100001100010000000000000110110101100001011101000001101110101
+          cpu time =   4 m. 35.22 s.
+
+-------------------------------------------------------------------------------
+bat[      79] ncas =      790000000.
+ bitrseed = 0111110100000100011100011010111010100101001111101111000000001001
+          cpu time =   4 m. 35.24 s.
+
+-------------------------------------------------------------------------------
+bat[      80] ncas =      800000000.
+ bitrseed = 0000100101110100010000111001010001101101010000101111101000100011
+          cpu time =   4 m. 32.41 s.
+
+-------------------------------------------------------------------------------
+bat[      81] ncas =      810000000.
+ bitrseed = 0100001000001110010000000000111111001100010000001010100011010001
+          cpu time =   4 m. 31.87 s.
+
+-------------------------------------------------------------------------------
+bat[      82] ncas =      820000000.
+ bitrseed = 0101001101110100011100101101011110100100101100000000001100010000
+          cpu time =   4 m. 33.10 s.
+
+-------------------------------------------------------------------------------
+bat[      83] ncas =      830000000.
+ bitrseed = 1101000001111000100000100011100010110010100101011001111100110000
+          cpu time =   4 m. 34.70 s.
+
+-------------------------------------------------------------------------------
+bat[      84] ncas =      840000000.
+ bitrseed = 0011001111110001101011010100111110001011100111111101000001001011
+          cpu time =   4 m. 30.79 s.

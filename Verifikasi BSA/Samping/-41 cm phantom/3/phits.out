@@ -1,0 +1,6 @@
+** warning : in [transform] section,
+   non-orthogonality of transformation.
+   transform id =       3:  r =  0.15E-03 > 2.e-6
+** warning : in [transform] section,
+   non-orthogonality of transformation.
+   transform id =       4:  r =  0.56E-04 > 2.e-6

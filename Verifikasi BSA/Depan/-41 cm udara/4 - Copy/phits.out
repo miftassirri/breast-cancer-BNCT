@@ -1,0 +1,318 @@
+           _________________________________________________________
+          |                                                         |
+          |       _/_/_/_/                                          |
+          |      _/      _/                  _/_/_/_/_/_/           |
+          |     _/      _/  _/      _/   _/      _/      _/_/_/_/_/ |
+          |    _/_/_/_/    _/      _/   _/      _/      _/          |
+          |   _/          _/_/_/_/_/   _/      _/       _/_/_/_/    |
+          |  _/          _/      _/   _/      _/              _/    |
+          | _/          _/      _/   _/      _/      _/_/_/_/_/     |
+          |                                                         |
+          |                                                         |
+          |       Particle and Heavy Ion Transport code System      |
+          |                      Version =  3.310                   |
+          |                       developed by                      |
+          |                                                         |
+          |  Tatsuhiko SATO, Yosuke IWAMOTO, Shintaro HASHIMOTO,    |
+          |    Tatsuhiko OGAWA, Takuya FURUTA, Shinichiro ABE,      |
+          |    Takeshi KAI, Norihiro MATSUDA, Yusuke MATSUYA,       |
+          | Yuho HIRATA, Lan YAO, Pi-En TSAI, Hunter RATLIFF (JAEA),|
+          |                                                         |
+          |            Hiroshi IWASE, Yasuhito SAKAKI (KEK),        |
+          |                                                         |
+          |           Nobuhiro SHIGYO (Kyushu University),          |
+          |                                                         |
+          |      Lembit SIHVER (Technische Universitat Wien), and   |
+          |                                                         |
+          |                     Koji NIITA (RIST)                   |
+          |                                                         |
+          |                 Last Revised  2023-04-11                |
+          |_________________________________________________________|
+
+                        Starting Date = 2023-06-21
+                        Starting Time = 20h 45m 25
+
+>>> Input Echo >>>=============================================================
+
+[ Parameters ]
+ icntl    =           7     # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
+ maxcas   =      100000     # (D=10) number of particles per one batch
+ maxbch   =       10000     # (D=10) number of batches
+ e-mode   =           0     # (D=0) 0: Normal, 1: Event generator mode Ver.1, 2: Ver.2
+
+[ Source ]
+  totfact =  9.36226E+15    # (D=1.0) global factor
+   s-type =   1             # cylindrical source
+     proj =  proton         # kind of incident particle         
+       e0 =   30.000        # energy of beam [MeV/n]
+       r0 =   1.5000        # radius [cm]
+       r1 =   0.0000        # minimum radius [cm]
+       x0 =   0.0000        # (D=0.0) center position of x-axis [cm]
+       y0 =   0.0000        # (D=0.0) center position of y-axis [cm]
+       z0 =   0.0000        # minimum position of z-axis [cm]
+       z1 =   0.0000        # maximum position of z-axis [cm]
+      dir =   1.0000        # z-direction of beam [cosine]
+     trcl =   2003          # transform ID
+
+[ Material ]
+MAT[ 1 ] 
+            C        -1.2400000E-04
+            N        -7.5526800E-01
+            O        -2.3178100E-01
+           Ar        -1.2827000E-02
+MAT[ 2001 ] 
+          9Be        -1.0000000E+00
+MAT[ 2002 ] 
+        206Pb        -2.4400000E-01
+        207Pb        -2.2400000E-01
+        208Pb        -5.3200000E-01
+MAT[ 2003 ] 
+        209Bi        -1.0000000E+00
+MAT[ 2004 ] 
+           1H        -5.2620000E-01
+            C        -2.9690000E-01
+          16O        -1.0070000E-01
+          6Li        -7.2400000E-02
+          7Li        -3.8000000E-03
+MAT[ 2005 ] 
+           Ni        -9.5000000E-01
+         55Mn        -1.5000000E-02
+           Fe        -1.0000000E-02
+           Si        -5.0000000E-03
+           Cu        -1.0000000E-02
+          12C        -5.0000000E-03
+           Ti        -5.0000000E-03
+MAT[ 2006 ] 
+           Pb        -3.3300000E-01
+          19F        -6.6700000E-01
+MAT[ 2007 ] 
+         27Al        -1.0000000E+00
+MAT[ 2008 ] 
+          7Li        -2.6785000E-01
+          19F        -7.3241500E-01
+MAT[ 2009 ] 
+          10B        -7.8261000E-01
+          12C        -2.1739000E-01
+MAT[ 2010 ] 
+           1H        -8.1000000E-02
+          12C        -4.6900000E-01
+          10B        -4.5000000E-01
+
+[ Cell ]
+ 230         1 -1.2050000E-03  -400 #20001 #20002 #20003 #20004 #20005
+                              #20006 #20007 #20008 #20009 #20011 #20012
+                              #20013 #20014 #20018 #20023 #20024 
+ 231        -1                 400 
+ 20001    2004 -9.8430000E-01  ( 2011 -2002 2003 -2006 )
+                              : ( -2009 -2001 2006 2014 )
+                              : ( -2009 -2014 2016 2024 )  trcl=2002 
+ 20002    2006 -8.4500000E+00  ( -2024 2022 -2014 2019 2038 )
+                              : ( 2019 -2035 2038 -2024 )  trcl=2002 
+ 20003    2006 -8.4500000E+00  -2006 2007 -2003 2014  trcl=2002 
+ 20004    2006 -8.4500000E+00  ( -2014 2035 2027 -2022 2038 )
+                              : ( 2038 -2022 2035 -2018 )  trcl=2002 
+ 20005    2006 -8.4500000E+00  ( 2011 -2003 2004 -2007 )
+                              : ( -2003 2010 -2007 2013 )
+                              : ( 2027 -2007 2014 -2013 )  trcl=2002 
+ 20006    2007 -2.7000000E+00  -2013 2031 -2027  trcl=2002 
+ 20007    2007 -2.7000000E+00  ( 2013 -2010 -2004 2025 )
+                              : ( 2013 -2010 -2005 )  trcl=2002 
+ 20008    2009 -2.5200000E+00  -2027 -2034 2018  trcl=2002 
+ 20009    2008 -2.6530000E+00  -2032 -2027 2017  trcl=2002 
+ 20011       0                 2004 -2012 -2026  trcl=2002 
+ 20012    2001 -1.8500000E+00  2005 -2004 -2025  trcl=2002 
+ 20013    2003 -9.8000000E+00  -2026 2004 2012 -2011  trcl=2002 
+ 20014    2003 -9.8000000E+00  2030 -2018 -2038  trcl=2002 
+ 20018    2005 -8.8600000E+00  2036 -2028 2037 -2038  trcl=2002 
+ 20023    2010 -9.3000000E-01  2038 -2009 -2019 2042  trcl=2002 
+ 20024    2002 -1.1340000E+01  2038 -2009 -2042 2043  trcl=2002 
+
+[ Surface ]
+ 400           so    5.0000000E+02
+ 2001     2001 px    2.5210000E+02
+ 2002     2001 px    2.5200000E+02
+ 2003     2001 px    2.4200000E+02
+ 2004     2001 px    2.0500000E+02
+ 2005     2001 px    2.0450000E+02
+ 2006     2001 cx    5.7000000E+01
+ 2007     2001 cx    2.8000000E+01
+ 2008     2001 cx    6.7010000E+01
+ 2009     2001 cx    8.7000000E+01
+ 2010     2001 cx    2.5000000E+01
+ 2011     2001 cx    1.5000000E+01
+ 2012     2001 cx    5.0000000E+00
+ 2013     2001 px    1.6600000E+02
+ 2014     2001 px    1.5300000E+02
+ 2015     2001 px    1.4300000E+02
+ 2016     2001 px    1.2930000E+02
+ 2017     2001 px    1.4600000E+02
+ 2018     2001 px    1.4579100E+02
+ 2019     2001 px    1.2930000E+02
+ 2020     2001 px    1.3840000E+02
+ 2021     2001 kx    1.3300000E+02  2.0000000E+00
+ 2022     2001 kx    1.2500000E+02  6.0000000E-01
+ 2023     2001 kx    1.0590000E+02  9.0000000E-01
+ 2024     2001 kx    1.0600000E+02  9.0000000E-01
+ 2025     2001 cx    9.5000000E+00
+ 2026     2001 px    2.6000000E+02
+ 2027     2001 kx    1.3500000E+02  6.5000000E-01
+ 2028     2001 px    1.4529000E+02
+ 2029     2001 px    1.4579000E+02
+ 2030     2001 px    1.4529100E+02
+ 2031     2001 px    1.5400000E+02
+ 2032     2001 px    1.5399500E+02
+ 2033     2001 px    1.5200000E+02
+ 2034     2001 px    1.4599900E+02
+ 2035     2001 px    1.4400000E+02
+ 2036     2001 px    1.3830100E+02
+ 2037     2001 cx    5.0000000E+00
+ 2038     2001 cx    5.5000000E+00
+ 2039     2001 py    4.2000000E+00
+ 2040     2001 py   -4.2000000E+00
+ 2041     2001 px    9.8300000E+01
+ 2042     2001 px    1.2730000E+02
+ 2043     2001 px    1.2430000E+02
+
+[ Transform ]
+tr2001         0.0000000E+00  0.0000000E+00  1.3830000E+02
+               0.0000000E+00  0.0000000E+00 -1.0000000E+00
+               0.0000000E+00  1.0000000E+00  0.0000000E+00
+               1.0000000E+00  0.0000000E+00  0.0000000E+00    1
+*tr2002        1.0000000E+01 -3.3000000E+01  5.2000000E+01
+               0.0000000E+00  1.8000000E+02  9.0000000E+01
+               0.0000000E+00  0.0000000E+00  0.0000000E+00
+               0.0000000E+00  0.0000000E+00  0.0000000E+00    2
+*tr2003        1.0000000E+01 -1.5300000E+02  5.2000000E+01
+               0.0000000E+00  1.8000000E+02  9.0000000E+01
+               0.0000000E+00  0.0000000E+00  0.0000000E+00
+               0.0000000E+00  0.0000000E+00  0.0000000E+00    2
+*tr2004        1.0000000E+01  0.0000000E+00  5.2000000E+01
+               0.0000000E+00  1.8000000E+02  9.0000000E+01
+               0.0000000E+00  0.0000000E+00  0.0000000E+00
+               0.0000000E+00  0.0000000E+00  0.0000000E+00    2
+
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =  1.0000000E-02  # minimum value of e-mesh points
+     emax =   1000.000      # maximum value of e-mesh points
+#    edel =   999.9900      # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           1.00000E-02  1.00000E+03
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = fast_neutron_dose.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+  multiplier =   1          # number of material group
+     part =  all      
+# kf/name :  0        
+     emax =   1.00000E+10
+      mat                mset1  
+        1 ( 1.82881E-11 1 1 -4 )
+    y-txt = Dose [Gy/source]
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          84 (  0)           0 (  0)          84 (  0)
+
+[ T-Gshow ]
+    title = [t-gshow] in xyz mesh
+     mesh =  xyz            # mesh type is xyz scoring mesh
+   x-type =    2            # x-mesh is linear given by xmin, xmax and nx
+     xmin =   0.000000      # minimum value of x-mesh points
+     xmax =   20.00000      # maximum value of x-mesh points
+#    xdel =  0.1000000      # mesh width of x-mesh points
+       nx =    200          # number of x-mesh points
+   y-type =    2            # y-mesh is linear given by ymin, ymax and ny
+     ymin =  -41.00000      # minimum value of y-mesh points
+     ymax =  -5.000000      # maximum value of y-mesh points
+#    ydel =  0.3600000      # mesh width of y-mesh points
+       ny =    100          # number of y-mesh points
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =   45.00000      # minimum value of z-mesh points
+     zmax =   55.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     10          # number of z-mesh points
+     axis =   xy            # axis of output
+     file = 2d_xy_BSAORNL.out  # file name of output for the above axis
+   output =    2            # (D=2) 1:bnd, 2:bnd+mat, 3:bnd+num 4:bnd+mat+num
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :         313 (  0)       10151 (  0)       10464 (  0)
+
+[END] of Input Echo <<<========================================================
+
+<<< Report of real Geometry memory >>>
+*           GG/CG memory =        2
+*     total memory: mdas = 80000000
+*                percent =     0.00 %
+
+<<< Report of material memory for high energy>>>
+*   high energy material =        1
+*     total memory: mdas = 80000000
+*                percent =     0.00 %
+
+<<< Report of material memory for low energy>>>
+*    low energy material =    10438
+*     total memory: mdas = 80000000
+*                percent =     0.01 %
+
+<<< Report of real tally memory >>>
+*      real tally memory =      397
+*     total memory: mdas = 80000000
+*                percent =     0.00 %
+
+<<< Report of temporary tally memory >>>
+* temporary tally memory =    15594
+*     total memory: mdas = 80000000
+*                percent =     0.02 %
+
+<<< Report of total memory >>>
+*      used total memory =    20595
+*     total memory: mdas = 80000000
+*                percent =     0.03 %
+*                ---------------------
+
+-------------------------------------------------------------------------------
+ job termination date : 2023/06/21
+                 time :   20:45:47
+
+ END 

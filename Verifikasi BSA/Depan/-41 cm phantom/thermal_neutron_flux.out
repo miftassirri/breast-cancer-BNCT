@@ -1,0 +1,129 @@
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.217391      # mesh width of z-mesh points
+       nz =     46          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -3.97826E+01 -3.85652E+01 -3.73478E+01 -3.61304E+01
+#          -3.49130E+01 -3.36957E+01 -3.24783E+01 -3.12609E+01 -3.00435E+01
+#          -2.88261E+01 -2.76087E+01 -2.63913E+01 -2.51739E+01 -2.39565E+01
+#          -2.27391E+01 -2.15217E+01 -2.03043E+01 -1.90870E+01 -1.78696E+01
+#          -1.66522E+01 -1.54348E+01 -1.42174E+01 -1.30000E+01 -1.17826E+01
+#          -1.05652E+01 -9.34783E+00 -8.13043E+00 -6.91304E+00 -5.69565E+00
+#          -4.47826E+00 -3.26087E+00 -2.04348E+00 -8.26087E-01  3.91304E-01
+#           1.60870E+00  2.82609E+00  4.04348E+00  5.26087E+00  6.47826E+00
+#           7.69565E+00  8.91304E+00  1.01304E+01  1.13478E+01  1.25652E+01
+#           1.37826E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =   0.000000      # minimum value of e-mesh points
+     emax =  5.0000000E-07  # maximum value of e-mesh points
+#    edel =  5.0000000E-07  # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           0.00000E+00  5.00000E-07
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = thermal_neutron_flux.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          55 (  0)           0 (  0)          55 (  0)
+
+#------------------------------------------------------------------------------
+#newpage:
+#   no. =  1   ie  =  1   ir  =  1
+#   e = (   0.0000E+00  -   5.0000E-07  )
+#   r = (   0.0000E+00  -   5.5000E+00  )
+
+x: z [cm]
+y: Flux [1/cm^2/source]              
+p: xlin ylog afac(0.8) form(0.9)
+h: n            x            y(neutron ),hh0l n  
+#  z-lower      z-upper        neutron   r.err 
+  -4.1000E+01  -3.9783E+01   2.3991E+09  0.0318
+  -3.9783E+01  -3.8565E+01   2.2466E+09  0.0502
+  -3.8565E+01  -3.7348E+01   2.7205E+09  0.0469
+  -3.7348E+01  -3.6130E+01   3.2133E+09  0.0468
+  -3.6130E+01  -3.4913E+01   3.3077E+09  0.0430
+  -3.4913E+01  -3.3696E+01   3.4315E+09  0.0421
+  -3.3696E+01  -3.2478E+01   3.7077E+09  0.0428
+  -3.2478E+01  -3.1261E+01   3.8428E+09  0.0433
+  -3.1261E+01  -3.0043E+01   3.6083E+09  0.0439
+  -3.0043E+01  -2.8826E+01   3.2501E+09  0.0451
+  -2.8826E+01  -2.7609E+01   3.0118E+09  0.0453
+  -2.7609E+01  -2.6391E+01   2.4786E+09  0.0465
+  -2.6391E+01  -2.5174E+01   2.1187E+09  0.0492
+  -2.5174E+01  -2.3957E+01   1.6450E+09  0.0478
+  -2.3957E+01  -2.2739E+01   1.1581E+09  0.0515
+  -2.2739E+01  -2.1522E+01   8.4660E+08  0.0552
+  -2.1522E+01  -2.0304E+01   6.7342E+08  0.0615
+  -2.0304E+01  -1.9087E+01   5.6458E+08  0.0690
+  -1.9087E+01  -1.7870E+01   4.7570E+08  0.0793
+  -1.7870E+01  -1.6652E+01   3.9691E+08  0.0848
+  -1.6652E+01  -1.5435E+01   3.9474E+08  0.0956
+  -1.5435E+01  -1.4217E+01   3.9412E+08  0.0971
+  -1.4217E+01  -1.3000E+01   4.6125E+08  0.0994
+  -1.3000E+01  -1.1783E+01   4.4848E+08  0.0962
+  -1.1783E+01  -1.0565E+01   5.3786E+08  0.1265
+  -1.0565E+01  -9.3478E+00   4.8848E+08  0.1415
+  -9.3478E+00  -8.1304E+00   5.5977E+08  0.1431
+  -8.1304E+00  -6.9130E+00   4.4666E+08  0.1567
+  -6.9130E+00  -5.6957E+00   4.0184E+08  0.1613
+  -5.6957E+00  -4.4783E+00   2.9621E+08  0.2079
+  -4.4783E+00  -3.2609E+00   2.4661E+08  0.2073
+  -3.2609E+00  -2.0435E+00   1.7769E+08  0.2415
+  -2.0435E+00  -8.2609E-01   1.6867E+08  0.2623
+  -8.2609E-01   3.9130E-01   1.5482E+08  0.2754
+   3.9130E-01   1.6087E+00   9.2888E+07  0.2909
+   1.6087E+00   2.8261E+00   6.6129E+07  0.3236
+   2.8261E+00   4.0435E+00   5.7412E+07  0.3173
+   4.0435E+00   5.2609E+00   4.0142E+07  0.4592
+   5.2609E+00   6.4783E+00   3.6470E+07  0.4078
+   6.4783E+00   7.6957E+00   3.6515E+07  0.4383
+   7.6957E+00   8.9130E+00   9.4339E+06  0.5182
+   8.9130E+00   1.0130E+01   3.2626E+06  0.7144
+   1.0130E+01   1.1348E+01   2.2692E+06  0.7072
+   1.1348E+01   1.2565E+01   9.3995E+05  1.0000
+   1.2565E+01   1.3783E+01   0.0000E+00  0.0000
+   1.3783E+01   1.5000E+01   5.8587E+05  1.0000
+
+#   sum over    5.3219E+03   1.1004E+09
+
+'no. =  1,  ie =  1,  ir =  1'
+msuc: {\huge [t-track] in r-z mesh}
+msdr: {\it plotted by \ANGEL \version}
+msdl: {\it calculated by \PHITS  3.31}
+wt: s(0.7)
+\vspace{-3}
+  emin  &=&   0.0000E+00 [MeV]
+  emax  &=&   5.0000E-07 [MeV]
+  rmin  &=&   0.0000E+00 [cm]
+  rmax  &=&   5.5000E+00 [cm]
+e:
+ 
+# Information for Restart Calculation
+# This calculation was newly started
+# istdev =  2 # 1:Batch variance, 2:History variance
+# resc2  = 4.27247102920542940E-09 # Total source weight or Total source weight / maxcas
+# resc3  = 4.00000000000000000E+07 # Total history number or Total batch number
+# maxcas =    10000000 # History / Batch, only used for istdev=1
+# bitrseed = 0101001101111000100111010100100100100000111001011001010000100001 # bit data of rseed

@@ -1,0 +1,133 @@
+[ T-Deposit ]
+    title = [t-deposit] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+     unit =    0            # unit is [Gy/source]
+   letmat =    0            # (D=0) mat ID for LET, 0:real mat, <0: electron for H2O
+  dedxfnc =    0            # (D=0) user defined multiplier, 0(no), 1, 2
+ material =  all            # (D=all) number of specific material
+   output =  dose           # total deposit energy
+  deposit =    0            # (D=0) 0-> total deposit dist, 1-> each process
+     axis =     z           # axis of output
+     file = gamma_dose.out  # file name of output for the above axis
+     part =  photon   
+# kf/name :  22       
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          62 (  0)           0 (  0)          62 (  0)
+
+#------------------------------------------------------------------------------
+#newpage:
+#   no. =  1   ir  =  1
+#   r = (   0.0000E+00  -   5.5000E+00  )
+
+x: z [cm]
+y: Dose [Gy/source]      
+p: xlin ylog afac(0.8) form(0.9)
+h: n            x            y(photon  ),hh0l n 
+#  z-lower      z-upper        photon    r.err 
+  -4.1000E+01  -4.0000E+01   8.9818E-02  0.0034
+  -4.0000E+01  -3.9000E+01   2.9287E-02  0.0075
+  -3.9000E+01  -3.8000E+01   2.9752E-02  0.0081
+  -3.8000E+01  -3.7000E+01   2.9252E-02  0.0083
+  -3.7000E+01  -3.6000E+01   2.8337E-02  0.0088
+  -3.6000E+01  -3.5000E+01   2.7102E-02  0.0093
+  -3.5000E+01  -3.4000E+01   2.5369E-02  0.0098
+  -3.4000E+01  -3.3000E+01   2.1904E-02  0.0101
+  -3.3000E+01  -3.2000E+01   1.5212E-02  0.0102
+  -3.2000E+01  -3.1000E+01   1.2421E-02  0.0100
+  -3.1000E+01  -3.0000E+01   1.0523E-02  0.0103
+  -3.0000E+01  -2.9000E+01   9.1764E-03  0.0109
+  -2.9000E+01  -2.8000E+01   8.0873E-03  0.0114
+  -2.8000E+01  -2.7000E+01   7.2269E-03  0.0118
+  -2.7000E+01  -2.6000E+01   6.5844E-03  0.0125
+  -2.6000E+01  -2.5000E+01   6.0344E-03  0.0121
+  -2.5000E+01  -2.4000E+01   5.8969E-03  0.0121
+  -2.4000E+01  -2.3000E+01   6.4539E-03  0.0120
+  -2.3000E+01  -2.2000E+01   5.8514E-03  0.0119
+  -2.2000E+01  -2.1000E+01   4.8551E-03  0.0128
+  -2.1000E+01  -2.0000E+01   4.0004E-03  0.0136
+  -2.0000E+01  -1.9000E+01   3.4763E-03  0.0166
+  -1.9000E+01  -1.8000E+01   2.9793E-03  0.0158
+  -1.8000E+01  -1.7000E+01   2.6298E-03  0.0166
+  -1.7000E+01  -1.6000E+01   2.3492E-03  0.0176
+  -1.6000E+01  -1.5000E+01   2.1025E-03  0.0187
+  -1.5000E+01  -1.4000E+01   1.9099E-03  0.0197
+  -1.4000E+01  -1.3000E+01   1.7565E-03  0.0205
+  -1.3000E+01  -1.2000E+01   1.6144E-03  0.0213
+  -1.2000E+01  -1.1000E+01   1.4822E-03  0.0223
+  -1.1000E+01  -1.0000E+01   1.3738E-03  0.0232
+  -1.0000E+01  -9.0000E+00   1.2714E-03  0.0242
+  -9.0000E+00  -8.0000E+00   1.1942E-03  0.0251
+  -8.0000E+00  -7.0000E+00   1.1217E-03  0.0260
+  -7.0000E+00  -6.0000E+00   1.0521E-03  0.0270
+  -6.0000E+00  -5.0000E+00   9.9053E-04  0.0278
+  -5.0000E+00  -4.0000E+00   9.2821E-04  0.0287
+  -4.0000E+00  -3.0000E+00   8.6340E-04  0.0297
+  -3.0000E+00  -2.0000E+00   8.0155E-04  0.0307
+  -2.0000E+00  -1.0000E+00   7.5224E-04  0.0319
+  -1.0000E+00   0.0000E+00   7.1041E-04  0.0329
+   0.0000E+00   1.0000E+00   6.7913E-04  0.0339
+   1.0000E+00   2.0000E+00   6.4890E-04  0.0348
+   2.0000E+00   3.0000E+00   6.2283E-04  0.0358
+   3.0000E+00   4.0000E+00   5.9720E-04  0.0366
+   4.0000E+00   5.0000E+00   5.7219E-04  0.0376
+   5.0000E+00   6.0000E+00   5.4785E-04  0.0387
+   6.0000E+00   7.0000E+00   5.2882E-04  0.0395
+   7.0000E+00   8.0000E+00   5.0731E-04  0.0404
+   8.0000E+00   9.0000E+00   4.8598E-04  0.0415
+   9.0000E+00   1.0000E+01   4.6858E-04  0.0423
+   1.0000E+01   1.1000E+01   4.4581E-04  0.0436
+   1.1000E+01   1.2000E+01   4.2840E-04  0.0446
+   1.2000E+01   1.3000E+01   4.0905E-04  0.0447
+   1.3000E+01   1.4000E+01   3.9515E-04  0.0455
+   1.4000E+01   1.5000E+01   3.8139E-04  0.0463
+
+'no. =  1,  ir =  1'
+msuc: {\huge [t-deposit] in r-z mesh}
+msdr: {\it plotted by \ANGEL \version}
+msdl: {\it calculated by \PHITS  3.31}
+wt: s(0.7)
+\vspace{-3}
+  rmin  &=&   0.0000E+00 [cm]
+  rmax  &=&   5.5000E+00 [cm]
+e:
+ 
+# Information for Restart Calculation
+# This calculation was newly started
+# istdev =  2 # 1:Batch variance, 2:History variance
+# resc2  = 1.06811775968502986E-07 # Total source weight or Total source weight / maxcas
+# resc3  = 1.00000000000000000E+09 # Total history number or Total batch number
+# maxcas =      100000 # History / Batch, only used for istdev=1
+# bitrseed = 0001001110011001001001110000100100110111001111011100001000101100 # bit data of rseed

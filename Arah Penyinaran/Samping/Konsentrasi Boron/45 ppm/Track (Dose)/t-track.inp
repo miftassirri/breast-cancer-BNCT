@@ -9,17 +9,16 @@ C --------------------------------------------------------------
 
 [ Parameters ]
         icntl = 0 # (D=0) 3:ECH 5:NOR 6:SRC 7,8:GSH 11:DSH 12:DUMP
-        maxcas = 10000000 # (D=10) number of particles per one batch
-        maxbch = 100 # (D=10) number of batches
-        e-mode = 2
-        ipnint = 1
+        maxcas = 100000 # (D=10) number of particles per one batch
+        maxbch = 10000 # (D=10) number of batches
+        e-mode = 0
 
 [ Source ]
-  totfact = 1.2483018e+16        # (D=1.0) global factor
+  totfact = 9.3622636e+15        # (D=1.0) global factor
    s-type =     1           # cylindrical source
      proj =   proton        # kind of incident particle         
        e0 =    30.00        # energy of beam [MeV/u]
-       r0 =     2        # radius [cm]
+       r0 =     1.5        # radius [cm]
        x0 =   0.00        # (D=0.0) center position of x-axis [cm]
        y0 =   0.00        # (D=0.0) center position of y-axis [cm]
        z0 =   0.00        # minimum position of z-axis [cm]
@@ -273,7 +272,7 @@ C --------------------------------------------------------------
  $     2.2  RIBS
  $           
  $     ALL RIBS
- 64    2 -1.4        81 -80 ((83 -82):(85 -84):(87 -86):(89 -88):
+ 64    3 -1.4        81 -80 ((83 -82):(85 -84):(87 -86):(89 -88):
                     (91 -90):(93 -92):(95 -94):(97 -96):(99 -98):
                     (101 -100):(103 -102):(105 -104))
                     VOL=694
@@ -691,7 +690,7 @@ C --------------------------------------------------------------
  $                   VOL=168.5
                     VOL=236.543
  $      RIGHT GLAND
- 191   25 -0.94       -373 10
+ 191   26 -0.94       -373 10
  $                   VOL=168.5
                     VOL=236.543
  $      BOTH GLANDS
@@ -781,7 +780,7 @@ C --------------------------------------------------------------
  $           
  $   10.2.2 SKIN OF FEMALE TRUNK   
  $           
- 222   11  -1.09      ((-384 -394 3 (10:73:-3)):
+ 222   111  -1.09      ((-384 -394 3 (10:73:-3)):
  $     PLUS          BREAST PART /* VOL=51 */ 
                    (10 ((-370 371):(-372 373))))
  $     REMOVE        MATERIAL UNDER NECK
@@ -1530,8 +1529,8 @@ C --------------------------------------------------------------
  2039 2001 py 4.2
  2040 2001 py -4.2
  2041 2001 px 98.3
- 2042 2001 px 124.3
- 2043 2001 px 119.3
+ 2042 2001 px 127.3
+ 2043 2001 px 124.3
 
 [ Transform ]
  $  $   AXIS TRANSFORMATION SECTION *
@@ -1553,7 +1552,7 @@ C --------------------------------------------------------------
  *TR7  1.967 -1.09 59.77 33 90 57 90 0 90 123 90 33
  *TR8 -1.967 -1.09 59.77 33 90 123 90 0 90 57 90 33
 
- TR2001 0 0 138.3 0 0 -1 0 1 0 1 0 0 1
+ TR2001 0 0 143.3 0 0 -1 0 1 0 1 0 0 1
  *TR2002 40 -10 52 0 270 90 0 0 0 0 0 0 2
  *TR2003 160 -10 52 0 270 0 0 0 0 0 0 0 2
 
@@ -1582,8 +1581,28 @@ C --------------------------------------------------------------
                 37000  -0.00002                   
                 38000  -0.00003                   
                 82000  -0.00001      
+
+        $       All Ribs (RHO = 1.4 G/ML)    
+        M3       1000  -0.07337                   
+                6000  -0.25475                   
+                7000  -0.03057                   
+                8000  -0.47893                   
+                9000  -0.00025                   
+                11000  -0.00326                   
+                12000  -0.00112                   
+                14000  -0.00002                   
+                15000  -0.05095                   
+                16000  -0.00173                   
+                17000  -0.00143                   
+                19000  -0.00153                   
+                20000  -0.10190                   
+                26000  -0.00008                   
+                30000  -0.00005                   
+                37000  -0.00002                   
+                38000  -0.00003                   
+                82000  -0.00001      
                 5010    -4.5e-6
-        MT2 lwtr.20t
+        MT3 lwtr.20t
 
         $      AIR (RHO = 0.001205)               
         M4       6000  -0.000124                  
@@ -1676,7 +1695,19 @@ C --------------------------------------------------------------
                 16000   -0.002
                 17000   -0.003
                 19000   -0.001
-                5010    -4.5e-6 
+
+        $Breast Skin
+        M111     1000    -0.1          
+                6000    -0.204
+                7000    -0.042
+                8000    -0.645
+                11000   -0.002
+                15000   -0.001
+                16000   -0.002
+                17000   -0.003
+                19000   -0.001
+                5010    -4.5e-6
+        MT111 lwtr.20t
 
         $ SOFT TISSUE  (RHO=1.03)
         M12     1000    -0.105        
@@ -1830,22 +1861,25 @@ C --------------------------------------------------------------
         M25       1000      -0.116
                 6000      -0.519  
                 8000      -0.365 
-                5010      -4.5e-6
-        MT25 lwtr.20t
+
+        $ BREAST (RHO=0.94)
+        M26       1000      -0.116
+                6000      -0.519  
+                8000      -0.365
 
         $ GTV
-        M1001     1000      -0.0992
-                6000      -0.1936 
-                8000      -0.6598
+        M1001     1000      -0.116
+                6000      -0.519
+                8000      -0.365
                 5010      -45e-6
         MT1001 lwtr.20t
 
         $ CTV/PTV
         M1002     1000      -0.116
                 6000      -0.519  
-                8000      -0.365 
+                8000      -0.365
                 5010      -4.5e-6
-        MT1002 lwtr.20t
+        MT1002 lwtr.20t 
 
         M1111 1000 1.0
         M2222 7000 1.0
@@ -1900,7 +1934,7 @@ C --------------------------------------------------------------
 
 [ T-Track ]
         mesh = reg
-        reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
+        reg = 64 80 81 86 222 1001 1002 1003 
         axis =   reg             # axis of output
         file = photon.out       # file name of output for the above axis
         part = photon
@@ -1908,15 +1942,16 @@ C --------------------------------------------------------------
         ne =    1            # number of e-mesh points
                 0.0  1000.0
         unit =    1            # unit is [1/cm^2/source]
-        multiplier = 7 $ The following is subsection of multiplier.
+        multiplier = 6 $ The following is subsection of multiplier.
+        part  = photon
+        emax  = 1000     
         mat        mset1
-        2         (3.47570E-11    2 -5 -6)
-        11        (4.25141E-11   11 -5 -6)
+        3         (3.47570E-11    2 -5 -6)
+        111        (4.25140E-11   11 -5 -6)
         14        (4.26571E-11   14 -5 -6)
         15        (4.31001E-11   15 -5 -6)
-        25        (4.81831E-11   25 -5 -6)
-        1001      (4.14443E-11 1001 -5 -6)
-        1002      (4.81831E-11 1002 -5 -6)
+        1001      (4.81830E-11 1001 -5 -6)
+        1002      (4.81830E-11 1002 -5 -6)
         y-txt = Dose [Gy/source]
         epsout = 1
         # angel = ymin(1.0e-17) ymax(1.0e-14)
@@ -1925,30 +1960,7 @@ C --------------------------------------------------------------
 
 [ T-Track ]
         mesh = reg
-        reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
-        axis =   reg             # axis of output
-        file = neutron.out       # file name of output for the above axis
-        part = neutron
-        e-type =    1            # e-mesh is given by the below data
-        ne =    1            # number of e-mesh points
-                0.0  1000.0
-        unit =    1            # unit is [1/cm^2/source]
-        multiplier = 7 $ The following is subsection of multiplier.
-        mat        mset1
-        2         (3.47570E-11    2 1 -4)
-        11        (4.25141E-11   11 1 -4)
-        14        (4.26571E-11   14 1 -4)
-        15        (4.31001E-11   15 1 -4)
-        25        (4.81831E-11   25 1 -4)
-        1001      (4.14443E-11 1001 1 -4)
-        1002      (4.81831E-11 1002 1 -4)
-        y-txt = Dose [Gy/source]
-        epsout = 1
-        # angel = ymin(1.0e-17) ymax(1.0e-14)
-
-[ T-Track ]
-        mesh = reg
-        reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
+        reg = 64 80 81 86 222 1001 1002 1003 
         axis =   reg             # axis of output
         file = hydro.out       # file name of output for the above axis
         part = neutron
@@ -1956,14 +1968,15 @@ C --------------------------------------------------------------
         ne =    1            # number of e-mesh points
                 0.0  1000.0
         unit =    1            # unit is [1/cm^2/source]
-        multiplier = 7 $ The following is subsection of multiplier.
+        multiplier = 6 $ The following is subsection of multiplier.
+        part  = neutron
+        emax  = 1000     
         mat        mset1
-        2         (1.93656E-11 1111 1 -4)
-        11        (2.63944E-11 1111 1 -4)
+        3         (1.93656E-11 1111 1 -4)
+        111       (2.63944E-11 1111 1 -4)
         14        (2.71862E-11 1111 1 -4)
         15        (2.74502E-11 1111 1 -4)
-        25        (3.06175E-11 1111 1 -4)
-        1001      (2.61833E-11 1111 1 -4)
+        1001      (3.06175E-11 1111 1 -4)
         1002      (3.06175E-11 1111 1 -4)
         y-txt = Dose [Gy/source]
         epsout = 1
@@ -1971,7 +1984,7 @@ C --------------------------------------------------------------
 
 [ T-Track ]
         mesh = reg
-        reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
+        reg = 64 80 81 86 222 1001 1002 1003 
         axis =   reg             # axis of output
         file = nitro.out       # file name of output for the above axis
         part = neutron
@@ -1980,9 +1993,11 @@ C --------------------------------------------------------------
                 0.0  1000.0
         unit =    1            # unit is [1/cm^2/source]
         multiplier = 4 $ The following is subsection of multiplier.
+        part  = neutron
+        emax  = 1000     
         mat        mset1
-        2         (5.80656E-13 2222 1 -4)
-        11        (7.97761E-13 2222 1 -4)
+        3         (5.80656E-13 2222 1 -4)
+        111       (7.97761E-13 2222 1 -4)
         14        (5.88824E-13 2222 1 -4)
         15        (5.50835E-13 2222 1 -4)
         y-txt = Dose [Gy/source]
@@ -1991,7 +2006,7 @@ C --------------------------------------------------------------
 
 [ T-Track ]
         mesh = reg
-        reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
+        reg = 64 80 81 86 222 1001 1002 1003 
         axis =   reg             # axis of output
         file = boron.out       # file name of output for the above axis
         part = neutron
@@ -1999,14 +2014,14 @@ C --------------------------------------------------------------
         ne =    1            # number of e-mesh points
                 0.0  1000.0
         unit =    1            # unit is [1/cm^2/source]
-        multiplier = 7 $ The following is subsection of multiplier.
+        multiplier = 6 $ The following is subsection of multiplier.
         part  = neutron
+        emax  = 1000     
         mat        mset1
-        2         (1.19567E-16 3333 1 -4)
-        11        (1.19567E-16 3333 1 -4)
+        3         (1.19567E-16 3333 1 -4)
+        111       (1.19567E-16 3333 1 -4)
         14        (1.19567E-16 3333 1 -4)
         15        (1.19567E-16 3333 1 -4)
-        25        (1.19567E-16 3333 1 -4)
         1001      (1.19567E-15 3333 1 -4)
         1002      (1.19567E-16 3333 1 -4)
         y-txt = Dose [Gy/source]
@@ -2030,13 +2045,3 @@ C --------------------------------------------------------------
         nitro.out
         boron.out
         anatally end    1
-
-[ T-Deposit ]
-        mesh = reg
-        reg = 63 64 80 81 86 190 191 222 1001 1002 1003 
-        axis =   reg            # axis of output
-        file = dose.out       # file name of output for the above axis
-        part = all neutron photon proton (alpha 7Li)
-        unit =    0            # unit is [Gy/source]
-        output = dose
-        epsout = 1

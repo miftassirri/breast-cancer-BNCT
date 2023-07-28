@@ -35,8 +35,8 @@
           |                 Last Revised  2023-04-11                |
           |_________________________________________________________|
 
-                        Starting Date = 2023-05-16
-                        Starting Time = 23h 32m 12
+                        Starting Date = 2023-07-19
+                        Starting Time = 00h 32m 08
 
 >>> Input Echo >>>=============================================================
 
@@ -82,8 +82,6 @@ MAT[ 2 ]
            Rb        -2.0000000E-05
            Sr        -3.0000000E-05
            Pb        -1.0000000E-05
-          10B        -1.0000000E-05
-mt2      lwtr.20t  
 MAT[ 4 ] 
             C        -1.2400000E-04
             N        -7.5526700E-01
@@ -200,7 +198,6 @@ MAT[ 14 ]
            Cl        -3.0000000E-03
             K        -2.0000000E-03
           10B        -1.0000000E-05
-mt14     lwtr.20t  
 MAT[ 15 ] 
             H        -1.0400000E-01
             C        -1.3900000E-01
@@ -212,7 +209,6 @@ MAT[ 15 ]
            Cl        -2.0000000E-03
             K        -3.0000000E-03
           10B        -1.0000000E-05
-mt15     lwtr.20t  
 MAT[ 16 ] 
             H        -1.0300000E-01
             C        -1.3200000E-01
@@ -308,20 +304,14 @@ MAT[ 25 ]
             H        -1.1600000E-01
             C        -5.1900000E-01
             O        -3.6500000E-01
-          10B        -1.0000000E-05
-mt25     lwtr.20t  
 MAT[ 1001 ] 
             H        -9.9200000E-02
             C        -1.9360000E-01
             O        -6.5980000E-01
-          10B        -1.0000000E-04
-mt1001   lwtr.20t  
 MAT[ 1002 ] 
             H        -1.1600000E-01
             C        -5.1900000E-01
             O        -3.6500000E-01
-          10B        -1.0000000E-05
-mt1002   lwtr.20t  
 MAT[ 1111 ] 
             H         1.0000000E+00
 MAT[ 2222 ] 
@@ -1343,8 +1333,8 @@ MAT[ 2010 ]
  2039     2001 py    4.2000000E+00
  2040     2001 py   -4.2000000E+00
  2041     2001 px    9.8300000E+01
- 2042     2001 px    1.2430000E+02
- 2043     2001 px    1.1930000E+02
+ 2042     2001 px    1.2730000E+02
+ 2043     2001 px    1.2430000E+02
 
 [ Transform ]
 tr1            3.5000000E+00  5.0000000E+00  3.8000000E+01
@@ -1375,7 +1365,7 @@ tr6            0.0000000E+00  2.5750000E+00  4.2300000E+01
                3.3000000E+01  9.0000000E+01  1.2300000E+02
                9.0000000E+01  0.0000000E+00  9.0000000E+01
                5.7000000E+01  9.0000000E+01  3.3000000E+01    1
-tr2001         0.0000000E+00  0.0000000E+00  1.3830000E+02
+tr2001         0.0000000E+00  0.0000000E+00  1.4330000E+02
                0.0000000E+00  0.0000000E+00 -1.0000000E+00
                0.0000000E+00  1.0000000E+00  0.0000000E+00
                1.0000000E+00  0.0000000E+00  0.0000000E+00    1
@@ -1504,61 +1494,78 @@ tr2001         0.0000000E+00  0.0000000E+00  1.3830000E+02
   20023      1.000000    
   20024      1.000000    
 
+[ Mat Name Color ]
+   mat                  name     size             color   # HSB color value
+     0                  void     1.00         lightgray   # { -0.800  1.000  1.000 }
+     1                     1     1.00       yellowgreen   # {  0.700  1.000  1.000 }
+     2                Tulang     1.00          darkgray   # { -0.400  1.000  1.000 }
+     4                 Udara     1.00              gray   # { -0.600  1.000  1.000 }
+     5                     5     1.00     pastelmagenta   # {  0.067  0.600  1.000 }
+     6                     6     1.00         bluegreen   # {  0.500  1.000  1.000 }
+     7                     7     1.00           darkred   # {  1.000  1.000  0.600 }
+     8                     8     1.00             green   # {  0.600  1.000  1.000 }
+     9                     9     1.00       pastelbrown   # {  0.900  0.600  0.500 }
+    10                    10     1.00              cyan   # {  0.400  1.000  1.000 }
+    11                 Kulit     1.00      orangeyellow   # {  0.867  1.000  1.000 }
+    12         JaringanLunak     1.00         darkgreen   # {  0.600  1.000  0.500 }
+    13                    13     1.00             camel   # {  0.800  0.700  0.700 }
+    14             Paru-Paru     1.00        pastelblue   # {  0.250  0.400  1.000 }
+    15               Jantung     1.00        pastelpink   # {  0.900  0.500  1.000 }
+    16                    16     1.00      pastelyellow   # {  0.800  0.700  1.000 }
+    17                    17     1.00      pastelpurple   # {  0.100  0.400  0.500 }
+    18                    18     1.00             brown   # {  0.900  1.000  0.500 }
+    19                    19     1.00        pastelpink   # {  0.900  0.500  1.000 }
+    20                    20     1.00            yellow   # {  0.800  1.000  1.000 }
+    21                    21     1.00              blue   # {  0.200  1.000  1.000 }
+    22                    22     1.00       pastelgreen   # {  0.700  0.600  1.000 }
+    23                    23     1.00           magenta   # {  0.067  1.000  1.000 }
+    24                    24     1.00         darkgreen   # {  0.600  1.000  0.500 }
+    25              Payudara     1.00             brown   # {  0.900  1.000  0.500 }
+  1001                   GTV     1.00      pastelpurple   # {  0.100  0.400  0.500 }
+  1002               CTV/GTV     1.00      pastelviolet   # {  0.133  0.400  1.000 }
+  1111                  1111     1.00         mossgreen   # {  0.500  1.000  0.300 }
+  2222                  2222     1.00           winered   # {  0.002  0.800  0.700 }
+  3333                  3333     1.00          cyanblue   # {  0.400  1.000  0.500 }
+  2001             Beryllium     1.00               red   # {  1.000  1.000  1.000 }
+  2002                Timbal     1.00            orange   # {  0.933  1.000  1.000 }
+  2003               Bismuth     1.00            yellow   # {  0.800  1.000  1.000 }
+  2004     PolietilenLithium     1.00             green   # {  0.600  1.000  1.000 }
+  2005               Nikel95     1.00              cyan   # {  0.400  1.000  1.000 }
+  2006                  PbF2     1.00              blue   # {  0.200  1.000  1.000 }
+  2007             Alumunium     1.00            violet   # {  0.133  1.000  1.000 }
+  2008                   LiF     1.00           magenta   # {  0.067  1.000  1.000 }
+  2009          BoronKarbida     1.00           darkred   # {  1.000  1.000  0.600 }
+  2010    BorotedParaffinWax     1.00              pink   # {  1.000  0.500  1.000 }
+
 [ T-Gshow ]
     title = [t-gshow] in xyz mesh
      mesh =  xyz            # mesh type is xyz scoring mesh
    x-type =    2            # x-mesh is linear given by xmin, xmax and nx
-     xmin =  -30.00000      # minimum value of x-mesh points
-     xmax =   180.0000      # maximum value of x-mesh points
-#    xdel =   1.000000      # mesh width of x-mesh points
+     xmin =   4.000000      # minimum value of x-mesh points
+     xmax =   20.90000      # maximum value of x-mesh points
+#    xdel =  8.0476190E-02  # mesh width of x-mesh points
        nx =    210          # number of x-mesh points
    y-type =    2            # y-mesh is linear given by ymin, ymax and ny
-     ymin =  -120.0000      # minimum value of y-mesh points
-     ymax =   90.00000      # maximum value of y-mesh points
-#    ydel =   1.000000      # mesh width of y-mesh points
-       ny =    210          # number of y-mesh points
+     ymin =  -14.00000      # minimum value of y-mesh points
+     ymax =  -6.500000      # maximum value of y-mesh points
+#    ydel =  3.7500000E-02  # mesh width of y-mesh points
+       ny =    200          # number of y-mesh points
    z-type =    2            # z-mesh is linear given by zmin, zmax and nz
      zmin =   45.00000      # minimum value of z-mesh points
      zmax =   55.00000      # maximum value of z-mesh points
 #    zdel =   1.000000      # mesh width of z-mesh points
        nz =     10          # number of z-mesh points
      axis =   xy            # axis of output
-     file = 2d_xy_BSAORNL.out  # file name of output for the above axis
+     file = 2_2d_xy_BSAORNL.out  # file name of output for the above axis
    output =    2            # (D=2) 1:bnd, 2:bnd+mat, 3:bnd+num 4:bnd+mat+num
     ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
     resol =    1            # (D=1) resolution of gshow or rshow
     width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+    x-txt = Panjang (cm)
+    y-txt = Tinggi (cm)
    epsout =    1            # (D=0) generate eps file by ANGEL
 #    used :        main (  %)        temp (  %)       total (  %)
-#  memory :         433 (  0)       22261 (  0)       22694 (  0)
-
-[ T-Gshow ]
-    title = [t-gshow] in xyz mesh
-     mesh =  xyz            # mesh type is xyz scoring mesh
-   x-type =    2            # x-mesh is linear given by xmin, xmax and nx
-     xmin =  -30.00000      # minimum value of x-mesh points
-     xmax =   180.0000      # maximum value of x-mesh points
-#    xdel =   1.000000      # mesh width of x-mesh points
-       nx =    210          # number of x-mesh points
-   y-type =    2            # y-mesh is linear given by ymin, ymax and ny
-     ymin =  -15.00000      # minimum value of y-mesh points
-     ymax =  -5.000000      # maximum value of y-mesh points
-#    ydel =   1.000000      # mesh width of y-mesh points
-       ny =     10          # number of y-mesh points
-   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
-     zmin =  -100.0000      # minimum value of z-mesh points
-     zmax =   150.0000      # maximum value of z-mesh points
-#    zdel =   1.000000      # mesh width of z-mesh points
-       nz =    250          # number of z-mesh points
-     axis =   xz            # axis of output
-     file = 2d_xz_BSAORNL.out  # file name of output for the above axis
-   output =    2            # (D=2) 1:bnd, 2:bnd+mat, 3:bnd+num 4:bnd+mat+num
-    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
-    resol =    1            # (D=1) resolution of gshow or rshow
-    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
-   epsout =    1            # (D=0) generate eps file by ANGEL
-#    used :        main (  %)        temp (  %)       total (  %)
-#  memory :         473 (  0)       26481 (  0)       26954 (  0)
+#  memory :         423 (  0)       21206 (  0)       21629 (  0)
 
 [ T-Gshow ]
     title = [t-gshow] in xyz mesh
@@ -1601,28 +1608,28 @@ tr2001         0.0000000E+00  0.0000000E+00  1.3830000E+02
 *                percent =     0.00 %
 
 <<< Report of material memory for low energy>>>
-*    low energy material =    33306
+*    low energy material =    32986
 *     total memory: mdas = 80000000
 *                percent =     0.04 %
 
 <<< Report of real tally memory >>>
-*      real tally memory =     1389
+*      real tally memory =      906
 *     total memory: mdas = 80000000
 *                percent =     0.00 %
 
 <<< Report of temporary tally memory >>>
-* temporary tally memory =    54792
+* temporary tally memory =    54472
 *     total memory: mdas = 80000000
 *                percent =     0.07 %
 
 <<< Report of total memory >>>
-*      used total memory =    59793
+*      used total memory =    59473
 *     total memory: mdas = 80000000
 *                percent =     0.07 %
 *                ---------------------
 
 -------------------------------------------------------------------------------
- job termination date : 2023/05/16
-                 time :   23:33:41
+ job termination date : 2023/07/19
+                 time :   00:32:52
 
  END 

@@ -25,22 +25,23 @@
      file = neutron.out     # file name of output for the above axis
      part =  neutron  
 # kf/name :  2112     
-  multiplier =   7          # number of material group
-     part =  all      
-# kf/name :  0        
-     emax =   1.00000E+10
+  multiplier =   8          # number of material group
+     part =  neutron  
+# kf/name :  2112     
+     emax =    1000.0    
       mat                   mset1  
-        2    ( 3.47570E-11 2 1 -4 )
-       11   ( 4.25140E-11 11 1 -4 )
+        3    ( 3.47570E-11 2 1 -4 )
+      111   ( 4.25140E-11 11 1 -4 )
        14   ( 4.26571E-11 14 1 -4 )
        15   ( 4.31001E-11 15 1 -4 )
        25   ( 4.81830E-11 25 1 -4 )
+       26   ( 4.81830E-11 26 1 -4 )
      1001 ( 4.14435E-11 1001 1 -4 )
      1002 ( 4.81830E-11 1002 1 -4 )
     y-txt = Dose [Gy/source]
    epsout =    1            # (D=0) generate eps file by ANGEL
 #    used :        main (  %)        temp (  %)       total (  %)
-#  memory :         148 (  0)           0 (  0)         148 (  0)
+#  memory :         166 (  0)           0 (  0)         166 (  0)
 
 #------------------------------------------------------------------------------
 #newpage:
@@ -54,19 +55,19 @@ y: Dose [Gy/source]
 p: xlin ylog afac(0.8) form(0.9)
 h:   x      n     n          y(neutron ),l3 n  
 #  num    reg     volume       neutron   r.err 
-    1      63   9.2000E+02   1.3095E-04  0.6802
-    2      64   6.9400E+02   6.3669E-04  0.2101
-    3      80   1.5600E+03   1.8581E-03  0.2372
-    4      81   1.8100E+03   3.0008E-04  0.6305
-    5      86   7.4000E+02   1.2337E-03  0.4270
-    6     190   2.3654E+02   5.9667E-03  0.2945
-    7     191   2.3654E+02   9.0260E-04  0.7555
-    8     222   1.4100E+03   6.5148E-04  0.2106
-    9    1001   8.1810E+00   1.8332E-04  0.9201
-   10    1002   5.9560E+00   1.6003E-04  0.9707
-   11    1003   8.3130E+00   6.5360E-04  0.9932
+    1      63   9.2000E+02   0.0000E+00  0.0000
+    2      64   6.9400E+02   4.5820E-04  0.3363
+    3      80   1.5600E+03   1.4763E-03  0.3673
+    4      81   1.8100E+03   3.7700E-04  0.9468
+    5      86   7.4000E+02   1.0390E-04  0.3602
+    6     190   2.3654E+02   1.0456E-03  0.5239
+    7     191   2.3654E+02   8.8005E-09  1.0000
+    8     222   1.4100E+03   0.0000E+00  0.0000
+    9    1001   8.1810E+00   8.9978E-06  0.4672
+   10    1002   5.9560E+00   9.8032E-06  0.3867
+   11    1003   8.3130E+00   9.8694E-06  0.3084
 
-#   sum over    7.6295E+03   9.7888E-04
+#   sum over    7.6295E+03   4.7551E-04
 
 'no. =  1,  ie =  1,  mset =  1'
 msuc: {\huge [t-track] in region mesh}
@@ -82,7 +83,7 @@ e:
 # Information for Restart Calculation
 # This calculation was newly started
 # istdev =  2 # 1:Batch variance, 2:History variance
-# resc2  = 8.01088326423139237E-09 # Total source weight or Total source weight / maxcas
-# resc3  = 1.00000000000000000E+08 # Total history number or Total batch number
-# maxcas =     1000000 # History / Batch, only used for istdev=1
-# bitrseed = 1101111110010001010110101011011001110100110101001100011110000101 # bit data of rseed
+# resc2  = 1.84784372015198795E-09 # Total source weight or Total source weight / maxcas
+# resc3  = 1.73000000000000000E+07 # Total history number or Total batch number
+# maxcas =      100000 # History / Batch, only used for istdev=1
+# bitrseed = 1100101110111001000001110100011101001001111110110001011101011111 # bit data of rseed

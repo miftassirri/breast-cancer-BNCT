@@ -44,10 +44,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -717,10 +717,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](2002),ic[yellowgreen]
+h: x ny1,0  y2=[y1](Timbal),ic[orange]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(yellowgreen)
+hb:   line clip z   cb(orange)
 clip:
   4.309118E+01 -7.654267E+01
   4.535422E+01 -7.674580E+01
@@ -982,7 +982,7 @@ clip:
   4.083285E+01 -7.628033E+01
   4.293784E+01 -7.652674E+01
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   4.988344E+01  4.923566E+00
   5.016598E+01  4.814795E+00
@@ -1061,10 +1061,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -1734,10 +1734,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.206332E+01 -1.126468E+01
   5.218257E+01 -1.124878E+01
@@ -1758,7 +1758,7 @@ clip:
   5.117427E+01 -1.082170E+01
   5.154674E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.187158E+01  8.742062E+00
   5.218257E+01  8.751223E+00
@@ -1793,10 +1793,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -2466,10 +2466,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.092880E+01 -1.330785E+01
   5.117427E+01 -1.340247E+01
@@ -2480,10 +2480,10 @@ clip:
   5.110449E+01 -1.300726E+01
   5.050237E+01 -1.307380E+01
 
-h: x ny1,0  y2=[y1](25),ic[red]
+h: x ny1,0  y2=[y1](Payudara),ic[brown]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.206584E+01 -1.318511E+01
   5.218257E+01 -1.317881E+01
@@ -2521,7 +2521,7 @@ clip:
   5.117427E+01 -1.303471E+01
   5.128664E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.285738E+01 -1.339178E+01
   5.319087E+01 -1.325158E+01
@@ -2530,7 +2530,7 @@ clip:
   5.304860E+01 -1.293814E+01
   5.271336E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.419917E+01 -1.243144E+01
   5.433932E+01 -1.224602E+01
@@ -2539,7 +2539,7 @@ clip:
   5.409897E+01 -1.201685E+01
   5.402978E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.914106E+01 -1.116682E+01
   4.915768E+01 -1.122091E+01
@@ -2558,7 +2558,7 @@ clip:
   4.898657E+01 -1.035272E+01
   4.913636E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.959655E+01 -7.848294E+00
   5.016598E+01 -7.653404E+00
@@ -2568,7 +2568,7 @@ clip:
   5.010192E+01 -7.244272E+00
   5.003866E+01 -7.305349E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.106341E+01  7.010069E+00
   5.117427E+01  6.965292E+00
@@ -2597,7 +2597,7 @@ clip:
   4.996894E+01  7.889313E+00
   5.084809E+01  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.257407E+01  6.527656E+00
   5.319087E+01  6.748420E+00
@@ -2607,7 +2607,7 @@ clip:
   5.317648E+01  7.129499E+00
   5.315191E+01  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.409586E+01  7.978677E+00
   5.419917E+01  7.568561E+00
@@ -2617,7 +2617,7 @@ clip:
   5.419917E+01  8.136382E+00
   5.416195E+01  8.077184E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.909940E+01  8.983023E+00
   4.915768E+01  8.779091E+00
@@ -2635,7 +2635,7 @@ clip:
   4.897514E+01  9.825953E+00
   4.908553E+01  9.038592E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.417603E+01  1.190075E+01
   5.419917E+01  1.186362E+01
@@ -2646,7 +2646,7 @@ clip:
   5.409586E+01  1.202132E+01
   5.416195E+01  1.192282E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.317648E+01  1.287050E+01
   5.319087E+01  1.286229E+01
@@ -2675,10 +2675,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -3348,10 +3348,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.016387E+01 -1.403721E+01
   5.017581E+01 -1.404458E+01
@@ -3360,10 +3360,10 @@ clip:
   5.016598E+01 -1.373792E+01
   5.016064E+01 -1.403521E+01
 
-h: x ny1,0  y2=[y1](25),ic[red]
+h: x ny1,0  y2=[y1](Payudara),ic[brown]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.103892E+01 -1.416426E+01
   5.117427E+01 -1.420416E+01
@@ -3421,7 +3421,7 @@ clip:
   5.016598E+01 -1.373792E+01
   5.069998E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.912611E+01 -1.310390E+01
   4.915768E+01 -1.314328E+01
@@ -3431,7 +3431,7 @@ clip:
   4.897099E+01 -1.289579E+01
   4.910248E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.519691E+01 -1.212246E+01
   5.520747E+01 -1.262070E+01
@@ -3441,7 +3441,7 @@ clip:
   5.520747E+01 -1.210034E+01
   5.520353E+01 -1.210863E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.809096E+01 -1.024527E+01
   4.814938E+01 -1.082356E+01
@@ -3455,7 +3455,7 @@ clip:
   4.814026E+01 -9.236860E+00
   4.808869E+01 -1.018957E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.408750E+01 -6.450414E+00
   5.419917E+01 -6.544768E+00
@@ -3479,7 +3479,7 @@ clip:
   7.940664E+01 -5.552496E-01
   7.937000E+01 -5.754908E-01
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   7.937000E+01  3.509823E-01
   7.940664E+01  2.000000E-01
@@ -3499,7 +3499,7 @@ clip:
   8.016770E+01  6.216604E-01
   8.002421E+01  3.859174E-01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.004537E+01  6.039373E+00
   5.016598E+01  5.961485E+00
@@ -3509,7 +3509,7 @@ clip:
   5.016598E+01  6.262078E+00
   4.988366E+01  6.154367E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.089292E+01  5.886102E+00
   5.117427E+01  5.795835E+00
@@ -3560,7 +3560,7 @@ clip:
   5.016598E+01  6.262078E+00
   5.033505E+01  6.154367E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.904213E+01  7.005606E+00
   4.915768E+01  6.856719E+00
@@ -3570,10 +3570,10 @@ clip:
   4.868736E+01  7.564217E+00
   4.896291E+01  7.115775E+00
 
-h: x ny1,0  y2=[y1](1002),ic[darkbrown]
+h: x ny1,0  y2=[y1](CTV/GTV),ic[pastelviolet]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.097950E+01  8.852873E+00
   5.117427E+01  8.705588E+00
@@ -3584,7 +3584,7 @@ clip:
   5.049754E+01  9.683851E+00
   5.080291E+01  9.038592E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.189225E+01  8.761769E+00
   5.218257E+01  8.770572E+00
@@ -3594,7 +3594,7 @@ clip:
   5.213498E+01  9.083972E+00
   5.121227E+01  9.038592E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.287874E+01  8.740974E+00
   5.319087E+01  9.030901E+00
@@ -3603,7 +3603,7 @@ clip:
   5.298185E+01  9.237896E+00
   5.278773E+01  9.038592E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.808567E+01  9.939252E+00
   4.814938E+01  9.176436E+00
@@ -3613,10 +3613,10 @@ clip:
   4.808567E+01  1.006075E+01
   4.808532E+01  1.000000E+01
 
-h: x ny1,0  y2=[y1](1001),ic[violet]
+h: x ny1,0  y2=[y1](GTV),ic[pastelpurple]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(violet)
+hb:   line clip z   cb(pastelpurple)
 clip:
   5.107859E+01  9.908763E+00
   5.117427E+01  9.581069E+00
@@ -3631,7 +3631,7 @@ clip:
   5.107859E+01  1.009124E+01
   5.107408E+01  1.000000E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.287584E+01  9.699621E+00
   5.319087E+01  9.644118E+00
@@ -3642,7 +3642,7 @@ clip:
   5.287584E+01  1.030038E+01
   5.292592E+01  1.000000E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.049754E+01  1.031615E+01
   5.117427E+01  1.092898E+01
@@ -3652,7 +3652,7 @@ clip:
   5.097950E+01  1.114713E+01
   5.080291E+01  1.096141E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.213498E+01  1.091603E+01
   5.218257E+01  1.090774E+01
@@ -3663,7 +3663,7 @@ clip:
   5.189225E+01  1.123823E+01
   5.121227E+01  1.096141E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.298185E+01  1.076210E+01
   5.319087E+01  1.035588E+01
@@ -3674,7 +3674,7 @@ clip:
   5.287874E+01  1.125903E+01
   5.278773E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.868736E+01  1.243578E+01
   4.915768E+01  1.273159E+01
@@ -3683,7 +3683,7 @@ clip:
   4.904213E+01  1.299439E+01
   4.896291E+01  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.016598E+01  1.373792E+01
   5.023268E+01  1.378203E+01
@@ -3711,10 +3711,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -4384,10 +4384,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.110080E+01 -1.506667E+01
   5.117427E+01 -1.508370E+01
@@ -4402,10 +4402,10 @@ clip:
   5.097390E+01 -1.480556E+01
   5.084866E+01 -1.499661E+01
 
-h: x ny1,0  y2=[y1](25),ic[red]
+h: x ny1,0  y2=[y1](Payudara),ic[brown]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   4.989541E+01 -1.429319E+01
   5.016598E+01 -1.446126E+01
@@ -4446,7 +4446,7 @@ clip:
   4.888264E+01 -1.333604E+01
   4.955350E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.800839E+01 -1.224682E+01
   4.814938E+01 -1.256043E+01
@@ -4457,7 +4457,7 @@ clip:
   4.785612E+01 -1.183277E+01
   4.795492E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.607127E+01 -1.128876E+01
   5.621577E+01 -1.159361E+01
@@ -4469,7 +4469,7 @@ clip:
   5.621340E+01 -1.018731E+01
   5.610106E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.617055E+01 -9.271277E+00
   5.621577E+01 -9.913516E+00
@@ -4480,7 +4480,7 @@ clip:
   5.615715E+01 -9.172276E+00
   5.616493E+01 -9.228165E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.956791E+01 -5.952786E+00
   5.016598E+01 -5.538742E+00
@@ -4490,7 +4490,7 @@ clip:
   5.010388E+01 -5.323323E+00
   5.000029E+01 -5.382532E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   7.937000E+01 -6.104260E-01
   7.940664E+01 -1.170952E+00
@@ -4520,7 +4520,7 @@ clip:
   8.224099E+01 -3.938036E-01
   8.157835E+01 -5.754908E-01
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   7.937000E+01  3.509823E-01
   7.940664E+01  2.000000E-01
@@ -4559,7 +4559,7 @@ clip:
   7.937000E+01  1.382261E+00
   7.937000E+01  1.347326E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.113113E+01  5.151823E+00
   5.117427E+01  5.141424E+00
@@ -4628,7 +4628,7 @@ clip:
   5.016598E+01  5.538742E+00
   5.097893E+01  5.192959E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.292530E+01  4.939741E+00
   5.319087E+01  5.016034E+00
@@ -4638,7 +4638,7 @@ clip:
   5.314891E+01  5.232967E+00
   5.302107E+01  5.192959E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.909406E+01  6.093708E+00
   4.915768E+01  6.030395E+00
@@ -4649,10 +4649,10 @@ clip:
   4.859023E+01  6.695428E+00
   4.903532E+01  6.154367E+00
 
-h: x ny1,0  y2=[y1](1002),ic[darkbrown]
+h: x ny1,0  y2=[y1](CTV/GTV),ic[pastelviolet]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.101141E+01  8.883303E+00
   5.117427E+01  8.758028E+00
@@ -4663,10 +4663,10 @@ clip:
   5.055559E+01  9.628499E+00
   5.085982E+01  9.038592E+00
 
-h: x ny1,0  y2=[y1](1001),ic[violet]
+h: x ny1,0  y2=[y1](GTV),ic[pastelpurple]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(violet)
+hb:   line clip z   cb(pastelpurple)
 clip:
   5.189536E+01  8.764739E+00
   5.218257E+01  8.773833E+00
@@ -4687,7 +4687,7 @@ clip:
   5.117427E+01  9.075341E+00
   5.121737E+01  9.038592E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.242733E+01  8.310560E+00
   5.319087E+01  8.727741E+00
@@ -4697,7 +4697,7 @@ clip:
   5.316247E+01  9.065669E+00
   5.314018E+01  9.038592E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.612016E+01  8.947431E+00
   5.621577E+01  8.406395E+00
@@ -4708,7 +4708,7 @@ clip:
   5.614692E+01  9.104233E+00
   5.613627E+01  9.038592E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.055559E+01  1.037150E+01
   5.119438E+01  1.094223E+01
@@ -4717,7 +4717,7 @@ clip:
   5.101141E+01  1.111670E+01
   5.085982E+01  1.096141E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.316247E+01  1.093433E+01
   5.319087E+01  1.089786E+01
@@ -4728,7 +4728,7 @@ clip:
   5.242733E+01  1.168944E+01
   5.314018E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.614692E+01  1.089577E+01
   5.621577E+01  1.008648E+01
@@ -4738,7 +4738,7 @@ clip:
   5.612016E+01  1.105257E+01
   5.613627E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.859023E+01  1.330457E+01
   4.915768E+01  1.365956E+01
@@ -4748,7 +4748,7 @@ clip:
   4.909406E+01  1.390629E+01
   4.903532E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.314891E+01  1.476703E+01
   5.319087E+01  1.475279E+01
@@ -4777,10 +4777,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -5450,10 +5450,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.012586E+01 -1.503486E+01
   5.016598E+01 -1.505496E+01
@@ -5464,10 +5464,10 @@ clip:
   4.966232E+01 -1.451638E+01
   5.005224E+01 -1.499661E+01
 
-h: x ny1,0  y2=[y1](25),ic[red]
+h: x ny1,0  y2=[y1](Payudara),ic[brown]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.100730E+01 -1.515582E+01
   5.117427E+01 -1.519632E+01
@@ -5532,7 +5532,7 @@ clip:
   5.016598E+01 -1.482688E+01
   5.053164E+01 -1.499661E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.425185E+00 -1.323391E+01
  -2.489626E-01 -1.368971E+01
@@ -5544,7 +5544,7 @@ clip:
  -1.257261E+00 -1.256709E+01
  -1.820397E+00 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.812058E+01 -1.310126E+01
   4.814938E+01 -1.314981E+01
@@ -5555,7 +5555,7 @@ clip:
   4.805205E+01 -1.298100E+01
   4.810459E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.508157E+00 -1.233579E+01
  -3.273859E+00 -1.244467E+01
@@ -5612,7 +5612,7 @@ clip:
  -2.367599E+00 -1.201510E+01
  -2.182810E+00 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.607035E+01 -1.225105E+01
   5.621577E+01 -1.243004E+01
@@ -5623,7 +5623,7 @@ clip:
   5.614752E+01 -1.204732E+01
   5.612382E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -5.445443E+00 -1.129876E+01
  -5.290456E+00 -1.139479E+01
@@ -5664,7 +5664,7 @@ clip:
  -6.298755E+00 -1.068646E+01
  -5.673201E+00 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   7.081395E-01 -7.354164E+00
   4.719228E+01 -7.354164E+00
@@ -5772,7 +5772,7 @@ clip:
   0.000000E+00 -7.067964E+00
   0.000000E+00 -7.305349E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.616457E+01 -7.354164E+00
   6.937485E+01 -7.354164E+00
@@ -5811,10 +5811,10 @@ clip:
   5.563968E+01 -6.893239E+00
   5.587024E+01 -7.305349E+00
 
-h: x ny1,0  y2=[y1](12),ic[pastelviolet]
+h: x ny1,0  y2=[y1](Jaringan Lunak),ic[darkgreen]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00 -6.837701E+00
  -4.282158E+00 -7.227669E+00
@@ -5891,7 +5891,7 @@ clip:
  -4.800000E+00 -5.876292E+00
  -4.800000E+00 -6.343940E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.077924E+00 -7.134351E+00
  -2.489626E-01 -6.933279E+00
@@ -5902,7 +5902,7 @@ clip:
  -2.874180E-01 -6.307273E+00
  -4.928117E-01 -6.343940E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   0.000000E+00 -6.106556E+00
   7.593361E-01 -6.244998E+00
@@ -6099,10 +6099,10 @@ clip:
   0.000000E+00 -5.145147E+00
   0.000000E+00 -5.382532E+00
 
-h: x ny1,0  y2=[y1](2),ic[orangeyellow]
+h: x ny1,0  y2=[y1](Tulang),ic[darkgray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.530057E+01 -4.174093E+00
   3.604979E+01 -4.174093E+00
@@ -6141,7 +6141,7 @@ clip:
   3.510000E+01 -3.403930E+00
   3.510000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01 -3.618368E+00
   3.806639E+01 -4.174093E+00
@@ -6169,7 +6169,7 @@ clip:
   3.790000E+01  3.428794E+00
   3.790000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.070000E+01 -3.832805E+00
   4.109129E+01 -4.174093E+00
@@ -6203,7 +6203,7 @@ clip:
   4.070000E+01 -2.871397E+00
   4.070000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.350000E+01 -4.047243E+00
   4.411618E+01 -4.174093E+00
@@ -6242,7 +6242,7 @@ clip:
   4.350000E+01 -3.085835E+00
   4.350000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.639186E+01 -4.174093E+00
   4.714108E+01 -4.174093E+00
@@ -6281,7 +6281,7 @@ clip:
   4.630000E+01 -3.300272E+00
   4.630000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01 -3.514710E+00
   4.915768E+01 -4.174093E+00
@@ -6309,7 +6309,7 @@ clip:
   4.910000E+01  3.325136E+00
   4.910000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.190000E+01 -3.729147E+00
   5.218257E+01 -4.174093E+00
@@ -6337,7 +6337,7 @@ clip:
   5.190000E+01  3.539574E+00
   5.190000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.470000E+01 -3.943585E+00
   5.520747E+01 -4.174093E+00
@@ -6376,7 +6376,7 @@ clip:
   5.470000E+01 -2.982177E+00
   5.470000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.750000E+01 -4.158022E+00
   5.823237E+01 -4.174093E+00
@@ -6415,7 +6415,7 @@ clip:
   5.750000E+01 -3.196614E+00
   5.750000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.050804E+01 -4.174093E+00
   6.125726E+01 -4.174093E+00
@@ -6454,7 +6454,7 @@ clip:
   6.030000E+01 -3.411052E+00
   6.030000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01 -3.625489E+00
   6.327386E+01 -4.174093E+00
@@ -6482,7 +6482,7 @@ clip:
   6.310000E+01  3.435916E+00
   6.310000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.590000E+01 -3.839927E+00
   6.629876E+01 -4.174093E+00
@@ -6617,7 +6617,7 @@ clip:
   7.520000E+01  1.512704E+00
   7.520000E+01 -1.536899E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.810554E+01 -1.895214E+00
   8.848133E+01 -1.788599E+00
@@ -6681,7 +6681,7 @@ clip:
   8.000000E+01 -9.723847E-03
   8.000000E+01 -5.754908E-01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   8.930934E+01 -7.473939E-01
   8.948963E+01 -1.503599E+00
@@ -6697,7 +6697,7 @@ clip:
   8.939442E+01  3.859174E-01
   8.935723E+01 -5.754908E-01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   7.500000E+01  1.952657E+00
   7.537344E+01  1.900440E+00
@@ -6759,7 +6759,7 @@ clip:
   7.519459E+01  2.479267E+00
   7.500000E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.417936E+00  6.978399E+00
  -3.023294E+00  6.876862E+00
@@ -6816,7 +6816,7 @@ clip:
  -1.257261E+00  7.181476E+00
  -1.005616E+00  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   0.000000E+00  6.391752E+00
   7.593361E-01  6.244998E+00
@@ -6923,7 +6923,7 @@ clip:
   5.093201E-01  7.354164E+00
   0.000000E+00  7.115775E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   4.858038E+01  6.565330E+00
   4.915768E+01  6.244998E+00
@@ -6961,7 +6961,7 @@ clip:
   4.789582E+01  7.835422E+00
   4.823001E+01  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.530252E+01  6.244998E+00
   6.932365E+01  6.244998E+00
@@ -6998,7 +6998,7 @@ clip:
   5.591711E+01  7.400541E+00
   5.576999E+01  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -5.643508E+00  7.740551E+00
  -5.290456E+00  7.587117E+00
@@ -7031,7 +7031,7 @@ clip:
  -6.298755E+00  8.093788E+00
  -6.272583E+00  8.077184E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.617853E+01  8.041681E+00
   5.621577E+01  7.569963E+00
@@ -7041,10 +7041,10 @@ clip:
   5.619652E+01  8.095534E+00
   5.619046E+01  8.077184E+00
 
-h: x ny1,0  y2=[y1](1002),ic[darkbrown]
+h: x ny1,0  y2=[y1](CTV/GTV),ic[pastelviolet]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.114319E+01  9.008950E+00
   5.117427E+01  8.982903E+00
@@ -7059,7 +7059,7 @@ clip:
   5.088171E+01  9.317550E+00
   5.111005E+01  9.038592E+00
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.105602E+01  9.887246E+00
   5.117427E+01  9.528845E+00
@@ -7070,10 +7070,10 @@ clip:
   5.105602E+01  1.011275E+01
   5.104931E+01  1.000000E+01
 
-h: x ny1,0  y2=[y1](1001),ic[violet]
+h: x ny1,0  y2=[y1](GTV),ic[pastelpurple]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(violet)
+hb:   line clip z   cb(pastelpurple)
 clip:
   5.176292E+01  9.599868E+00
   5.218257E+01  9.572241E+00
@@ -7084,7 +7084,7 @@ clip:
   5.176292E+01  1.040013E+01
   5.153491E+01  1.000000E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.291303E+01  9.735082E+00
   5.319087E+01  9.453982E+00
@@ -7095,7 +7095,7 @@ clip:
   5.291303E+01  1.026492E+01
   5.295069E+01  1.000000E+01
 
-hb:   line clip z   cb(darkbrown)
+hb:   line clip z   cb(pastelviolet)
 clip:
   5.088171E+01  1.068245E+01
   5.117427E+01  1.047115E+01
@@ -7109,7 +7109,7 @@ clip:
   5.114319E+01  1.099105E+01
   5.111005E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.619652E+01  1.190447E+01
   5.621577E+01  1.184484E+01
@@ -7120,7 +7120,7 @@ clip:
   5.617853E+01  1.195832E+01
   5.619046E+01  1.192282E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.265560E+00  1.206909E+01
  -1.707380E+00  1.235200E+01
@@ -7132,7 +7132,7 @@ clip:
  -2.265560E+00  1.288843E+01
  -2.275495E+00  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.786554E+01  1.261358E+01
   4.814938E+01  1.273319E+01
@@ -7142,7 +7142,7 @@ clip:
   4.805061E+01  1.297840E+01
   4.799968E+01  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.514197E+01  1.378318E+01
   5.520747E+01  1.370650E+01
@@ -7152,7 +7152,7 @@ clip:
   5.520747E+01  1.401386E+01
   5.508656E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.407601E+01  1.468960E+01
   5.419917E+01  1.461144E+01
@@ -7180,10 +7180,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -7853,10 +7853,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.304465E+00 -1.503371E+01
  -7.511279E-01 -1.547921E+01
@@ -7946,7 +7946,7 @@ clip:
  -2.880872E+00 -1.440992E+01
  -9.281566E-01 -1.499661E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.006836E+01 -1.508969E+01
   5.016598E+01 -1.513869E+01
@@ -7957,10 +7957,10 @@ clip:
   4.996456E+01 -1.480457E+01
   4.989770E+01 -1.499661E+01
 
-h: x ny1,0  y2=[y1](25),ic[red]
+h: x ny1,0  y2=[y1](Payudara),ic[brown]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.093964E+01 -1.522033E+01
   5.117427E+01 -1.527853E+01
@@ -8010,7 +8010,7 @@ clip:
   5.016598E+01 -1.491528E+01
   5.033273E+01 -1.499661E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -5.374416E+00 -1.411526E+01
  -3.649835E+00 -1.463812E+01
@@ -8021,7 +8021,7 @@ clip:
  -5.290456E+00 -1.364815E+01
  -5.632696E+00 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.438146E+01 -1.482280E+01
   5.520747E+01 -1.411880E+01
@@ -8031,7 +8031,7 @@ clip:
   5.510429E+01 -1.393682E+01
   5.501141E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -8.390007E+00 -1.314498E+01
  -6.627108E+00 -1.372212E+01
@@ -8042,7 +8042,7 @@ clip:
  -8.315353E+00 -1.260514E+01
  -8.600672E+00 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.806920E+01 -1.315025E+01
   4.814938E+01 -1.328249E+01
@@ -8053,7 +8053,7 @@ clip:
   4.789512E+01 -1.283136E+01
   4.802506E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.060015E+01 -1.236811E+01
  -9.736387E+00 -1.268026E+01
@@ -8063,7 +8063,7 @@ clip:
  -1.087893E+01 -1.159085E+01
  -1.128144E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.618961E+01 -1.213733E+01
   5.621577E+01 -1.259972E+01
@@ -8073,7 +8073,7 @@ clip:
   5.620314E+01 -1.210035E+01
   5.619876E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.343568E+01 -1.122615E+01
  -1.314179E+01 -1.135604E+01
@@ -8086,7 +8086,7 @@ clip:
  -1.335685E+01 -1.034371E+01
  -1.360203E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   7.436166E-01 -1.116597E+01
   4.715680E+01 -1.116597E+01
@@ -8188,7 +8188,7 @@ clip:
   1.139970E-01 -1.053565E+01
   0.000000E+00 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.720835E+01 -1.116597E+01
   6.933937E+01 -1.116597E+01
@@ -8222,7 +8222,7 @@ clip:
   5.657873E+01 -1.053565E+01
   5.646115E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.540788E+01 -1.022241E+01
  -1.522906E+01 -1.032724E+01
@@ -8251,10 +8251,10 @@ clip:
  -1.638174E+01 -9.547044E+00
  -1.546245E+01 -1.018957E+01
 
-h: x ny1,0  y2=[y1](12),ic[pastelviolet]
+h: x ny1,0  y2=[y1](Jaringan Lunak),ic[darkgreen]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   3.963765E-01 -1.053565E+01
   6.968661E+01 -1.053565E+01
@@ -8484,10 +8484,10 @@ clip:
   0.000000E+00 -9.952189E+00
   0.000000E+00 -1.018957E+01
 
-h: x ny1,0  y2=[y1](2),ic[orangeyellow]
+h: x ny1,0  y2=[y1](Tulang),ic[darkgray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.584611E+01 -8.460968E+00
   3.625348E+01 -8.460968E+00
@@ -8501,7 +8501,7 @@ clip:
   3.510000E+01 -8.210972E+00
   3.510000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01 -8.425409E+00
   3.806639E+01 -8.460968E+00
@@ -8520,7 +8520,7 @@ clip:
   3.790000E+01 -7.464001E+00
   3.790000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.088760E+01 -8.460968E+00
   4.209959E+01 -8.460968E+00
@@ -8534,7 +8534,7 @@ clip:
   4.070000E+01 -7.678438E+00
   4.070000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.391250E+01 -8.460968E+00
   4.431987E+01 -8.460968E+00
@@ -8548,7 +8548,7 @@ clip:
   4.350000E+01 -7.892876E+00
   4.350000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.693740E+01 -8.460968E+00
   4.734476E+01 -8.460968E+00
@@ -8562,7 +8562,7 @@ clip:
   4.630000E+01 -8.107314E+00
   4.630000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01 -8.321751E+00
   4.915768E+01 -8.460968E+00
@@ -8579,7 +8579,7 @@ clip:
   4.910000E+01 -7.250355E+00
   4.910000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.197889E+01 -8.460968E+00
   5.319087E+01 -8.460968E+00
@@ -8596,7 +8596,7 @@ clip:
   5.190000E+01 -7.574780E+00
   5.190000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.500379E+01 -8.460968E+00
   5.541115E+01 -8.460968E+00
@@ -8610,7 +8610,7 @@ clip:
   5.470000E+01 -7.789218E+00
   5.470000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.802868E+01 -8.460968E+00
   5.843605E+01 -8.460968E+00
@@ -8624,7 +8624,7 @@ clip:
   5.750000E+01 -8.003655E+00
   5.750000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.105358E+01 -8.460968E+00
   6.146095E+01 -8.460968E+00
@@ -8638,7 +8638,7 @@ clip:
   6.030000E+01 -8.218093E+00
   6.030000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01 -8.432531E+00
   6.327386E+01 -8.460968E+00
@@ -8657,7 +8657,7 @@ clip:
   6.310000E+01 -7.471122E+00
   6.310000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.609507E+01 -8.460968E+00
   6.650244E+01 -8.460968E+00
@@ -8671,7 +8671,7 @@ clip:
   6.590000E+01 -7.685560E+00
   6.590000E+01 -8.266757E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.335685E+01 -6.984922E+00
  -1.287758E+01 -6.800918E+00
@@ -8686,7 +8686,7 @@ clip:
  -1.355364E+01 -6.156296E+00
  -1.424599E+01 -6.343940E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.792574E+01 -6.715436E+00
   6.831535E+01 -6.919581E+00
@@ -8707,7 +8707,7 @@ clip:
   6.764419E+01 -6.022479E+00
   6.774001E+01 -6.343940E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.001940E+01 -6.045929E+00
  -8.859326E+00 -5.825264E+00
@@ -8724,7 +8724,7 @@ clip:
  -9.353197E+00 -5.354360E+00
  -9.540735E+00 -5.382532E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.651034E+00 -4.772846E+00
  -2.489626E-01 -4.369258E+00
@@ -8747,7 +8747,7 @@ clip:
  -4.800000E+00 -3.953476E+00
  -4.800000E+00 -4.421124E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -6.361940E-01 -4.790347E+00
  -2.489626E-01 -4.754692E+00
@@ -8783,7 +8783,7 @@ clip:
   7.520000E+01  3.435520E+00
   7.520000E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.613507E+01 -3.694913E+00
   7.739004E+01 -3.694913E+00
@@ -8875,7 +8875,7 @@ clip:
   8.520600E+01 -3.220928E+00
   8.489630E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.717863E+01 -3.740423E+00
   8.747303E+01 -3.806605E+00
@@ -8889,7 +8889,7 @@ clip:
   8.708469E+01 -3.089435E+00
   8.708469E+01 -3.459716E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   8.892237E+01 -4.000596E+00
   8.948963E+01 -3.688995E+00
@@ -9045,7 +9045,7 @@ clip:
   8.753482E+01 -2.439394E+00
   8.753482E+01 -2.498307E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.948963E+01 -3.299687E+00
   8.990496E+01 -2.894325E+00
@@ -9054,7 +9054,7 @@ clip:
   8.927212E+01 -2.290916E+00
   8.904290E+01 -2.498307E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.049793E+01 -2.562736E+00
   9.053492E+01 -2.498307E+00
@@ -9063,7 +9063,7 @@ clip:
   9.030671E+01 -2.315986E+00
   9.019728E+01 -2.498307E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.751426E+01 -2.379867E+00
   7.940664E+01 -2.379867E+00
@@ -9076,7 +9076,7 @@ clip:
   7.794750E+01 -1.107022E+00
   7.740000E+01 -1.536899E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.414984E+01 -1.821318E+00
   8.444813E+01 -2.166357E+00
@@ -9095,7 +9095,7 @@ clip:
   8.412637E+01 -1.230104E+00
   8.407272E+01 -1.536899E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.049793E+01 -1.930719E+00
   9.061050E+01 -1.644240E+00
@@ -9114,7 +9114,7 @@ clip:
   8.994123E+01 -1.106297E+00
   8.977772E+01 -1.536899E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00 -1.069251E+00
  -4.282158E+00 -8.029707E-01
@@ -9128,7 +9128,7 @@ clip:
  -4.800000E+00 -1.078429E-01
  -4.800000E+00 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -3.948620E-01 -7.146052E-01
  -2.489626E-01 -9.021464E-01
@@ -9143,10 +9143,10 @@ clip:
  -9.918990E-01 -3.224690E-01
  -5.509575E-01 -5.754908E-01
 
-h: x ny1,0  y2=[y1](15),ic[pink]
+h: x ny1,0  y2=[y1](Jantung),ic[pastelpink]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pink)
+hb:   line clip z   cb(pastelpink)
 clip:
   4.794950E+01 -7.660745E-01
   4.814938E+01 -8.863102E-01
@@ -9186,7 +9186,7 @@ clip:
   4.714108E+01 -5.418903E-02
   4.768523E+01 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.784089E+01 -1.107022E+00
   7.996409E+01 -1.107022E+00
@@ -9233,7 +9233,7 @@ clip:
  -4.282158E+00  8.029707E-01
  -3.744580E+00  3.859174E-01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.814632E+01  1.107022E+00
   7.965866E+01  1.107022E+00
@@ -9249,7 +9249,7 @@ clip:
   7.740000E+01  1.356821E+00
   7.740000E+01  1.347326E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.419249E+01  1.103572E+00
   8.444813E+01  8.336434E-01
@@ -9267,7 +9267,7 @@ clip:
   8.409648E+01  1.682628E+00
   8.408897E+01  1.347326E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00  1.814974E+00
  -4.282158E+00  1.797029E+00
@@ -9311,7 +9311,7 @@ clip:
   8.550805E+01  3.220928E+00
   8.631539E+01  2.308734E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.936437E+01  2.189304E+00
   8.948963E+01  2.030750E+00
@@ -9332,7 +9332,7 @@ clip:
   8.848133E+01  2.800656E+00
   8.925479E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.037434E+01  2.190895E+00
   9.049793E+01  1.930719E+00
@@ -9343,7 +9343,7 @@ clip:
   8.998205E+01  2.800617E+00
   9.031079E+01  2.308734E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.780800E+01  2.786387E+00
   6.882270E+01  2.786387E+00
@@ -9410,7 +9410,7 @@ clip:
   8.484595E+01  3.852229E+00
   8.488669E+01  3.270142E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -7.415962E+00  5.089115E+00
  -4.874388E+00  4.796239E+00
@@ -9500,7 +9500,7 @@ clip:
  -6.298755E+00  5.426953E+00
  -4.469425E+00  5.192959E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.339611E+01  6.116932E+00
  -1.329055E+01  6.091157E+00
@@ -9517,7 +9517,7 @@ clip:
  -1.335685E+01  6.985320E+00
  -1.354602E+01  6.154367E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.566110E+01  6.841497E+00
  -1.537344E+01  6.722398E+00
@@ -9545,7 +9545,7 @@ clip:
  -1.638174E+01  7.216608E+00
  -1.621419E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.560858E+01  6.695083E+00
   3.649100E+01  6.695083E+00
@@ -9559,7 +9559,7 @@ clip:
   3.510000E+01  7.171561E+00
   3.510000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01  6.957123E+00
   3.806639E+01  6.695083E+00
@@ -9576,7 +9576,7 @@ clip:
   3.790000E+01  8.235836E+00
   3.790000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.070000E+01  6.742686E+00
   4.109129E+01  6.695083E+00
@@ -9592,7 +9592,7 @@ clip:
   4.070000E+01  7.704094E+00
   4.070000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.367497E+01  6.695083E+00
   4.455739E+01  6.695083E+00
@@ -9606,7 +9606,7 @@ clip:
   4.350000E+01  7.489656E+00
   4.350000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.669987E+01  6.695083E+00
   4.758229E+01  6.695083E+00
@@ -9620,7 +9620,7 @@ clip:
   4.630000E+01  7.275219E+00
   4.630000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01  7.060781E+00
   4.915768E+01  6.695083E+00
@@ -9637,7 +9637,7 @@ clip:
   4.910000E+01  8.077184E+00
   4.910000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.190000E+01  6.846344E+00
   5.218257E+01  6.695083E+00
@@ -9656,7 +9656,7 @@ clip:
   5.190000E+01  7.807752E+00
   5.190000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.476626E+01  6.695083E+00
   5.564868E+01  6.695083E+00
@@ -9670,7 +9670,7 @@ clip:
   5.470000E+01  7.593314E+00
   5.470000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.779116E+01  6.695083E+00
   5.867358E+01  6.695083E+00
@@ -9684,7 +9684,7 @@ clip:
   5.750000E+01  7.378877E+00
   5.750000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.081605E+01  6.695083E+00
   6.169847E+01  6.695083E+00
@@ -9698,7 +9698,7 @@ clip:
   6.030000E+01  7.164439E+00
   6.030000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01  6.950002E+00
   6.327386E+01  6.695083E+00
@@ -9715,7 +9715,7 @@ clip:
   6.310000E+01  8.242957E+00
   6.310000E+01  7.115775E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.590000E+01  6.735564E+00
   6.629876E+01  6.695083E+00
@@ -9730,7 +9730,7 @@ clip:
   6.590000E+01  7.696972E+00
   6.590000E+01  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.335685E+01  1.034331E+01
  -1.295607E+01  1.057927E+01
@@ -9742,7 +9742,7 @@ clip:
  -1.357064E+01  1.116526E+01
  -1.400905E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   3.128164E-01  1.053565E+01
   4.714108E+01  1.053565E+01
@@ -9844,7 +9844,7 @@ clip:
   5.447972E-01  1.116597E+01
   0.000000E+00  1.096141E+01
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   4.770286E+01  1.053565E+01
   5.621577E+01  1.053565E+01
@@ -9880,7 +9880,7 @@ clip:
   4.758782E+01  1.138738E+01
   4.750646E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.677755E+01  1.053565E+01
   6.977017E+01  1.053565E+01
@@ -9914,7 +9914,7 @@ clip:
   5.700953E+01  1.116597E+01
   5.649354E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.134025E+01  1.138676E+01
  -1.095654E+01  1.155695E+01
@@ -9927,7 +9927,7 @@ clip:
  -1.146506E+01  1.204182E+01
  -1.177024E+01  1.192282E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -8.794877E+00  1.242700E+01
  -7.540420E+00  1.288422E+01
@@ -9936,7 +9936,7 @@ clip:
  -8.536848E+00  1.309542E+01
  -9.154007E+00  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -5.606449E+00  1.354434E+01
  -4.680407E+00  1.384563E+01
@@ -9945,7 +9945,7 @@ clip:
  -5.524508E+00  1.406880E+01
  -6.237858E+00  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.519574E+01  1.383445E+01
   5.520747E+01  1.382091E+01
@@ -9956,7 +9956,7 @@ clip:
   5.504189E+01  1.400351E+01
   5.518600E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.588262E+00  1.449935E+01
  -1.567564E+00  1.480704E+01
@@ -9965,7 +9965,7 @@ clip:
  -2.456810E+00  1.498940E+01
  -3.079433E+00  1.480704E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.413416E+01  1.474505E+01
   5.419917E+01  1.470389E+01
@@ -9994,10 +9994,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -10667,10 +10667,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.424940E+00 -1.610208E+01
  -3.013461E+00 -1.620631E+01
@@ -10813,7 +10813,7 @@ clip:
  -6.312765E+00 -1.498326E+01
  -2.585521E+00 -1.595802E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -7.391473E+00 -1.507711E+01
  -5.769911E+00 -1.550086E+01
@@ -10824,10 +10824,10 @@ clip:
  -7.307054E+00 -1.471630E+01
  -7.696354E+00 -1.499661E+01
 
-h: x ny1,0  y2=[y1](25),ic[red]
+h: x ny1,0  y2=[y1](Payudara),ic[brown]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   5.107269E+01 -1.509347E+01
   5.117427E+01 -1.511755E+01
@@ -10855,7 +10855,7 @@ clip:
   5.016598E+01 -1.474198E+01
   5.074793E+01 -1.499661E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.053831E+01 -1.423197E+01
  -9.960037E+00 -1.438982E+01
@@ -10865,7 +10865,7 @@ clip:
  -1.056129E+01 -1.381653E+01
  -1.125256E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.902837E+01 -1.415849E+01
   4.915768E+01 -1.427997E+01
@@ -10876,7 +10876,7 @@ clip:
   4.831189E+01 -1.322876E+01
   4.890623E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.442688E+01 -1.313266E+01
  -1.280494E+01 -1.360004E+01
@@ -10887,10 +10887,10 @@ clip:
  -1.436515E+01 -1.269668E+01
  -1.462758E+01 -1.307380E+01
 
-h: x ny1,0  y2=[y1](12),ic[pastelviolet]
+h: x ny1,0  y2=[y1](Jaringan Lunak),ic[darkgreen]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   5.968200E-01 -1.322876E+01
   6.948617E+01 -1.322876E+01
@@ -11144,7 +11144,7 @@ clip:
   0.000000E+00 -1.283641E+01
   0.000000E+00 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.748702E+01 -1.220486E+01
  -1.571148E+01 -1.275148E+01
@@ -11155,7 +11155,7 @@ clip:
  -1.739004E+01 -1.172424E+01
  -1.777896E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.047851E+01 -1.121160E+01
  -1.871554E+01 -1.180994E+01
@@ -11166,7 +11166,7 @@ clip:
  -2.041494E+01 -1.062080E+01
  -2.064988E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.265101E+01 -1.039884E+01
  -2.190771E+01 -1.068904E+01
@@ -11175,10 +11175,10 @@ clip:
  -2.243154E+01 -9.736409E+00
  -2.316247E+01 -1.018957E+01
 
-h: x ny1,0  y2=[y1](2),ic[orangeyellow]
+h: x ny1,0  y2=[y1](Tulang),ic[darkgray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.526032E+01 -1.094233E+01
   3.604979E+01 -1.094233E+01
@@ -11189,7 +11189,7 @@ clip:
   3.559555E+01 -9.756452E+00
   3.510000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01 -1.034823E+01
   3.806639E+01 -1.094233E+01
@@ -11203,7 +11203,7 @@ clip:
   3.806639E+01 -9.756452E+00
   3.790000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.070000E+01 -1.056266E+01
   4.109129E+01 -1.094233E+01
@@ -11216,7 +11216,7 @@ clip:
   4.070000E+01 -9.816484E+00
   4.070000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.350000E+01 -1.077710E+01
   4.411618E+01 -1.094233E+01
@@ -11227,7 +11227,7 @@ clip:
   4.366194E+01 -9.756452E+00
   4.350000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.635161E+01 -1.094233E+01
   4.714108E+01 -1.094233E+01
@@ -11238,7 +11238,7 @@ clip:
   4.668683E+01 -9.756452E+00
   4.630000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01 -1.024457E+01
   4.915768E+01 -1.094233E+01
@@ -11252,7 +11252,7 @@ clip:
   4.910000E+01 -1.013458E+01
   4.910000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.190000E+01 -1.045901E+01
   5.218257E+01 -1.094233E+01
@@ -11266,7 +11266,7 @@ clip:
   5.218257E+01 -9.756452E+00
   5.190000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.470000E+01 -1.067344E+01
   5.520747E+01 -1.094233E+01
@@ -11277,7 +11277,7 @@ clip:
   5.475322E+01 -9.756452E+00
   5.470000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.750000E+01 -1.088788E+01
   5.823237E+01 -1.094233E+01
@@ -11288,7 +11288,7 @@ clip:
   5.777812E+01 -9.756452E+00
   5.750000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.046779E+01 -1.094233E+01
   6.125726E+01 -1.094233E+01
@@ -11299,7 +11299,7 @@ clip:
   6.080301E+01 -9.756452E+00
   6.030000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01 -1.035535E+01
   6.327386E+01 -1.094233E+01
@@ -11313,7 +11313,7 @@ clip:
   6.327386E+01 -9.756452E+00
   6.310000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.590000E+01 -1.056978E+01
   6.629876E+01 -1.094233E+01
@@ -11324,7 +11324,7 @@ clip:
   6.590000E+01 -9.809362E+00
   6.590000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.471650E+01 -9.484050E+00
  -2.444813E+01 -9.615659E+00
@@ -11337,7 +11337,7 @@ clip:
  -2.444813E+01 -8.466695E+00
  -2.520713E+01 -9.228165E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.825682E+01 -9.283975E+00
   6.831535E+01 -9.277963E+00
@@ -11363,7 +11363,7 @@ clip:
   6.772603E+01 -8.828669E+00
   6.805346E+01 -9.228165E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.654240E+01 -8.340813E+00
  -2.646473E+01 -8.407118E+00
@@ -11386,7 +11386,7 @@ clip:
  -2.700574E+01 -7.821196E+00
  -2.662444E+01 -8.266757E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.343983E+01 -6.118294E+00
  -2.288011E+01 -5.916224E+00
@@ -11469,7 +11469,7 @@ clip:
   2.964102E+01 -5.040251E+00
   2.922051E+01 -5.382532E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.785403E+01 -4.863537E+00
  -1.525976E+01 -4.529523E+00
@@ -11514,7 +11514,7 @@ clip:
   7.520000E+01  4.396929E+00
   7.520000E+01 -4.421124E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.582241E+01 -4.954444E+00
   7.739004E+01 -4.954444E+00
@@ -11593,7 +11593,7 @@ clip:
   8.535645E+01 -4.325792E+00
   8.486761E+01 -4.421124E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.638061E+01 -4.501335E+00
   8.646473E+01 -4.674851E+00
@@ -11654,7 +11654,7 @@ clip:
   8.638061E+01 -3.539926E+00
   8.638061E+01 -4.421124E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -6.630009E+00 -3.775565E+00
  -1.408613E+00 -3.459716E+00
@@ -11671,7 +11671,7 @@ clip:
  -6.341064E+00 -3.419374E+00
  -6.996540E+00 -3.459716E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.037114E+01 -3.501478E+00
   8.041494E+01 -3.580812E+00
@@ -11801,7 +11801,7 @@ clip:
   8.685072E+01 -3.091676E+00
   8.685072E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.049793E+01 -3.702448E+00
   9.060802E+01 -3.564691E+00
@@ -11810,7 +11810,7 @@ clip:
   9.011551E+01 -3.095086E+00
   8.978842E+01 -3.459716E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00 -2.992068E+00
  -4.282158E+00 -3.299802E+00
@@ -11857,7 +11857,7 @@ clip:
  -3.273859E+00 -2.395096E+00
  -2.755493E+00 -2.498307E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -1.968901E+00 -3.176853E+00
  -2.489626E-01 -3.092196E+00
@@ -11910,10 +11910,10 @@ clip:
   6.423760E+00 -1.904346E+00
   6.872669E+00 -2.498307E+00
 
-h: x ny1,0  y2=[y1](15),ic[pink]
+h: x ny1,0  y2=[y1](Jantung),ic[pastelpink]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pink)
+hb:   line clip z   cb(pastelpink)
 clip:
   4.882297E+01 -2.817446E+00
   4.915768E+01 -2.932408E+00
@@ -11954,7 +11954,7 @@ clip:
   4.810968E+01 -2.460458E+00
   4.817299E+01 -2.498307E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.740886E+01 -3.441776E+00
   7.940664E+01 -3.441776E+00
@@ -11985,7 +11985,7 @@ clip:
   9.834025E+00 -1.528938E+00
   9.831756E+00 -1.534736E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   5.720193E+01 -1.558002E+00
   5.724521E+01 -1.557056E+00
@@ -12029,7 +12029,7 @@ clip:
   5.620752E+01 -1.529031E+00
   5.631470E+01 -1.536899E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.756013E+01 -2.336129E+00
   7.940664E+01 -2.336129E+00
@@ -12059,7 +12059,7 @@ clip:
   7.739004E+01 -6.852588E-01
   7.740000E+01 -1.536899E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.050570E+01 -2.490896E+00
   9.150622E+01 -1.710776E+00
@@ -12077,7 +12077,7 @@ clip:
   9.099902E+01 -1.059112E+00
   9.088642E+01 -1.536899E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00 -1.069251E+00
  -4.282158E+00 -8.029707E-01
@@ -12091,7 +12091,7 @@ clip:
  -4.800000E+00 -1.078429E-01
  -4.800000E+00 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -3.948620E-01 -7.146052E-01
  -2.489626E-01 -9.021464E-01
@@ -12123,7 +12123,7 @@ clip:
   5.585220E+00  1.803348E-01
   5.615493E+00 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.607180E+01 -8.710220E-01
   7.638174E+01 -1.365218E+00
@@ -12164,7 +12164,7 @@ clip:
  -4.282158E+00  8.029707E-01
  -3.744580E+00  3.859174E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.629280E+01  3.011066E-01
   7.638174E+01  2.347825E-01
@@ -12190,7 +12190,7 @@ clip:
   9.818335E+00  1.362286E+00
   9.823501E+00  1.347326E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.391097E+01  8.351390E-01
   8.444813E+01  8.291871E-01
@@ -12201,7 +12201,7 @@ clip:
   8.426943E+01  1.517720E+00
   8.348796E+01  1.347326E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00  1.814974E+00
  -4.282158E+00  1.797029E+00
@@ -12215,7 +12215,7 @@ clip:
  -4.800000E+00  2.776382E+00
  -4.800000E+00  2.308734E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -5.487989E-01  2.022841E+00
  -2.489626E-01  1.697854E+00
@@ -12226,7 +12226,7 @@ clip:
  -1.114620E+00  3.134135E+00
  -1.068282E+00  2.308734E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.555968E+01  1.524900E+00
   7.739004E+01  1.524900E+00
@@ -12247,7 +12247,7 @@ clip:
   7.550000E+01  2.429405E+00
   7.550000E+01  2.308734E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.040381E+01  2.298119E+00
   8.041494E+01  2.279188E+00
@@ -12302,7 +12302,7 @@ clip:
   9.044454E+01  2.359635E+00
   9.047013E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.136055E+01  2.169834E+00
   9.150622E+01  1.710776E+00
@@ -12312,7 +12312,7 @@ clip:
   9.150622E+01  2.460227E+00
   9.130817E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.298988E+00  3.246181E+00
  -5.254710E-02  3.082861E+00
@@ -12338,7 +12338,7 @@ clip:
   7.649438E+00  3.430320E+00
   7.196892E+00  3.270142E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.741877E+01  2.336129E+00
   7.940664E+01  2.336129E+00
@@ -12351,7 +12351,7 @@ clip:
   7.821834E+01  3.441776E+00
   7.740000E+01  3.270142E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.019860E+01  2.984735E+00
   9.049793E+01  2.505466E+00
@@ -12361,7 +12361,7 @@ clip:
   9.049793E+01  3.702448E+00
   8.996979E+01  3.270142E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.639683E+01  4.217164E+00
  -1.300476E+01  3.895842E+00
@@ -12511,7 +12511,7 @@ clip:
   8.031610E+01  4.325792E+00
   8.000000E+01  4.231550E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.844206E+01  4.194109E+00
   8.848133E+01  4.186011E+00
@@ -12525,7 +12525,7 @@ clip:
   8.770578E+01  4.971034E+00
   8.816394E+01  4.231550E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.254060E+01  5.088964E+00
  -2.142324E+01  4.884542E+00
@@ -12540,7 +12540,7 @@ clip:
  -2.337679E+01  6.094258E+00
  -2.304679E+01  5.192959E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.803582E+01  4.926427E+00
   6.831535E+01  4.820134E+00
@@ -12567,7 +12567,7 @@ clip:
   6.771627E+01  5.583142E+00
   6.786643E+01  5.192959E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   7.500000E+01  4.836882E+00
   7.537344E+01  4.981979E+00
@@ -12605,7 +12605,7 @@ clip:
   7.531171E+01  5.251823E+00
   7.500000E+01  5.192959E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.567527E+01  5.945707E+00
  -2.545643E+01  5.860122E+00
@@ -12635,7 +12635,7 @@ clip:
  -2.646473E+01  6.339936E+00
  -2.613579E+01  6.154367E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.343983E+01  9.192977E+00
  -2.290760E+01  9.492520E+00
@@ -12647,7 +12647,7 @@ clip:
  -2.349202E+01  1.004976E+01
  -2.360686E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.579437E+01  9.756452E+00
   3.630522E+01  9.756452E+00
@@ -12657,7 +12657,7 @@ clip:
   3.510000E+01  1.090562E+01
   3.510000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01  9.841348E+00
   3.806639E+01  9.756452E+00
@@ -12671,7 +12671,7 @@ clip:
   3.790000E+01  1.015865E+01
   3.790000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.083586E+01  9.756452E+00
   4.209959E+01  9.756452E+00
@@ -12682,7 +12682,7 @@ clip:
   4.070000E+01  1.037309E+01
   4.070000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.386076E+01  9.756452E+00
   4.437161E+01  9.756452E+00
@@ -12692,7 +12692,7 @@ clip:
   4.350000E+01  1.058753E+01
   4.350000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.688565E+01  9.756452E+00
   4.739651E+01  9.756452E+00
@@ -12702,7 +12702,7 @@ clip:
   4.630000E+01  1.080196E+01
   4.630000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01  9.945006E+00
   4.915768E+01  9.756452E+00
@@ -12716,7 +12716,7 @@ clip:
   4.910000E+01  1.005499E+01
   4.910000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.192715E+01  9.756452E+00
   5.319087E+01  9.756452E+00
@@ -12729,7 +12729,7 @@ clip:
   5.190000E+01  1.026943E+01
   5.190000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.495204E+01  9.756452E+00
   5.546290E+01  9.756452E+00
@@ -12739,7 +12739,7 @@ clip:
   5.470000E+01  1.048387E+01
   5.470000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.797694E+01  9.756452E+00
   5.848779E+01  9.756452E+00
@@ -12749,7 +12749,7 @@ clip:
   5.750000E+01  1.069831E+01
   5.750000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.100183E+01  9.756452E+00
   6.151269E+01  9.756452E+00
@@ -12759,7 +12759,7 @@ clip:
   6.030000E+01  1.091274E+01
   6.030000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01  9.834226E+00
   6.327386E+01  9.756452E+00
@@ -12773,7 +12773,7 @@ clip:
   6.310000E+01  1.016577E+01
   6.310000E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.604333E+01  9.756452E+00
   6.655418E+01  9.756452E+00
@@ -12783,7 +12783,7 @@ clip:
   6.590000E+01  1.038021E+01
   6.590000E+01  1.000000E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.104125E+01  1.036422E+01
  -2.016213E+01  1.072036E+01
@@ -12793,7 +12793,7 @@ clip:
  -2.062356E+01  1.116032E+01
  -2.117661E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.771456E+01  1.161339E+01
  -1.679599E+01  1.192282E+01
@@ -12802,7 +12802,7 @@ clip:
  -1.763634E+01  1.215766E+01
  -1.836937E+01  1.192282E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.465613E+01  1.260677E+01
  -1.374932E+01  1.288422E+01
@@ -12811,7 +12811,7 @@ clip:
  -1.457895E+01  1.308808E+01
  -1.526824E+01  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.171865E+01  1.348483E+01
  -1.045819E+01  1.384563E+01
@@ -12820,7 +12820,7 @@ clip:
  -1.147450E+01  1.397364E+01
  -1.193358E+01  1.384563E+01
 
-hb:   line clip z   cb(red)
+hb:   line clip z   cb(brown)
 clip:
   4.854151E+01  1.325812E+01
   4.915768E+01  1.322876E+01
@@ -12844,7 +12844,7 @@ clip:
   4.908039E+01  1.391932E+01
   4.901027E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   5.509046E+01  1.373407E+01
   5.520747E+01  1.359524E+01
@@ -12855,7 +12855,7 @@ clip:
   5.432708E+01  1.468508E+01
   5.498973E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -8.853341E+00  1.429407E+01
  -6.970217E+00  1.480704E+01
@@ -12866,7 +12866,7 @@ clip:
  -8.336087E+00  1.482681E+01
  -8.410264E+00  1.480704E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   4.999896E+01  1.464779E+01
   5.016598E+01  1.474198E+01
@@ -12876,7 +12876,7 @@ clip:
   5.005231E+01  1.491542E+01
   4.986311E+01  1.480704E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.642698E+00  1.542468E+01
  -3.321397E+00  1.576845E+01
@@ -12885,7 +12885,7 @@ clip:
  -4.377522E+00  1.585938E+01
  -4.732372E+00  1.576845E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -5.027935E-01  1.648783E+01
  -1.011840E-01  1.658895E+01
@@ -12913,10 +12913,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -13586,10 +13586,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.466026E+00 -1.710266E+01
  -2.957657E+00 -1.722093E+01
@@ -13755,7 +13755,7 @@ clip:
  -1.841455E+01 -1.308925E+01
  -2.917199E+00 -1.691943E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -8.316985E+00 -1.595958E+01
  -6.969399E+00 -1.627998E+01
@@ -13766,7 +13766,7 @@ clip:
  -8.315353E+00 -1.563459E+01
  -8.323507E+00 -1.595802E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.153645E+01 -1.518369E+01
  -1.100978E+01 -1.531172E+01
@@ -13776,10 +13776,10 @@ clip:
  -1.148337E+01 -1.486015E+01
  -1.230264E+01 -1.499661E+01
 
-h: x ny1,0  y2=[y1](12),ic[pastelviolet]
+h: x ny1,0  y2=[y1](Jaringan Lunak),ic[darkgreen]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   5.474112E-01 -1.519868E+01
   6.953558E+01 -1.519868E+01
@@ -14049,7 +14049,7 @@ clip:
   0.000000E+00 -1.475923E+01
   0.000000E+00 -1.499661E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.553995E+01 -1.419397E+01
  -1.508808E+01 -1.430730E+01
@@ -14059,7 +14059,7 @@ clip:
  -1.559361E+01 -1.382528E+01
  -1.616995E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.951340E+01 -1.317559E+01
  -1.921922E+01 -1.325250E+01
@@ -14069,7 +14069,7 @@ clip:
  -1.977191E+01 -1.272552E+01
  -1.990113E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.344535E+01 -1.211764E+01
  -2.201495E+01 -1.250961E+01
@@ -14080,10 +14080,10 @@ clip:
  -2.343983E+01 -1.170133E+01
  -2.346429E+01 -1.211239E+01
 
-h: x ny1,0  y2=[y1](2),ic[orangeyellow]
+h: x ny1,0  y2=[y1](Tulang),ic[darkgray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.540989E+01 -1.272253E+01
   3.604979E+01 -1.272253E+01
@@ -14094,7 +14094,7 @@ clip:
   3.572292E+01 -1.180072E+01
   3.510000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01 -1.227104E+01
   3.806639E+01 -1.272253E+01
@@ -14108,7 +14108,7 @@ clip:
   3.806639E+01 -1.180072E+01
   3.790000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.070000E+01 -1.248548E+01
   4.109129E+01 -1.272253E+01
@@ -14121,7 +14121,7 @@ clip:
   4.076442E+01 -1.180072E+01
   4.070000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.350000E+01 -1.269992E+01
   4.411618E+01 -1.272253E+01
@@ -14132,7 +14132,7 @@ clip:
   4.378931E+01 -1.180072E+01
   4.350000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.650118E+01 -1.272253E+01
   4.714108E+01 -1.272253E+01
@@ -14143,7 +14143,7 @@ clip:
   4.681421E+01 -1.180072E+01
   4.630000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01 -1.216738E+01
   4.915768E+01 -1.272253E+01
@@ -14157,7 +14157,7 @@ clip:
   4.915768E+01 -1.180072E+01
   4.910000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.190000E+01 -1.238182E+01
   5.218257E+01 -1.272253E+01
@@ -14171,7 +14171,7 @@ clip:
   5.218257E+01 -1.180072E+01
   5.190000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.470000E+01 -1.259626E+01
   5.520747E+01 -1.272253E+01
@@ -14182,7 +14182,7 @@ clip:
   5.488060E+01 -1.180072E+01
   5.470000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.759246E+01 -1.272253E+01
   5.887227E+01 -1.272253E+01
@@ -14192,7 +14192,7 @@ clip:
   5.790550E+01 -1.180072E+01
   5.750000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.061736E+01 -1.272253E+01
   6.125726E+01 -1.272253E+01
@@ -14203,7 +14203,7 @@ clip:
   6.093039E+01 -1.180072E+01
   6.030000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01 -1.227816E+01
   6.327386E+01 -1.272253E+01
@@ -14217,7 +14217,7 @@ clip:
   6.327386E+01 -1.180072E+01
   6.310000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.590000E+01 -1.249260E+01
   6.629876E+01 -1.272253E+01
@@ -14228,7 +14228,7 @@ clip:
   6.597189E+01 -1.180072E+01
   6.590000E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.654827E+01 -1.123064E+01
  -2.485913E+01 -1.172051E+01
@@ -14239,7 +14239,7 @@ clip:
  -2.646473E+01 -1.079218E+01
  -2.681675E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.959438E+01 -1.028946E+01
  -2.777662E+01 -1.086151E+01
@@ -14250,10 +14250,10 @@ clip:
  -2.948963E+01 -9.783642E+00
  -2.990000E+01 -1.018957E+01
 
-h: x ny1,0  y2=[y1](14),ic[pastelcyan]
+h: x ny1,0  y2=[y1](Paru-Paru),ic[pastelblue]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelcyan)
+hb:   line clip z   cb(pastelblue)
 clip:
   4.350000E+01 -1.077710E+01
   4.411618E+01 -1.099113E+01
@@ -14311,7 +14311,7 @@ clip:
   4.350000E+01 -9.815692E+00
   4.350000E+01 -1.018957E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.775212E+01 -1.072662E+01
   6.831535E+01 -1.105806E+01
@@ -14329,7 +14329,7 @@ clip:
   6.750072E+01 -1.000491E+01
   6.753729E+01 -1.018957E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.254793E+01 -9.260022E+00
  -3.150622E+01 -9.641759E+00
@@ -14425,7 +14425,7 @@ clip:
   2.700000E+01 -9.204427E+00
   2.700000E+01 -9.228165E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.465173E+01 -8.381760E+00
  -3.419026E+01 -8.591764E+00
@@ -14437,7 +14437,7 @@ clip:
  -3.453112E+01 -7.329027E+00
  -3.489207E+01 -8.266757E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.594576E+01 -7.692798E+00
  -3.553942E+01 -7.931094E+00
@@ -14493,7 +14493,7 @@ clip:
   7.520000E+01  5.358337E+00
   7.520000E+01 -5.382532E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.603110E+01 -5.716873E+00
   7.739004E+01 -5.716873E+00
@@ -14542,7 +14542,7 @@ clip:
   7.740000E+01 -5.373037E+00
   7.740000E+01 -5.382532E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.635232E+01 -5.489711E+00
   8.646473E+01 -5.530562E+00
@@ -14563,7 +14563,7 @@ clip:
   8.567653E+01 -4.630983E+00
   8.609189E+01 -5.382532E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.330598E+01 -5.175774E+00
  -3.251452E+01 -4.933914E+00
@@ -14728,7 +14728,7 @@ clip:
   8.616662E+01 -3.743959E+00
   8.616662E+01 -4.421124E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.049793E+01 -4.737194E+00
   9.066086E+01 -4.576477E+00
@@ -14737,7 +14737,7 @@ clip:
   9.021553E+01 -4.151857E+00
   8.991710E+01 -4.421124E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.586395E+01 -3.848280E+00
  -2.164149E+01 -3.459716E+00
@@ -14812,10 +14812,10 @@ clip:
   9.748724E+00 -3.378381E+00
   9.672608E+00 -3.459716E+00
 
-h: x ny1,0  y2=[y1](15),ic[pink]
+h: x ny1,0  y2=[y1](Jantung),ic[pastelpink]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pink)
+hb:   line clip z   cb(pastelpink)
 clip:
   4.882533E+01 -3.776608E+00
   4.915768E+01 -3.895337E+00
@@ -14882,7 +14882,7 @@ clip:
   4.814938E+01 -3.415040E+00
   4.822094E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.777147E+01 -4.057438E+00
   7.940664E+01 -4.057438E+00
@@ -14895,7 +14895,7 @@ clip:
   7.784873E+01 -2.935661E+00
   7.740000E+01 -3.459716E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.025884E+01 -3.608555E+00
   8.041494E+01 -3.837500E+00
@@ -14927,7 +14927,7 @@ clip:
   8.379111E+01 -2.833247E+00
   8.350370E+01 -3.459716E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.145227E+01 -3.511160E+00
   9.150622E+01 -3.857310E+00
@@ -14937,7 +14937,7 @@ clip:
   9.150622E+01 -3.414622E+00
   9.148131E+01 -3.459716E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.065312E+01 -2.804545E+00
  -2.951213E+00 -2.498307E+00
@@ -14959,7 +14959,7 @@ clip:
  -1.033195E+01 -2.497785E+00
  -1.034452E+01 -2.498307E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.624642E+01 -2.627339E+00
   7.739004E+01 -2.627339E+00
@@ -15002,7 +15002,7 @@ clip:
   7.550000E+01 -2.377637E+00
   7.550000E+01 -2.498307E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.111806E+01 -2.868418E+00
   9.150622E+01 -3.414622E+00
@@ -15013,7 +15013,7 @@ clip:
   9.134414E+01 -2.343765E+00
   9.128383E+01 -2.498307E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00 -2.030659E+00
  -4.282158E+00 -2.271331E+00
@@ -15078,7 +15078,7 @@ clip:
   1.082272E+01 -5.568015E-01
   1.082098E+01 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   5.613661E+01 -6.509685E-01
   5.621577E+01 -6.660497E-01
@@ -15100,7 +15100,7 @@ clip:
   5.540502E+01 -3.871237E-01
   5.583669E+01 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.607180E+01 -8.710220E-01
   7.638174E+01 -1.365218E+00
@@ -15110,7 +15110,7 @@ clip:
   7.638174E+01 -2.347825E-01
   7.610698E+01 -5.754908E-01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.230117E+01 -7.789211E-01
   9.251452E+01 -8.462317E-01
@@ -15136,7 +15136,7 @@ clip:
   1.083552E+01  3.924022E-01
   1.083594E+01  3.859174E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.629280E+01  3.011066E-01
   7.638174E+01  2.347825E-01
@@ -15161,7 +15161,7 @@ clip:
   1.084232E+01  1.876099E+00
   1.074813E+01  1.347326E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.399618E+01  9.163900E-01
   8.444813E+01  9.237545E-01
@@ -15172,7 +15172,7 @@ clip:
   8.437201E+01  1.419904E+00
   8.374808E+01  1.347326E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -5.293295E+00  2.306028E+00
  -6.991596E-02  2.138014E+00
@@ -15191,7 +15191,7 @@ clip:
  -5.290456E+00  2.582671E+00
  -5.370789E+00  2.308734E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.029297E+01  2.192439E+00
   8.041494E+01  2.022500E+00
@@ -15216,7 +15216,7 @@ clip:
   8.008571E+01  2.956221E+00
   8.022920E+01  2.308734E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.139500E+01  2.202678E+00
   9.150622E+01  1.847979E+00
@@ -15230,7 +15230,7 @@ clip:
   9.110744E+01  2.889907E+00
   9.135714E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.347600E+01  3.235658E+00
  -1.905368E+01  2.933599E+00
@@ -15389,7 +15389,7 @@ clip:
   9.270316E+00  3.807636E+00
   9.774405E+00  3.270142E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.570759E+01  2.627339E+00
   7.739004E+01  2.627339E+00
@@ -15410,7 +15410,7 @@ clip:
   7.550000E+01  3.390813E+00
   7.550000E+01  3.270142E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.804755E+01  2.935661E+00
   7.975743E+01  2.935661E+00
@@ -15433,7 +15433,7 @@ clip:
   8.375062E+01  3.935217E+00
   8.351331E+01  3.270142E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.162748E+01  4.115937E+00
  -3.015396E+01  3.903586E+00
@@ -15506,7 +15506,7 @@ clip:
   8.000000E+01  4.627192E+00
   8.000000E+01  4.231550E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.031098E+01  4.053297E+00
   9.049793E+01  3.840116E+00
@@ -15515,7 +15515,7 @@ clip:
   9.049793E+01  4.737194E+00
   9.013345E+01  4.231550E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.568496E+01  5.054184E+00
  -3.553942E+01  5.001022E+00
@@ -15543,7 +15543,7 @@ clip:
  -3.654772E+01  5.463995E+00
  -3.602667E+01  5.192959E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.567653E+01  4.441410E+00
   8.646473E+01  4.837946E+00
@@ -15603,7 +15603,7 @@ clip:
   3.201660E+01  6.367910E+00
   3.256482E+01  6.154367E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.453112E+01  7.326817E+00
  -3.410464E+01  7.670540E+00
@@ -15615,7 +15615,7 @@ clip:
  -3.478449E+01  8.318771E+00
  -3.526795E+01  8.077184E+00
 
-hb:   line clip z   cb(pastelcyan)
+hb:   line clip z   cb(pastelblue)
 clip:
   4.403523E+01  8.000000E+00
   5.428012E+01  8.000000E+00
@@ -15656,7 +15656,7 @@ clip:
   4.350000E+01  8.451064E+00
   4.350000E+01  8.077184E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.801542E+01  7.791202E+00
   6.831535E+01  7.709325E+00
@@ -15679,7 +15679,7 @@ clip:
   6.764073E+01  8.395345E+00
   6.778297E+01  8.077184E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.251452E+01  8.562286E+00
  -3.217778E+01  8.717506E+00
@@ -15692,7 +15692,7 @@ clip:
  -3.268997E+01  9.205883E+00
  -3.311935E+01  9.038592E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.985635E+01  9.650335E+00
  -2.887356E+01  1.000000E+01
@@ -15701,7 +15701,7 @@ clip:
  -2.974257E+01  1.024118E+01
  -3.046961E+01  1.000000E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.673049E+01  1.070801E+01
  -2.591962E+01  1.096141E+01
@@ -15710,7 +15710,7 @@ clip:
  -2.669996E+01  1.118570E+01
  -2.744822E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.377427E+01  1.160394E+01
  -2.266684E+01  1.192282E+01
@@ -15719,7 +15719,7 @@ clip:
  -2.359932E+01  1.207489E+01
  -2.414360E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.592174E+01  1.180072E+01
   3.617784E+01  1.180072E+01
@@ -15729,7 +15729,7 @@ clip:
   3.521107E+01  1.272253E+01
   3.510000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.793834E+01  1.180072E+01
   3.920274E+01  1.180072E+01
@@ -15741,7 +15741,7 @@ clip:
   3.790000E+01  1.208147E+01
   3.790000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.096324E+01  1.180072E+01
   4.209959E+01  1.180072E+01
@@ -15752,7 +15752,7 @@ clip:
   4.070000E+01  1.229591E+01
   4.070000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.398813E+01  1.180072E+01
   4.424423E+01  1.180072E+01
@@ -15762,7 +15762,7 @@ clip:
   4.350000E+01  1.251034E+01
   4.350000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.701303E+01  1.180072E+01
   4.726913E+01  1.180072E+01
@@ -15772,7 +15772,7 @@ clip:
   4.630236E+01  1.272253E+01
   4.630000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01  1.186782E+01
   4.915768E+01  1.180072E+01
@@ -15787,7 +15787,7 @@ clip:
   4.910000E+01  1.197781E+01
   4.910000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.205452E+01  1.180072E+01
   5.319087E+01  1.180072E+01
@@ -15800,7 +15800,7 @@ clip:
   5.190000E+01  1.219225E+01
   5.190000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.507942E+01  1.180072E+01
   5.533552E+01  1.180072E+01
@@ -15810,7 +15810,7 @@ clip:
   5.470000E+01  1.240669E+01
   5.470000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.810432E+01  1.180072E+01
   5.836042E+01  1.180072E+01
@@ -15820,7 +15820,7 @@ clip:
   5.750000E+01  1.262112E+01
   5.750000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.112921E+01  1.180072E+01
   6.138531E+01  1.180072E+01
@@ -15830,7 +15830,7 @@ clip:
   6.041854E+01  1.272253E+01
   6.030000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.314581E+01  1.180072E+01
   6.441021E+01  1.180072E+01
@@ -15842,7 +15842,7 @@ clip:
   6.310000E+01  1.208859E+01
   6.310000E+01  1.192282E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.617071E+01  1.180072E+01
   6.642681E+01  1.180072E+01
@@ -15852,7 +15852,7 @@ clip:
   6.590000E+01  1.230303E+01
   6.590000E+01  1.192282E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.090648E+01  1.241554E+01
  -1.918211E+01  1.288422E+01
@@ -15863,7 +15863,7 @@ clip:
  -2.045919E+01  1.292641E+01
  -2.061819E+01  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.670409E+01  1.353828E+01
  -1.551376E+01  1.384563E+01
@@ -15872,7 +15872,7 @@ clip:
  -1.649442E+01  1.395307E+01
  -1.691733E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.257820E+01  1.458807E+01
  -1.169754E+01  1.480704E+01
@@ -15881,7 +15881,7 @@ clip:
  -1.249734E+01  1.494891E+01
  -1.307474E+01  1.480704E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -8.503571E+00  1.558898E+01
  -7.760501E+00  1.576845E+01
@@ -15890,7 +15890,7 @@ clip:
  -8.475989E+00  1.592162E+01
  -9.116016E+00  1.576845E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.465931E+00  1.655463E+01
  -3.723475E+00  1.672986E+01
@@ -15899,7 +15899,7 @@ clip:
  -4.435762E+00  1.687632E+01
  -5.060943E+00  1.672986E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.563104E-01  1.749356E+01
  -1.227360E-01  1.757091E+01
@@ -15927,10 +15927,10 @@ p: ymin( -90.00000    ) ymax(  110.0000    )
 
 p: legs[c5*0.875]
 
-h: x ny1,0  y2=[y1](4),ic[pastelblue]
+h: x ny1,0  y2=[y1](Udara),ic[gray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 frame:
  -9.0000000E+01 -9.0000000E+01
   1.5000000E+02 -9.0000000E+01
@@ -16600,10 +16600,10 @@ clip:
  -9.099585E+01 -8.998646E+01
  -9.099585E+01 -9.094787E+01
 
-h: x ny1,0  y2=[y1](11),ic[orange]
+h: x ny1,0  y2=[y1](Kulit),ic[orangeyellow]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.301208E+00 -1.790692E+01
  -1.919404E+00 -1.821090E+01
@@ -16762,7 +16762,7 @@ clip:
  -2.142324E+01 -1.346955E+01
  -2.137027E+00 -1.788084E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -7.392161E+00 -1.700058E+01
  -7.170064E+00 -1.705005E+01
@@ -16772,7 +16772,7 @@ clip:
  -7.566138E+00 -1.667240E+01
  -7.756171E+00 -1.691943E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   6.624752E-01 -1.701179E+01
   6.942051E+01 -1.701179E+01
@@ -16918,7 +16918,7 @@ clip:
   5.326563E-01 -1.670329E+01
   0.000000E+00 -1.691943E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.147373E+01 -1.608529E+01
  -1.112401E+01 -1.616421E+01
@@ -16928,10 +16928,10 @@ clip:
  -1.153068E+01 -1.577645E+01
  -1.203683E+01 -1.595802E+01
 
-h: x ny1,0  y2=[y1](12),ic[pastelviolet]
+h: x ny1,0  y2=[y1](Jaringan Lunak),ic[darkgreen]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   0.000000E+00 -1.668205E+01
   7.593361E-01 -1.670329E+01
@@ -17212,7 +17212,7 @@ clip:
   0.000000E+00 -1.572064E+01
   0.000000E+00 -1.595802E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.554386E+01 -1.515911E+01
  -1.509515E+01 -1.526197E+01
@@ -17222,7 +17222,7 @@ clip:
  -1.551513E+01 -1.486151E+01
  -1.625089E+01 -1.499661E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.959981E+01 -1.421939E+01
  -1.908798E+01 -1.433905E+01
@@ -17232,10 +17232,10 @@ clip:
  -1.952519E+01 -1.392217E+01
  -2.038485E+01 -1.403521E+01
 
-h: x ny1,0  y2=[y1](2),ic[orangeyellow]
+h: x ny1,0  y2=[y1](Tulang),ic[darkgray]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.601301E+01 -1.407028E+01
   3.608658E+01 -1.407028E+01
@@ -17245,7 +17245,7 @@ clip:
   3.528425E+01 -1.330527E+01
   3.510000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.802960E+01 -1.407028E+01
   3.911147E+01 -1.407028E+01
@@ -17257,7 +17257,7 @@ clip:
   3.790000E+01 -1.387655E+01
   3.790000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.105450E+01 -1.407028E+01
   4.209959E+01 -1.407028E+01
@@ -17268,7 +17268,7 @@ clip:
   4.070000E+01 -1.366212E+01
   4.070000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.407940E+01 -1.407028E+01
   4.415297E+01 -1.407028E+01
@@ -17278,7 +17278,7 @@ clip:
   4.350000E+01 -1.344768E+01
   4.350000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.710429E+01 -1.407028E+01
   4.717786E+01 -1.407028E+01
@@ -17288,7 +17288,7 @@ clip:
   4.637554E+01 -1.330527E+01
   4.630000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.912089E+01 -1.407028E+01
   5.020276E+01 -1.407028E+01
@@ -17300,7 +17300,7 @@ clip:
   4.910000E+01 -1.398021E+01
   4.910000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.214579E+01 -1.407028E+01
   5.322766E+01 -1.407028E+01
@@ -17312,7 +17312,7 @@ clip:
   5.190000E+01 -1.376577E+01
   5.190000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.517068E+01 -1.407028E+01
   5.524425E+01 -1.407028E+01
@@ -17322,7 +17322,7 @@ clip:
   5.470000E+01 -1.355134E+01
   5.470000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.819558E+01 -1.407028E+01
   5.826915E+01 -1.407028E+01
@@ -17332,7 +17332,7 @@ clip:
   5.750000E+01 -1.333690E+01
   5.750000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.122048E+01 -1.407028E+01
   6.129405E+01 -1.407028E+01
@@ -17342,7 +17342,7 @@ clip:
   6.049172E+01 -1.330527E+01
   6.030000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.323707E+01 -1.407028E+01
   6.431894E+01 -1.407028E+01
@@ -17354,7 +17354,7 @@ clip:
   6.310000E+01 -1.386943E+01
   6.310000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.626197E+01 -1.407028E+01
   6.633554E+01 -1.407028E+01
@@ -17364,7 +17364,7 @@ clip:
   6.590000E+01 -1.365500E+01
   6.590000E+01 -1.403521E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.363774E+01 -1.326250E+01
  -2.310903E+01 -1.338922E+01
@@ -17374,7 +17374,7 @@ clip:
  -2.356940E+01 -1.295026E+01
  -2.442131E+01 -1.307380E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.765207E+01 -1.228311E+01
  -2.716832E+01 -1.240292E+01
@@ -17384,7 +17384,7 @@ clip:
  -2.766157E+01 -1.193262E+01
  -2.833743E+01 -1.211239E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.797859E+01 -1.243350E+01
   6.831535E+01 -1.250922E+01
@@ -17403,7 +17403,7 @@ clip:
   6.757163E+01 -1.186012E+01
   6.768450E+01 -1.211239E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.163425E+01 -1.127305E+01
  -3.128263E+01 -1.136418E+01
@@ -17502,10 +17502,10 @@ clip:
   2.700000E+01 -1.112724E+01
   2.700000E+01 -1.115098E+01
 
-h: x ny1,0  y2=[y1](14),ic[pastelcyan]
+h: x ny1,0  y2=[y1](Paru-Paru),ic[pastelblue]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pastelcyan)
+hb:   line clip z   cb(pastelblue)
 clip:
   4.350000E+01 -1.173851E+01
   4.411618E+01 -1.189692E+01
@@ -17577,7 +17577,7 @@ clip:
   4.350000E+01 -1.077710E+01
   4.350000E+01 -1.115098E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.557000E+01 -1.021874E+01
  -3.407060E+01 -1.062868E+01
@@ -17588,7 +17588,7 @@ clip:
  -3.553942E+01 -9.807853E+00
  -3.567502E+01 -1.018957E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.866800E+01 -9.327024E+00
  -3.691391E+01 -9.840407E+00
@@ -17599,7 +17599,7 @@ clip:
  -3.856432E+01 -8.880982E+00
  -3.899560E+01 -9.228165E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.169233E+01 -8.365082E+00
  -3.984785E+01 -8.965727E+00
@@ -17610,7 +17610,7 @@ clip:
  -4.158921E+01 -7.807853E+00
  -4.197861E+01 -8.266757E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.387596E+01 -7.562933E+00
  -4.296921E+01 -7.912339E+00
@@ -17619,7 +17619,7 @@ clip:
  -4.360581E+01 -6.885632E+00
  -4.449431E+01 -7.305349E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.590491E+01 -6.613305E+00
  -4.562241E+01 -6.769339E+00
@@ -17732,7 +17732,7 @@ clip:
   7.520000E+01 -5.547910E+00
   7.520000E+01 -6.343940E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.744018E+01 -6.375263E+00
   8.751385E+01 -6.382863E+00
@@ -17745,7 +17745,7 @@ clip:
   8.671120E+01 -5.617536E+00
   8.720626E+01 -6.343940E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.555656E+01 -6.169339E+00
   7.739004E+01 -6.169339E+00
@@ -17831,7 +17831,7 @@ clip:
   8.000000E+01 -4.816765E+00
   8.000000E+01 -5.382532E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.522767E+01 -5.600652E+00
   8.545643E+01 -5.735631E+00
@@ -17906,7 +17906,7 @@ clip:
   8.944740E+01 -5.342274E+00
   8.936618E+01 -5.382532E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.010441E+01 -5.757748E+00
   9.049793E+01 -5.470497E+00
@@ -17989,10 +17989,10 @@ clip:
   6.809129E+00 -4.314017E+00
   7.008055E+00 -4.421124E+00
 
-h: x ny1,0  y2=[y1](15),ic[pink]
+h: x ny1,0  y2=[y1](Jantung),ic[pastelpink]
  -1.000000E+00 -1.000000E+00
 
-hb:   line clip z   cb(pink)
+hb:   line clip z   cb(pastelpink)
 clip:
   5.003077E+01 -4.550037E+00
   5.016598E+01 -4.552571E+00
@@ -18069,7 +18069,7 @@ clip:
   8.540940E+01  4.276398E+00
   8.540940E+01 -4.421124E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.139979E+01 -4.522611E+00
   9.150622E+01 -4.737520E+00
@@ -18079,7 +18079,7 @@ clip:
   9.150622E+01 -4.375497E+00
   9.147394E+01 -4.421124E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.214616E+01 -3.990762E+00
  -4.158921E+01 -3.874304E+00
@@ -18106,7 +18106,7 @@ clip:
   5.255949E+00 -2.940175E+00
   5.568464E+00 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.740000E+01 -4.411628E+00
   7.940289E+01 -4.417545E+00
@@ -18119,7 +18119,7 @@ clip:
   7.820168E+01 -3.272204E+00
   7.740000E+01 -3.459716E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.133708E+01 -3.541861E+00
   8.142324E+01 -3.558509E+00
@@ -18134,7 +18134,7 @@ clip:
   8.087360E+01 -3.022386E+00
   8.115313E+01 -3.459716E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.128739E+01 -3.668374E+00
   9.150622E+01 -4.375497E+00
@@ -18144,7 +18144,7 @@ clip:
   9.150622E+01 -3.267153E+00
   9.140611E+01 -3.459716E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.290049E+01 -2.866328E+00
  -2.696747E+01 -2.498307E+00
@@ -18173,7 +18173,7 @@ clip:
   1.075829E+01 -2.418182E+00
   1.072465E+01 -2.498307E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.569722E+01 -3.150996E+00
   7.739004E+01 -3.150996E+00
@@ -18218,7 +18218,7 @@ clip:
   7.550000E+01 -2.377637E+00
   7.550000E+01 -2.498307E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.237759E+01 -2.628876E+00
   9.251452E+01 -2.877735E+00
@@ -18229,7 +18229,7 @@ clip:
   9.244192E+01 -2.429086E+00
   9.242031E+01 -2.498307E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -6.564491E+00 -1.790277E+00
  -1.293895E-01 -1.650912E+00
@@ -18265,7 +18265,7 @@ clip:
   4.614071E+00 -7.456519E-01
   4.746393E+00 -1.536899E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.335826E+01 -1.614679E+00
   8.343983E+01 -1.722267E+00
@@ -18276,7 +18276,7 @@ clip:
   8.326303E+01 -1.368318E+00
   8.331723E+01 -1.536899E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.196605E+01 -2.059861E+00
   9.251452E+01 -2.177728E+00
@@ -18299,7 +18299,7 @@ clip:
   9.219294E+01 -8.821181E-01
   9.209078E+01 -1.536899E+00
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
  -4.800000E+00 -1.069251E+00
  -4.282158E+00 -1.493078E+00
@@ -18328,7 +18328,7 @@ clip:
  -4.800000E+00 -1.078429E-01
  -4.800000E+00 -5.754908E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.607180E+01 -8.710220E-01
   7.638174E+01 -1.365218E+00
@@ -18349,7 +18349,7 @@ clip:
   4.686462E+00  1.246190E+00
   4.584955E+00  3.859174E-01
 
-hb:   line clip z   cb(pastelviolet)
+hb:   line clip z   cb(darkgreen)
 clip:
   7.629280E+01  3.011066E-01
   7.638174E+01  2.347825E-01
@@ -18364,7 +18364,7 @@ clip:
   7.615755E+01  1.133559E+00
   7.621238E+01  3.859174E-01
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.324696E+01  1.163422E+00
   8.343983E+01  6.777332E-01
@@ -18374,7 +18374,7 @@ clip:
   8.343983E+01  1.722267E+00
   8.325904E+01  1.347326E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.852257E+01  2.269413E+00
  -2.314803E+01  2.030504E+00
@@ -18558,7 +18558,7 @@ clip:
   1.077764E+01  2.370411E+00
   1.080186E+01  2.308734E+00
 
-hb:   line clip z   cb(pastelblue)
+hb:   line clip z   cb(gray)
 clip:
   8.141654E+01  2.302346E+00
   8.143188E+01  2.300496E+00
@@ -18572,7 +18572,7 @@ clip:
   8.088968E+01  2.761399E+00
   8.137775E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   9.248572E+01  2.281269E+00
   9.251452E+01  2.177728E+00
@@ -18583,7 +18583,7 @@ clip:
   9.246359E+01  2.357298E+00
   9.247782E+01  2.308734E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.065464E+01  3.199846E+00
  -3.821252E+01  2.934705E+00
@@ -18600,7 +18600,7 @@ clip:
  -4.112360E+01  3.787595E+00
  -4.120554E+01  3.270142E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.625679E+01  3.150996E+00
   7.739004E+01  3.150996E+00
@@ -18625,7 +18625,7 @@ clip:
   7.550000E+01  3.390813E+00
   7.550000E+01  3.270142E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.150521E+01  3.269180E+00
   9.246359E+01  2.357298E+00
@@ -18637,7 +18637,7 @@ clip:
   9.114821E+01  3.890183E+00
   9.150473E+01  3.270142E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.568862E+01  4.168420E+00
  -4.548708E+01  4.102513E+00
@@ -18663,7 +18663,7 @@ clip:
  -4.663071E+01  4.589163E+00
  -4.586685E+01  4.231550E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   7.740000E+01  3.279638E+00
   7.940448E+01  3.272204E+00
@@ -18765,7 +18765,7 @@ clip:
   7.740000E+01  5.202454E+00
   7.740000E+01  5.192959E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.497245E+01  4.731480E+00
   8.555335E+01  5.100551E+00
@@ -18774,7 +18774,7 @@ clip:
   8.510875E+01  5.524472E+00
   8.497245E+01  5.192959E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   9.022988E+01  4.937381E+00
   9.049793E+01  4.691029E+00
@@ -18784,7 +18784,7 @@ clip:
   8.961947E+01  6.030559E+00
   8.989450E+01  5.192959E+00
 
-hb:   line clip z   cb(pastelcyan)
+hb:   line clip z   cb(pastelblue)
 clip:
   5.517747E+01  6.125761E+00
   5.530991E+01  6.154367E+00
@@ -18847,7 +18847,7 @@ clip:
   5.500000E+01  6.917955E+00
   5.500000E+01  6.154367E+00
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   8.646473E+01  5.537597E+00
   8.695908E+01  5.683007E+00
@@ -18864,7 +18864,7 @@ clip:
   8.645217E+01  6.166339E+00
   8.641476E+01  6.154367E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   8.944295E+01  6.109859E+00
   8.948963E+01  6.089876E+00
@@ -18875,7 +18875,7 @@ clip:
   8.918769E+01  6.442260E+00
   8.933251E+01  6.154367E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.461411E+01  6.187827E+00
  -4.407595E+01  6.602645E+00
@@ -18887,7 +18887,7 @@ clip:
  -4.471244E+01  7.209537E+00
  -4.491929E+01  7.115775E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.208476E+01  7.604683E+00
  -4.138845E+01  7.885755E+00
@@ -18897,7 +18897,7 @@ clip:
  -4.183866E+01  8.315029E+00
  -4.251680E+01  8.077184E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -4.039085E+01  8.258406E+00
  -3.919033E+01  8.674082E+00
@@ -18909,7 +18909,7 @@ clip:
  -3.958273E+01  9.048235E+00
  -3.961385E+01  9.038592E+00
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.583112E+01  9.721864E+00
  -3.487326E+01  1.000000E+01
@@ -18918,7 +18918,7 @@ clip:
  -3.572396E+01  1.017596E+01
  -3.635196E+01  1.000000E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.803342E+01  9.731182E+00
   6.831535E+01  9.676450E+00
@@ -18937,7 +18937,7 @@ clip:
   6.761521E+01  1.029382E+01
   6.776396E+01  1.000000E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.295978E+01  1.053686E+01
  -3.139312E+01  1.096141E+01
@@ -18948,7 +18948,7 @@ clip:
  -3.258156E+01  1.102533E+01
  -3.282388E+01  1.096141E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.876801E+01  1.164947E+01
  -2.769899E+01  1.192282E+01
@@ -18957,7 +18957,7 @@ clip:
  -2.860889E+01  1.204445E+01
  -2.909295E+01  1.192282E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.465937E+01  1.268282E+01
  -2.383879E+01  1.288422E+01
@@ -18966,7 +18966,7 @@ clip:
  -2.460132E+01  1.303029E+01
  -2.520387E+01  1.288422E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -2.060390E+01  1.366546E+01
  -1.984710E+01  1.384563E+01
@@ -18975,7 +18975,7 @@ clip:
  -2.056845E+01  1.399201E+01
  -2.118912E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.548307E+01  1.330527E+01
   3.604979E+01  1.330527E+01
@@ -18986,7 +18986,7 @@ clip:
   3.581419E+01  1.407028E+01
   3.510000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   3.790000E+01  1.368698E+01
   3.806639E+01  1.330527E+01
@@ -19000,7 +19000,7 @@ clip:
   3.806639E+01  1.407028E+01
   3.790000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.070000E+01  1.347254E+01
   4.109129E+01  1.330527E+01
@@ -19013,7 +19013,7 @@ clip:
   4.085568E+01  1.407028E+01
   4.070000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.354946E+01  1.330527E+01
   4.468290E+01  1.330527E+01
@@ -19023,7 +19023,7 @@ clip:
   4.388058E+01  1.407028E+01
   4.350000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.657436E+01  1.330527E+01
   4.770000E+01  1.331270E+01
@@ -19033,7 +19033,7 @@ clip:
   4.690547E+01  1.407028E+01
   4.630000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   4.910000E+01  1.379064E+01
   4.915768E+01  1.330527E+01
@@ -19047,7 +19047,7 @@ clip:
   4.915768E+01  1.407028E+01
   4.910000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.190000E+01  1.357620E+01
   5.218257E+01  1.330527E+01
@@ -19062,7 +19062,7 @@ clip:
   5.194697E+01  1.407028E+01
   5.190000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.470000E+01  1.336176E+01
   5.520747E+01  1.330527E+01
@@ -19073,7 +19073,7 @@ clip:
   5.497186E+01  1.407028E+01
   5.470000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   5.766565E+01  1.330527E+01
   5.879908E+01  1.330527E+01
@@ -19083,7 +19083,7 @@ clip:
   5.799676E+01  1.407028E+01
   5.750000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.069054E+01  1.330527E+01
   6.125726E+01  1.330527E+01
@@ -19094,7 +19094,7 @@ clip:
   6.102166E+01  1.407028E+01
   6.030000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.310000E+01  1.367986E+01
   6.327386E+01  1.330527E+01
@@ -19108,7 +19108,7 @@ clip:
   6.327386E+01  1.407028E+01
   6.310000E+01  1.384563E+01
 
-hb:   line clip z   cb(orangeyellow)
+hb:   line clip z   cb(darkgray)
 clip:
   6.590000E+01  1.346542E+01
   6.629876E+01  1.330527E+01
@@ -19119,7 +19119,7 @@ clip:
   6.606315E+01  1.407028E+01
   6.590000E+01  1.384563E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.658563E+01  1.461263E+01
  -1.574953E+01  1.480704E+01
@@ -19128,7 +19128,7 @@ clip:
  -1.651642E+01  1.493545E+01
  -1.707286E+01  1.480704E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -1.259492E+01  1.553354E+01
  -1.156545E+01  1.576845E+01
@@ -19137,7 +19137,7 @@ clip:
  -1.244940E+01  1.586461E+01
  -1.287342E+01  1.576845E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -8.625450E+00  1.643418E+01
  -7.309770E+00  1.672986E+01
@@ -19146,7 +19146,7 @@ clip:
  -8.370360E+00  1.678231E+01
  -8.604977E+00  1.672986E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
   7.314757E-01  1.670329E+01
   6.935151E+01  1.670329E+01
@@ -19292,7 +19292,7 @@ clip:
   4.636558E-01  1.701179E+01
   0.000000E+00  1.672986E+01
 
-hb:   line clip z   cb(orange)
+hb:   line clip z   cb(orangeyellow)
 clip:
  -3.358499E+00  1.761056E+01
  -2.994169E+00  1.769127E+01

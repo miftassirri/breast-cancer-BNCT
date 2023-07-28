@@ -1,0 +1,141 @@
+[ T-Track ]
+    title = [t-track] in r-z mesh
+     mesh =  r-z            # mesh type is r-z scoring mesh
+       x0 =   0.000000      # center x-position of r-z mesh
+       y0 =   0.000000      # center y-position of r-z mesh
+   r-type =    2            # r-mesh is linear given by rmin, rmax and nr
+     rmin =   0.000000      # minimum value of r-mesh points
+     rmax =   5.500000      # maximum value of r-mesh points
+#    rdel =   5.500000      # mesh width of r-mesh points
+       nr =      1          # number of r-mesh points
+#    data = ( r(i), i = 1, nr + 1 )
+#           0.00000E+00  5.50000E+00
+   z-type =    2            # z-mesh is linear given by zmin, zmax and nz
+     zmin =  -41.00000      # minimum value of z-mesh points
+     zmax =   15.00000      # maximum value of z-mesh points
+#    zdel =   1.000000      # mesh width of z-mesh points
+       nz =     56          # number of z-mesh points
+#    data = ( z(i), i = 1, nz + 1 )
+#          -4.10000E+01 -4.00000E+01 -3.90000E+01 -3.80000E+01 -3.70000E+01
+#          -3.60000E+01 -3.50000E+01 -3.40000E+01 -3.30000E+01 -3.20000E+01
+#          -3.10000E+01 -3.00000E+01 -2.90000E+01 -2.80000E+01 -2.70000E+01
+#          -2.60000E+01 -2.50000E+01 -2.40000E+01 -2.30000E+01 -2.20000E+01
+#          -2.10000E+01 -2.00000E+01 -1.90000E+01 -1.80000E+01 -1.70000E+01
+#          -1.60000E+01 -1.50000E+01 -1.40000E+01 -1.30000E+01 -1.20000E+01
+#          -1.10000E+01 -1.00000E+01 -9.00000E+00 -8.00000E+00 -7.00000E+00
+#          -6.00000E+00 -5.00000E+00 -4.00000E+00 -3.00000E+00 -2.00000E+00
+#          -1.00000E+00  0.00000E+00  1.00000E+00  2.00000E+00  3.00000E+00
+#           4.00000E+00  5.00000E+00  6.00000E+00  7.00000E+00  8.00000E+00
+#           9.00000E+00  1.00000E+01  1.10000E+01  1.20000E+01  1.30000E+01
+#           1.40000E+01  1.50000E+01
+     trcl =   2004          # transform ID
+   e-type =    2            # e-mesh is linear given by emin, emax and ne
+     emin =  1.0000000E-02  # minimum value of e-mesh points
+     emax =   1000.000      # maximum value of e-mesh points
+#    edel =   999.9900      # mesh width of e-mesh points
+       ne =      1          # number of e-mesh points
+#    data = ( e(i), i = 1, ne + 1 )
+#           1.00000E-02  1.00000E+03
+     unit =    1            # unit is [1/cm^2/source]
+ material =  all            # (D=all) number of specific material
+     axis =       z            # axis of output
+     file = fast_neutron_flux.out  # file name of output for the above axis
+     part =  neutron  
+# kf/name :  2112     
+    gshow =    1            # 0: no 1:bnd, 2:bnd+mat, 3:bnd+reg 4:bnd+lat 5:bmp style
+    ginfo =    1            # (D=0) 0:no, 1:show in graph, 2:add file
+    resol =    1            # (D=1) resolution of gshow or rshow
+    width = 0.5000000       # (D=0.5) width of lines for gshow or rshow
+   epsout =    1            # (D=0) generate eps file by ANGEL
+#    used :        main (  %)        temp (  %)       total (  %)
+#  memory :          65 (  0)           0 (  0)          65 (  0)
+
+#------------------------------------------------------------------------------
+#newpage:
+#   no. =  1   ie  =  1   ir  =  1
+#   e = (   1.0000E-02  -   1.0000E+03  )
+#   r = (   0.0000E+00  -   5.5000E+00  )
+
+x: z [cm]
+y: Flux [1/cm^2/source]              
+p: xlin ylog afac(0.8) form(0.9)
+h: n            x            y(neutron ),hh0l n  
+#  z-lower      z-upper        neutron   r.err 
+  -4.1000E+01  -4.0000E+01   6.1457E+09  0.0065
+  -4.0000E+01  -3.9000E+01   5.1470E+09  0.0080
+  -3.9000E+01  -3.8000E+01   4.5086E+09  0.0083
+  -3.8000E+01  -3.7000E+01   3.9850E+09  0.0086
+  -3.7000E+01  -3.6000E+01   3.5558E+09  0.0091
+  -3.6000E+01  -3.5000E+01   3.1674E+09  0.0096
+  -3.5000E+01  -3.4000E+01   2.8030E+09  0.0100
+  -3.4000E+01  -3.3000E+01   2.4206E+09  0.0102
+  -3.3000E+01  -3.2000E+01   2.1056E+09  0.0106
+  -3.2000E+01  -3.1000E+01   1.8915E+09  0.0111
+  -3.1000E+01  -3.0000E+01   1.6963E+09  0.0118
+  -3.0000E+01  -2.9000E+01   1.5114E+09  0.0122
+  -2.9000E+01  -2.8000E+01   1.3452E+09  0.0129
+  -2.8000E+01  -2.7000E+01   1.1942E+09  0.0133
+  -2.7000E+01  -2.6000E+01   1.0608E+09  0.0140
+  -2.6000E+01  -2.5000E+01   9.2622E+08  0.0143
+  -2.5000E+01  -2.4000E+01   8.0186E+08  0.0145
+  -2.4000E+01  -2.3000E+01   6.9262E+08  0.0146
+  -2.3000E+01  -2.2000E+01   6.0019E+08  0.0149
+  -2.2000E+01  -2.1000E+01   5.3314E+08  0.0162
+  -2.1000E+01  -2.0000E+01   4.6379E+08  0.0163
+  -2.0000E+01  -1.9000E+01   4.1703E+08  0.0174
+  -1.9000E+01  -1.8000E+01   3.6415E+08  0.0172
+  -1.8000E+01  -1.7000E+01   3.1849E+08  0.0178
+  -1.7000E+01  -1.6000E+01   2.8417E+08  0.0184
+  -1.6000E+01  -1.5000E+01   2.5552E+08  0.0191
+  -1.5000E+01  -1.4000E+01   2.2999E+08  0.0200
+  -1.4000E+01  -1.3000E+01   2.1035E+08  0.0208
+  -1.3000E+01  -1.2000E+01   1.9336E+08  0.0216
+  -1.2000E+01  -1.1000E+01   1.7685E+08  0.0225
+  -1.1000E+01  -1.0000E+01   1.6027E+08  0.0235
+  -1.0000E+01  -9.0000E+00   1.4907E+08  0.0244
+  -9.0000E+00  -8.0000E+00   1.3751E+08  0.0253
+  -8.0000E+00  -7.0000E+00   1.2831E+08  0.0261
+  -7.0000E+00  -6.0000E+00   1.2036E+08  0.0270
+  -6.0000E+00  -5.0000E+00   1.1193E+08  0.0279
+  -5.0000E+00  -4.0000E+00   1.0442E+08  0.0289
+  -4.0000E+00  -3.0000E+00   9.7734E+07  0.0299
+  -3.0000E+00  -2.0000E+00   9.2036E+07  0.0308
+  -2.0000E+00  -1.0000E+00   8.7233E+07  0.0315
+  -1.0000E+00   0.0000E+00   8.2237E+07  0.0324
+   0.0000E+00   1.0000E+00   7.7414E+07  0.0334
+   1.0000E+00   2.0000E+00   7.2487E+07  0.0345
+   2.0000E+00   3.0000E+00   6.8634E+07  0.0355
+   3.0000E+00   4.0000E+00   6.5167E+07  0.0365
+   4.0000E+00   5.0000E+00   6.2138E+07  0.0374
+   5.0000E+00   6.0000E+00   5.9833E+07  0.0381
+   6.0000E+00   7.0000E+00   5.7027E+07  0.0390
+   7.0000E+00   8.0000E+00   5.4677E+07  0.0398
+   8.0000E+00   9.0000E+00   5.2350E+07  0.0407
+   9.0000E+00   1.0000E+01   4.9829E+07  0.0417
+   1.0000E+01   1.1000E+01   4.7377E+07  0.0427
+   1.1000E+01   1.2000E+01   4.4859E+07  0.0439
+   1.2000E+01   1.3000E+01   4.3130E+07  0.0448
+   1.3000E+01   1.4000E+01   4.1334E+07  0.0455
+   1.4000E+01   1.5000E+01   3.9691E+07  0.0466
+
+#   sum over    5.3219E+03   9.1273E+08
+
+'no. =  1,  ie =  1,  ir =  1'
+msuc: {\huge [t-track] in r-z mesh}
+msdr: {\it plotted by \ANGEL \version}
+msdl: {\it calculated by \PHITS  3.31}
+wt: s(0.7)
+\vspace{-3}
+  emin  &=&   1.0000E-02 [MeV]
+  emax  &=&   1.0000E+03 [MeV]
+  rmin  &=&   0.0000E+00 [cm]
+  rmax  &=&   5.5000E+00 [cm]
+e:
+ 
+# Information for Restart Calculation
+# This calculation was newly started
+# istdev =  2 # 1:Batch variance, 2:History variance
+# resc2  = 1.06811775968502986E-07 # Total source weight or Total source weight / maxcas
+# resc3  = 1.00000000000000000E+09 # Total history number or Total batch number
+# maxcas =      100000 # History / Batch, only used for istdev=1
+# bitrseed = 0001001110011001001001110000100100110111001111011100001000101100 # bit data of rseed
